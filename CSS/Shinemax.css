@@ -4,10 +4,11 @@ body {
 
 /* Carrossel */
 
-.slider {
+.fundo {
   width: 100%;
   height: 100%;
   overflow: hidden;
+  position: absolute;
 }
 .slides {
   width: 400%;
@@ -29,7 +30,7 @@ body {
 .manual-navigation {
   position: absolute;
   width: 1345px;
-  margin-top: -200px;
+  margin-top: -140px;
   display: flex;
   justify-content: center;
 }
@@ -69,7 +70,7 @@ body {
 .navigation-auto {
   position: absolute;
   width: 1345px;
-  margin-top: 600px;
+  margin-top: 660px;
   display: flex;
   justify-content: center;
 }
@@ -89,10 +90,12 @@ body {
   background-color: #fff;
 }
 
-/* Fundo */
+/* Barra de cima */
 
 .header {
   width: 100%;
+  height: 700px;
+  position: relative;
 }
 .container .barracima {
   width: 80%;
@@ -107,7 +110,6 @@ body {
   flex-direction: row;
   color: white;
   font-size: 40px;
-  font-weight: 500px;
 }
 .inicial {
   color: blue;
@@ -184,6 +186,8 @@ body {
 
 .filmes {
   width: 100%;
+  height: 800px;
+  display: flex;
   background-color: #0d0d0d;
 }
 .filmes .container {
@@ -207,4 +211,51 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-evenly;
+}
+
+/* Sobre Mim */
+
+.sobremim {
+  width: 100%;
+}
+.sobremim .container {
+  width: 80%;
+}
+
+/* Footer */
+
+.footer {
+  width: 100%;
+  height: 200px;
+  background-color: #0d0d0d;
+  color: white;
+  font-size: 18px;
+}
+.footer .container {
+  width: 80%;
+  height: 200px;
+  margin: auto;
+  display: grid;
+  align-items: center;
+}
+.redes {
+  display: flex;
+  justify-content: center;
+}
+.redesocial {
+  display: flex;
+  justify-content: space-evenly;
+}
+.contato {
+  display: flex;
+  justify-content: center;
+}
+.contatos {
+  display: flex;
+  justify-content: space-around;
+  list-style: none;
+}
+.copy {
+  display: flex;
+  justify-content: center;
 }
