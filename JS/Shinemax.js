@@ -15,10 +15,26 @@ var count = 1;
     }
 
 /* Botão */
-function mostrar(el) {
+
+function mostrarmenu(el) {
     var display = document.getElementById(el).style.display;
-    if(display == "none")
-        document.getElementById(el).style.display = 'block';
-    else
+    if(display == "none"){
+
+        document.getElementById(el).style.display = 'flex'
+        document.getElementById(el).className = 'barramenu'
+    } else {
         document.getElementById(el).style.display = 'none';
+    }
+
+}
+function mostrarpesquisa(el) {
+    var display = document.getElementById(el).style.display;
+    if(display == "none"){
+
+        document.getElementById(el).style.display = 'flex'
+        document.getElementById(el).className = 'barrapesquisa'
+    } else {
+        document.getElementById(el).style.display = 'none';
+    }
+
 }
