@@ -1,38 +1,27 @@
 /* Carrossel */
-var count = 1;
-    document.getElementById("radio1").checked = true;
+const imgs = document.getElementById("img");
+const img = document.querySelectorAll("#img img");
 
-    setInterval(function () {
-        nextImage();
-    }, 3000);
+let vezes = 0;
 
-    function nextImage() {
-        count++;
-        if (count > 4) {
-            count = 1;
-        }
-        document.getElementById("radio" + count).checked = true;
+function Carrossel() {
+    vezes++;
+    if (vezes > img.length - 1) {
+        vezes = 0;
     }
 
-/* Botão */
-
-function mostrarmenu(el) {
-    var display = document.getElementById(el).style.display;
-    if(display == "none"){
-
-        document.getElementById(el).style.display = 'flex'
-        document.getElementById(el).className = 'barramenu'
-    } else {
-        document.getElementById(el).style.display = 'none';
-    }
-
+    imgs.style.transform = `translateX(${-vezes * 100}%)`;
 }
-function mostrarpesquisa(el) {
+setInterval(Carrossel, 2000);
+
+/* Botão de Pesquisa */
+
+function mostrar(el) {
     var display = document.getElementById(el).style.display;
     if(display == "none"){
 
         document.getElementById(el).style.display = 'flex'
-        document.getElementById(el).className = 'barrapesquisa'
+        document.getElementById(el).className = 'pesquisa'
     } else {
         document.getElementById(el).style.display = 'none';
     }

@@ -1,315 +1,160 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>ShineMax</title>
-    <link rel="stylesheet" href="../CSS/Shinemax.css" />
-  </head>
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>ShineMax</title>
+        <link rel="stylesheet" href="../CSS/Shinemax.css" />
+    </head>
 
-  <body>
-    <div class="fundo">
-      <!-- Carrossel -->
-      <div class="slides">
-        <!-- button -->
-        <input type="radio" name="radio-btn" id="radio1" />
-        <input type="radio" name="radio-btn" id="radio2" />
-        <input type="radio" name="radio-btn" id="radio3" />
-        <input type="radio" name="radio-btn" id="radio4" />
-
-        <!-- Slides -->
-        <div class="slide first">
-          <img src="../Img/fundos/header.png" />
-        </div>
-        <div class="slide">
-          <img src="../Img/fundos/header2.png" />
-        </div>
-        <div class="slide">
-          <img src="../Img/fundos/header3.png" />
-        </div>
-        <div class="slide">
-          <img src="../Img/fundos/header4.png" />
-        </div>
-
-        <!-- navigation -->
-        <div class="navigation-auto">
-          <div class="auto-btn1"></div>
-          <div class="auto-btn2"></div>
-          <div class="auto-btn3"></div>
-          <div class="auto-btn4"></div>
-        </div>
-      </div>
-
-      <!-- manual -->
-      <div class="manual-navigation">
-        <label for="radio1" class="manual-btn"></label>
-        <label for="radio2" class="manual-btn"></label>
-        <label for="radio3" class="manual-btn"></label>
-        <label for="radio4" class="manual-btn"></label>
-      </div>
-      <!-- fim slides -->
-    </div>
-
-    <div class="header">
-      <!-- Barra de cima -->
-      <div class="container">
-        <div class="barracima">
-          <div id="ocultartitulo" class="titulo">
-            <img src="../Img/icones/logo.png" height="45px" />
-            <div class="inicial">S</div>
-            hine
-            <div class="inicial2">M</div>
-            ax
-          </div>
-          <ul id="ocultar" class="barra">
-            <li class="home">Home</li>
-            <li><a href="">Filmes</a></li>
-            <li><a href="">Séries</a></li>
-            <li><a href="">Animes</a></li>
-            <div>
-              <img onclick="mostrarpesquisa('pesquisa')" src="../Img/icones/pesquisa.png" height="30px" width="30px" />
+    <body>
+        <div class="carrossel">
+            <div class="container" id="img">
+                <img src="../Img/fundos/header.png" width="100%" />
+                <img src="../Img/fundos/header1.png" width="100%" />
+                <img src="../Img/fundos/header2.png" width="100%" />
+                <img src="../Img/fundos/header3.png" width="100%" />
+                <img src="../Img/fundos/header4.png" width="100%" />
             </div>
-            <div class="usuario">
-              <span onclick="mostrarmenu('menu-login')">
-                <img src="../Img/icones/usuario.png" width="70px" />
-              </span>
-              <div id="menu-login" style="display: none">
-                <a href=""> Login </a>
-                <a href=""> Cadastro </a>
-                <a href=""> Configurações </a>
+        </div>
+
+        <div class="header">
+            <!-- Barra de cima -->
+            <div class="container">
+                <div class="barracima">
+                    <div id="ocultartitulo" class="titulo">
+                        <img src="../Img/icones/logo.png" height="45px" />
+                        <div class="inicial">S</div>
+                        hine
+                        <div class="inicial2">M</div>
+                        ax
+                    </div>
+                    <ul id="ocultar" class="barra">
+                        <li class="home">Home</li>
+                        <li><a href="">Filmes</a></li>
+                        <li><a href="">Séries</a></li>
+                        <li><a href="">Animes</a></li>
+                        <div>
+                            <img onclick="mostrar('pesquisa')" src="../Img/icones/pesquisa.png" height="30px" width="30px" />
+                        </div>
+                        <div class="usuario">
+                            <span class="icone-login">
+                                <img src="../Img/icones/usuario.png" width="70px" />
+                                <div class="menu-login">
+                                    <a href=""> Login </a>
+                                    <a href=""> Cadastro </a>
+                                    <a href=""> Configurações </a>
+                                </div>
+                            </span>
+                        </div>
+                    </ul>
+                </div>
+                <!-- Fim da Barra-->
               </div>
+              <div id="pesquisa" style="display: none;">
+                <div class="buttonpesquisar">
+                  <img src="../Img/icones/pesquisa.png" width="20px" alt="Buscar" />
+                  <input type="search" class="inputpesquisa" placeholder="Buscar..." />
+                </div>
+              </div>
+
+            <div class="conteudo">
+                <div class="destaque">Destaques</div>
+                <div class="informaçao">
+                    <div class="nome">Naruto</div>
+                    <div class="resumo">Um jovem ninja que constantemente procura por reconhecimento e sonha em se tornar Hokage, o líder máximo e mais poderoso de sua vila.</div>
+                    <a href=""
+                        ><div class="button">
+                            <img src="../Img/icones/play.png" height="20px" width="20px" />
+                            Assistir
+                        </div></a
+                    >
+                </div>
             </div>
-          </ul>
-        </div>
-        <div class="barrapesquisar">
-          <input id="pesquisa" style="display: none" />
-        </div>
-        <!-- Fim da Barra-->
-      </div>
-
-      <div class="conteudo">
-        <div class="destaque">Destaques</div>
-        <div class="informaçao">
-          <div class="nome">Naruto</div>
-          <div class="resumo">
-            Um jovem ninja que constantemente procura por reconhecimento e sonha
-            em se tornar Hokage, o líder máximo e mais poderoso de sua vila.
-          </div>
-          <a href=""
-            ><div class="button">
-              <img src="../Img/icones/play.png" height="20px" width="20px" />
-              Assistir
-            </div></a
-          >
-        </div>
-      </div>
-    </div>
-
-    <div class="filmes">
-      <!-- Parte de Filmes -->
-      <div class="container">
-        <h2>Lançamentos</h2>
-        <div class="lancamentos">
-          <button class="mover" onclick="esquerda()"><</button>
-          <a href=""
-            ><img src="../Img/Capas/creed III.png" width="120px" height="180px"
-          /></a>
-          <a href=""
-            ><img
-              src="../Img/Capas/gato de botas.png"
-              width="120px"
-              height="180px"
-          /></a>
-          <a href=""
-            ><img src="../Img/Capas/avatar.png" width="120px" height="180px"
-          /></a>
-          <a href=""
-            ><img
-              src="../Img/Capas/john wick 4.png"
-              width="120px"
-              height="180px"
-          /></a>
-          <a href=""
-            ><img src="../Img/Capas/shazan.png" width="120px" height="180px"
-          /></a>
-          <a href=""
-            ><img
-              src="../Img/Capas/esquema de risco.png"
-              width="120px"
-              height="180px"
-          /></a>
-          <a href=""
-            ><img src="../Img/Capas/minions 2.png" width="120px" height="180px"
-          /></a>
-          <a href=""
-            ><img
-              src="../Img/Capas/uma noite no museu o retorno de kahmurah.png"
-              width="120px"
-              height="180px"
-          /></a>
-          <a href=""
-            ><img
-              src="../Img/Capas/adao negro.png"
-              width="120px"
-              height="180px"
-          /></a>
-          <a href=""
-            ><img
-              src="../Img/Capas/a mulher rei.png"
-              width="120px"
-              height="180px"
-          /></a>
-          <button class="mover" onclick="direita()">></button>
         </div>
 
-        <h2>Top 10</h2>
-        <div class="top10">
-          <button class="mover" onclick="esquerda()"><</button>
-          <a href=""
-            ><img src="../Img/Capas/avatar.png" width="120px" height="180px"
-          /></a>
-          <a href=""
-            ><img src="../Img/Capas/creed III.png" width="120px" height="180px"
-          /></a>
-          <a href=""
-            ><img
-              src="../Img/Capas/gato de botas.png"
-              width="120px"
-              height="180px"
-          /></a>
-          <a href=""
-            ><img
-              src="../Img/Capas/homem aranha de volta ao lar.png"
-              width="120px"
-              height="180px"
-          /></a>
-          <a href=""
-            ><img
-              src="../Img/Capas/homem de ferro 3.png"
-              width="120px"
-              height="180px"
-          /></a>
-          <a href=""
-            ><img
-              src="../Img/Capas/john wick 4.png"
-              width="120px"
-              height="180px"
-          /></a>
-          <a href=""
-            ><img
-              src="../Img/Capas/kingsman a origem.png"
-              width="120px"
-              height="180px"
-          /></a>
-          <a href=""
-            ><img src="../Img/Capas/minions 2.png" width="120px" height="180px"
-          /></a>
-          <a href=""
-            ><img
-              src="../Img/Capas/wifi ralph.png"
-              width="120px"
-              height="180px"
-          /></a>
-          <a href=""
-            ><img
-              src="../Img/Capas/vingadores guerra infinita.png"
-              width="120px"
-              height="180px"
-          /></a>
-          <button class="mover" onclick="direita()">></button>
+        <div class="filmes">
+            <!-- Parte de Filmes -->
+            <div class="container">
+                <h2>Lançamentos</h2>
+                <div class="lancamentos">
+                    <button class="mover" onclick="esquerda()"><</button>
+                    <a href=""><img src="../Img/Capas/creed III.png" width="120px" height="180px" /></a>
+                    <a href=""><img src="../Img/Capas/gato de botas.png" width="120px" height="180px" /></a>
+                    <a href=""><img src="../Img/Capas/avatar.png" width="120px" height="180px" /></a>
+                    <a href=""><img src="../Img/Capas/john wick 4.png" width="120px" height="180px" /></a>
+                    <a href=""><img src="../Img/Capas/shazan.png" width="120px" height="180px" /></a>
+                    <a href=""><img src="../Img/Capas/esquema de risco.png" width="120px" height="180px" /></a>
+                    <a href=""><img src="../Img/Capas/minions 2.png" width="120px" height="180px" /></a>
+                    <a href=""><img src="../Img/Capas/uma noite no museu o retorno de kahmurah.png" width="120px" height="180px" /></a>
+                    <a href=""><img src="../Img/Capas/adao negro.png" width="120px" height="180px" /></a>
+                    <a href=""><img src="../Img/Capas/a mulher rei.png" width="120px" height="180px" /></a>
+                    <button class="mover" onclick="direita()">></button>
+                </div>
+
+                <h2>Top 10</h2>
+                <div class="top10">
+                    <button class="mover" onclick="esquerda()"><</button>
+                    <a href=""><img src="../Img/Capas/avatar.png" width="120px" height="180px" /></a>
+                    <a href=""><img src="../Img/Capas/creed III.png" width="120px" height="180px" /></a>
+                    <a href=""><img src="../Img/Capas/gato de botas.png" width="120px" height="180px" /></a>
+                    <a href=""><img src="../Img/Capas/homem aranha de volta ao lar.png" width="120px" height="180px" /></a>
+                    <a href=""><img src="../Img/Capas/homem de ferro 3.png" width="120px" height="180px" /></a>
+                    <a href=""><img src="../Img/Capas/john wick 4.png" width="120px" height="180px" /></a>
+                    <a href=""><img src="../Img/Capas/kingsman a origem.png" width="120px" height="180px" /></a>
+                    <a href=""><img src="../Img/Capas/minions 2.png" width="120px" height="180px" /></a>
+                    <a href=""><img src="../Img/Capas/wifi ralph.png" width="120px" height="180px" /></a>
+                    <a href=""><img src="../Img/Capas/vingadores guerra infinita.png" width="120px" height="180px" /></a>
+                    <button class="mover" onclick="direita()">></button>
+                </div>
+
+                <h2>Recomendado</h2>
+                <div class="recomendado">
+                    <button class="mover" onclick="esquerda()"><</button>
+                    <a href=""><img src="../Img/Capas/carros 3.png" width="120px" height="180px" /></a>
+                    <a href=""><img src="../Img/Capas/chicago med.png" width="120px" height="180px" /></a>
+                    <a href=""><img src="../Img/Capas/kung fu panda 3.png" width="120px" height="180px" /></a>
+                    <a href=""><img src="../Img/Capas/meu malvado favorito 2.png" width="120px" height="180px" /></a>
+                    <a href=""><img src="../Img/Capas/operação big hero.png" width="120px" height="180px" /></a>
+                    <a href=""><img src="../Img/Capas/peaky blinders.png" width="120px" height="180px" /></a>
+                    <a href=""><img src="../Img/Capas/the flash.png" width="120px" height="180px" /></a>
+                    <a href=""><img src="../Img/Capas/the last of us.png" width="120px" height="180px" /></a>
+                    <a href=""><img src="../Img/Capas/eu sou a lenda.png" width="120px" height="180px" /></a>
+                    <a href=""><img src="../Img/Capas/the witcher.png" width="120px" height="180px" /></a>
+                    <button class="mover" onclick="direita()">></button>
+                </div>
+            </div>
+            <!-- Fim da Parte dos Filmes -->
         </div>
 
-        <h2>Recomendado</h2>
-        <div class="recomendado">
-          <button class="mover" onclick="esquerda()"><</button>
-          <a href=""
-            ><img src="../Img/Capas/carros 3.png" width="120px" height="180px"
-          /></a>
-          <a href=""
-            ><img
-              src="../Img/Capas/chicago med.png"
-              width="120px"
-              height="180px"
-          /></a>
-          <a href=""
-            ><img
-              src="../Img/Capas/kung fu panda 3.png"
-              width="120px"
-              height="180px"
-          /></a>
-          <a href=""
-            ><img
-              src="../Img/Capas/meu malvado favorito 2.png"
-              width="120px"
-              height="180px"
-          /></a>
-          <a href=""
-            ><img
-              src="../Img/Capas/operação big hero.png"
-              width="120px"
-              height="180px"
-          /></a>
-          <a href=""
-            ><img
-              src="../Img/Capas/peaky blinders.png"
-              width="120px"
-              height="180px"
-          /></a>
-          <a href=""
-            ><img src="../Img/Capas/the flash.png" width="120px" height="180px"
-          /></a>
-          <a href=""
-            ><img
-              src="../Img/Capas/the last of us.png"
-              width="120px"
-              height="180px"
-          /></a>
-          <a href=""
-            ><img
-              src="../Img/Capas/eu sou a lenda.png"
-              width="120px"
-              height="180px"
-          /></a>
-          <a href=""
-            ><img
-              src="../Img/Capas/the witcher.png"
-              width="120px"
-              height="180px"
-          /></a>
-          <button class="mover" onclick="direita()">></button>
+        <div class="footer">
+            <!-- Barra Baixo -->
+            <div class="container">
+                <div class="redes">Siga-nos nas Redes Sociais</div>
+                <div class="redesocial">
+                    <a href="https://github.com/TheoMesquita/Shinemax">
+                        <img src="../Img/icones/git.png" width="30px" />
+                    </a>
+                    <a href="https://web.facebook.com/theofilo.mesquita.5">
+                        <img src="../Img/icones/facebook.png" width="30px" />
+                    </a>
+                    <a href="https://www.instagram.com/010_theo/">
+                        <img src="../Img/icones/instagram.png" width="30px" />
+                    </a>
+                    <a href="">
+                        <img src="../Img/icones/youtube.png" width="30px" />
+                    </a>
+                </div>
+                <div class="contato">Algum problema? Contate-nos</div>
+                <div class="contatos">
+                    <li>E-mail: theomesquita@hotmail.com</li>
+                    <li>Celular: (11) 98677-3099</li>
+                </div>
+                <div class="copy">&copy; Copyright Todos os direitos reservados</div>
+            </div>
+            <!-- Fim da Barra -->
         </div>
-      </div>
-      <!-- Fim da Parte dos Filmes -->
-    </div>
-
-    <div class="footer">
-      <!-- Barra Baixo -->
-      <div class="container">
-        <div class="redes">Siga-nos nas Redes Sociais</div>
-        <div class="redesocial">
-          <a href="https://github.com/TheoMesquita/Shinemax">
-            <img src="../Img/icones/git.png" width="30px" />
-          </a>
-          <a href="https://web.facebook.com/theofilo.mesquita.5">
-            <img src="../Img/icones/facebook.png" width="30px" />
-          </a>
-          <a href="https://www.instagram.com/010_theo/">
-            <img src="../Img/icones/instagram.png" width="30px" />
-          </a>
-          <a href="">
-            <img src="../Img/icones/youtube.png" width="30px" />
-          </a>
-        </div>
-        <div class="contato">Algum problema? Contate-nos</div>
-        <div class="contatos">
-          <li>E-mail: theomesquita@hotmail.com</li>
-          <li>Celular: (11) 98677-3099</li>
-        </div>
-        <div class="copy">&copy; Copyright Todos os direitos reservados</div>
-      </div>
-      <!-- Fim da Barra -->
-    </div>
-    <script src="../JS/Shinemax.js"></script>
-  </body>
+        <script src="../JS/Shinemax.js"></script>
+    </body>
 </html>
