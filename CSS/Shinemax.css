@@ -1,14 +1,17 @@
 body {
     margin: 0;
+    padding: 0;
+    border: 0;
 }
 
 /* Carrossel */
 
 .carrossel {
-    box-shadow: 2px 2px 4px black;
+    /* box-shadow: 2px 2px 4px black; */
     overflow: hidden;
-    height: 700px;
+    /* height: 700px; */
     width: 100%;
+    z-index: 0;
     position: absolute;
 }
 .container {
@@ -66,29 +69,31 @@ a {
 
 /* Barra de Pesquisa*/
 
-#pesquisa{
-  width: 83%;
-  display: flex;
-  justify-content: end;
-  position: absolute;
+#pesquisa {
+    /* width: 50vw; */
+    /* height: 10px; */
+    display: flex;
+    justify-content: end;
+    position: absolute;
+    /* right: 50%; */
 }
 .buttonpesquisar {
-  width: 450px;
-  height: 40px;
-  background-color: #181616;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: 15px;
-  padding: 5px;
+    width: 450px;
+    height: 40px;
+    background-color: #181616;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 15px;
+    padding: 5px;
 }
 
 .inputpesquisa {
-  background-color: #181616;
-  border: transparent;
-  padding-left: 10px;
-  margin-left: 10px;
-  width: 380px;
+    background-color: #181616;
+    border: transparent;
+    padding-left: 10px;
+    margin-left: 10px;
+    width: 380px;
 }
 
 /* Menu Login */
@@ -115,7 +120,7 @@ a {
     background-color: #272525;
     border-radius: 5px;
     padding: 15px;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
 }
 .usuario .menu-login a:hover {
     background-color: white;
@@ -170,6 +175,9 @@ a {
 .carrossel-conteudo {
     width: 100%;
     height: 100%;
+    background-color: #0d0d0d;
+    position: relative;
+    top: 5vw;
 }
 .buttons {
     display: flex;
