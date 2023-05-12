@@ -248,6 +248,21 @@ a {
     cursor: pointer;
 }
 
+/* Gráfico */
+.grafico{
+    height: 700px;
+    display: flex;
+    background-color: #0d0d0d;
+}
+.avaliacoes{
+    width: 80%;
+    height: 500px;
+    display: flex;
+    margin: auto;
+    align-items: center;
+    justify-content: center;
+}
+
 /* Footer */
 
 .footer {
@@ -285,4 +300,13 @@ a {
 .copy {
     display: flex;
     justify-content: center;
+}
+.topo{
+    position: absolute;
+    right: 0.1%;
+    background-color: rgb(96 90 90 / 50%);
+    border: none;
+    bottom: 3%;
+    border-radius: 4px;
+    padding: 15px 32px;
 }
