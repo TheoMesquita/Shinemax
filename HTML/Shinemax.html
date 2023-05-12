@@ -24,13 +24,15 @@
             <!-- Barra de cima -->
             <div class="container">
                 <div class="barracima">
-                    <div id="ocultartitulo" class="titulo">
-                        <img src="../Img/icones/logo.png" height="45px" />
-                        <div class="inicial">S</div>
-                        hine
-                        <div class="inicial2">M</div>
-                        ax
-                    </div>
+                    <a href="Shinemax.html">
+                        <div id="ocultartitulo" class="titulo">
+                            <img src="../Img/icones/logo.png" height="45px" />
+                            <div class="inicial">S</div>
+                            hine
+                            <div class="inicial2">M</div>
+                            ax
+                        </div>
+                    </a>
                     <ul id="ocultar" class="barra">
                         <li>Home</li>
                         <li><a href="">Filmes</a></li>
@@ -78,8 +80,8 @@
             <!-- Filmes -->
             <div class="filmes">
             <div class="buttons">
-                <div class="before"><div class="arrow-left"></div></div>
-                <div class="container">
+                <button class="buttonrolar" onclick="moverEsquerda()"><div class="before"><div class="arrow-left"></div></div></button>
+                <div class="container" id="scroll">
                     <h4 class="title">Filmes Populares</h4>
                     <div class="corpo" id="mylist">
                         <div class="imgs">
@@ -132,12 +134,12 @@
                         </div>
                     </div>
                 </div>
-                <div class="after"><div class="arrow-right"></div></div>
+                <button class="buttonrolar" onclick="moverDireita()"><div class="after"><div class="arrow-right"></div></div></button>
             </div>
 
             <div class="buttons">
-                <div class="before"><div class="arrow-left"></div></div>
-                <div class="container">
+                <button class="buttonrolar" onclick="moverEsquerda2()"><div class="before"><div class="arrow-left"></div></div></button>
+                <div class="container" id="scroll2">
                     <h4 class="title">Tops da Semana</h4>
                     <div class="corpo" id="mylist">
                         <div class="imgs">
@@ -182,12 +184,12 @@
                         </div>
                     </div>
                 </div>
-                <div class="after"><div class="arrow-right"></div></div>
+                <button class="buttonrolar" onclick="moverDireita2()"><div class="after"><div class="arrow-right"></div></div></button>
             </div>
 
             <div class="buttons">
-                <div class="before"><div class="arrow-left"></div></div>
-                <div class="container">
+                <button class="buttonrolar" onclick="moverEsquerda3()"><div class="before"><div class="arrow-left"></div></div></button>
+                <div class="container" id="scroll3">
                     <h4 class="title">Recomendados</h4>
                     <div class="corpo" id="mylist">
                         <div class="imgs">
@@ -232,7 +234,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="after"><div class="arrow-right"></div></div>
+                <button class="buttonrolar" onclick="moverDireita3()"><div class="after"><div class="arrow-right"></div></div></button>
             </div>
         </div>
         </div>
@@ -243,7 +245,12 @@
             <div class="avaliacoes">
                 <canvas id="avaliacoes" style="display: block; box-sizing: border-box; height: 500px; width: 500px;"></canvas>
               </div>
-              <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+              <div class="avaliar">
+                  <button class="buttonlike" onclick="like()">Gostei</button>
+                  <button class="buttonlike" onclick="deslike()">Não Gostei</button>
+                  <button class="buttonlike" onclick="adicionar()">Ainda Não Sei</button>
+                </div>
+                <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
         </div>
 
         <div class="footer">
