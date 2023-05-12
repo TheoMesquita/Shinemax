@@ -1,0 +1,14 @@
+.nome{
+    display: flex;
+    flex-direction: column;
+    height: 60px;
+    font-size: 20px;
+    justify-content: space-between;
+}
+.confirmar_senha{
+    display: flex;
+    flex-direction: column;
+    height: 60px;
+    font-size: 18px;
+    justify-content: space-between;
+}

@@ -7,6 +7,7 @@
     <title> Entrar </title>
     <link rel="stylesheet" href="../CSS/Shinemax.css">
     <link rel="stylesheet" href="../CSS/Login.css">
+    <link rel="stylesheet" href="../CSS/Cadastro.css">
 </head>
 <body>
     <div class="carrossel">
@@ -42,8 +43,8 @@
                         <span class="icone-login">
                             <img src="../Img/icones/usuario.png" width="70px" />
                             <div class="menu-login">
-                                Login
-                                <a href="Cadastro.html"> Cadastro </a>
+                                <a href="Login.html"> Login </a>
+                                Cadastro
                                 <a href="Configuracões.html"> Configurações </a>
                             </div>
                         </span>
@@ -60,6 +61,10 @@
           </div>
 
           <div class="credenciais">
+            <div class="nome">
+                Nome:
+                <input id="nome">
+            </div>
             <div class="email">
                 E-mail:
                 <input id="email">
@@ -68,7 +73,11 @@
                 Senha:
                 <input type="password" id="senha">
             </div>
-            <button onclick="" class="button">Entrar</button>
+            <div class="confirmar_senha">
+                Confirmar Senha:
+                <input type="password" id="ConfirmarSenha">
+            </div>
+            <button onclick="" class="button">Cadastrar</button>
           </div>
     <script src="../JS/Shinemax.js" defer></script>
 </body>
