@@ -1,11 +1,11 @@
-.nome{
+.nome {
     display: flex;
     flex-direction: column;
     height: 60px;
     font-size: 20px;
     justify-content: space-between;
 }
-.confirmar_senha{
+.confirmar_senha {
     display: flex;
     flex-direction: column;
     height: 60px;

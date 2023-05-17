@@ -1,4 +1,4 @@
-.credenciais{
+.credenciais {
     width: 300px;
     height: 400px;
     background-color: #2f2a2a;
@@ -12,26 +12,26 @@
     margin-top: 5%;
     border-radius: 10px;
 }
-.credenciais input{
+.credenciais input {
     border-radius: 10px;
     border: 0;
     height: 20px;
 }
-.email{
+.email {
     display: flex;
     flex-direction: column;
     height: 60px;
     font-size: 20px;
     justify-content: space-between;
 }
-.senha{
+.senha {
     display: flex;
     flex-direction: column;
     height: 60px;
     font-size: 20px;
     justify-content: space-between;
 }
-.button:hover{
+.button:hover {
     background-color: rgb(165, 27, 27);
     cursor: pointer;
     color: black;

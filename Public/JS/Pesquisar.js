@@ -2,7 +2,7 @@
 
 function mostrar(el) {
     var display = document.getElementById(el).style.display;
-    if(display == "none"){
+    if (display == "none") {
 
         document.getElementById(el).style.display = 'flex'
         document.getElementById(el).className = 'pesquisa'
