@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Entrar</title>
+        <link rel="stylesheet" href="../CSS/Shinemax.css" />
+        <link rel="stylesheet" href="../CSS/Login.css" />
+        <link rel="stylesheet" href="../CSS/Cadastro.css" />
+    </head>
+    <body>
+        <div class="carrossel">
+            <div class="container" id="img">
+                <img src="../Img/fundos/header.png" width="100%" />
+                <img src="../Img/fundos/header1.png" width="100%" />
+                <img src="../Img/fundos/header2.png" width="100%" />
+                <img src="../Img/fundos/header3.png" width="100%" />
+                <img src="../Img/fundos/header4.png" width="100%" />
+            </div>
+        </div>
+
+        <div class="fundo">
+            <!-- Barra de cima -->
+            <div class="container">
+                <div class="barracima">
+                    <a href="../Shinemax.html">
+                        <div id="ocultartitulo" class="titulo">
+                            <img src="../Img/icones/logo.png" height="45px" />
+                            <div class="inicial">S</div>
+                            hine
+                            <div class="inicial2">M</div>
+                            ax
+                        </div>
+                    </a>
+                    <ul id="ocultar" class="barra">
+                        <li><a href="../Shinemax.html">Home</a></li>
+                        <li><a href="Filmes.html">Filmes</a></li>
+                        <li><a href="Series.html">Séries</a></li>
+                        <li><a href="Animes.html">Animes</a></li>
+                        <div>
+                            <img onclick="mostrar('pesquisa')" src="../Img/icones/pesquisa.png" height="30px" width="30px" />
+                        </div>
+                        <div class="usuario">
+                            <span class="icone-login">
+                                <img src="../Img/icones/usuario.png" width="70px" />
+                                <div class="menu-login">
+                                    <a href="Login.html"> Login </a>
+                                    Cadastro
+                                    <a href="Configuracões.html"> Configurações </a>
+                                </div>
+                            </span>
+                        </div>
+                    </ul>
+                </div>
+                <!-- Fim da Barra-->
+            </div>
+            <div id="pesquisa" style="display: none">
+                <div class="buttonpesquisar">
+                    <img src="../Img/icones/pesquisa.png" width="20px" alt="Buscar" />
+                    <input type="search" class="inputpesquisa" placeholder="Buscar..." />
+                </div>
+            </div>
+
+            <div class="credenciais">
+                <div class="nome">
+                    Nome:
+                    <input id="nome" />
+                </div>
+                <div class="email">
+                    E-mail:
+                    <input id="email" />
+                </div>
+                <div class="senha">
+                    Senha:
+                    <input type="password" id="senha" />
+                </div>
+                <div class="confirmar_senha">
+                    Confirmar Senha:
+                    <input type="password" id="ConfirmarSenha" />
+                </div>
+                <button onclick="" class="button">Cadastrar</button>
+            </div>
+        </div>
+        <script src="../JS/Shinemax.js" defer></script>
+    </body>
+</html>

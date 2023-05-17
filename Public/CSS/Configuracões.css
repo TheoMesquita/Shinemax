@@ -55,3 +55,8 @@
     height: 120px;
     color: white;
 }
+.icone-login li{
+    list-style: none;
+    color: white;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
