@@ -8,6 +8,13 @@ series varchar(45),
 animes varchar(45)
 );
 
+create table usuario(
+idUsuario int primary key auto_increment,
+nome varchar(45),
+idade int,
+genero char(1), constraint chkGenero check (genero in ('m','f'))
+);
+
 create table conta(
 idConta int primary key auto_increment,
 apelido varchar(45),
@@ -16,18 +23,10 @@ senha varchar(45),
 Tipo varchar(45),
 constraint chkTipo check (Tipo in('administrador','normal')),
 fkShineMax int,
-constraint fkShineMax foreign key (fkShineMax) references shinemax(idShineMax)
+constraint fkShineMax foreign key (fkShineMax) references shinemax(idShineMax),
+fkUsuario int,
+constraint fkUsuario foreign key (fkUsuario) references usuario(idUsuario)
 );
-
-create table usuario(
-idUsuario int primary key auto_increment,
-nome varchar(45),
-sobrenome varchar(45),
-idade int,
-genero char(1), constraint chkGenero check (genero in ('m','f'))
-);
-
-alter table conta add column fkUsuario int, add constraint fkUsuario foreign key (fkUsuario) references usuario(idUsuario);
 
 insert into shinemax values
 	(null, 'Creed III', 'Peaky Blinders', ''),
