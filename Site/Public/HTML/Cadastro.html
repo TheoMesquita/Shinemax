@@ -1,87 +1,234 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-    <head>
-        <meta charset="UTF-8" />
-        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Entrar</title>
-        <link rel="stylesheet" href="../CSS/Shinemax.css" />
-        <link rel="stylesheet" href="../CSS/Login.css" />
-        <link rel="stylesheet" href="../CSS/Cadastro.css" />
-    </head>
-    <body>
-        <div class="carrossel">
-            <div class="container" id="img">
-                <img src="../Img/fundos/header.png" width="100%" />
-                <img src="../Img/fundos/header1.png" width="100%" />
-                <img src="../Img/fundos/header2.png" width="100%" />
-                <img src="../Img/fundos/header3.png" width="100%" />
-                <img src="../Img/fundos/header4.png" width="100%" />
-            </div>
-        </div>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Entrar</title>
+    <link rel="stylesheet" href="../CSS/Shinemax.css" />
+    <link rel="stylesheet" href="../CSS/Login.css" />
+    <link rel="stylesheet" href="../CSS/Cadastro.css" />
+  </head>
+  <body>
+    <div class="carrossel">
+      <div class="container" id="img">
+        <img src="../Img/fundos/header.png" width="100%" />
+        <img src="../Img/fundos/header1.png" width="100%" />
+        <img src="../Img/fundos/header2.png" width="100%" />
+        <img src="../Img/fundos/header3.png" width="100%" />
+        <img src="../Img/fundos/header4.png" width="100%" />
+      </div>
+    </div>
 
-        <div class="fundo">
-            <!-- Barra de cima -->
-            <div class="container">
-                <div class="barracima">
-                    <a href="../Shinemax.html">
-                        <div id="ocultartitulo" class="titulo">
-                            <img src="../Img/icones/logo.png" height="45px" />
-                            <div class="inicial">S</div>
-                            hine
-                            <div class="inicial2">M</div>
-                            ax
-                        </div>
-                    </a>
-                    <ul id="ocultar" class="barra">
-                        <li><a href="../Shinemax.html">Home</a></li>
-                        <li><a href="Filmes.html">Filmes</a></li>
-                        <li><a href="Series.html">Séries</a></li>
-                        <li><a href="Animes.html">Animes</a></li>
-                        <div>
-                            <img onclick="mostrar('pesquisa')" src="../Img/icones/pesquisa.png" height="30px" width="30px" />
-                        </div>
-                        <div class="usuario">
-                            <span class="icone-login">
-                                <img src="../Img/icones/usuario.png" width="70px" />
-                                <div class="menu-login">
-                                    <a href="Login.html"> Login </a>
-                                    Cadastro
-                                    <a href="Configuracões.html"> Configurações </a>
-                                </div>
-                            </span>
-                        </div>
-                    </ul>
-                </div>
-                <!-- Fim da Barra-->
+    <div class="fundo">
+      <!-- Barra de cima -->
+      <div class="container">
+        <div class="barracima">
+          <a href="../Shinemax.html">
+            <div id="ocultartitulo" class="titulo">
+              <img src="../Img/icones/logo.png" height="45px" />
+              <div class="inicial">S</div>
+              hine
+              <div class="inicial2">M</div>
+              ax
             </div>
-            <div id="pesquisa" style="display: none">
-                <div class="buttonpesquisar">
-                    <img src="../Img/icones/pesquisa.png" width="20px" alt="Buscar" />
-                    <input type="search" class="inputpesquisa" placeholder="Buscar..." />
-                </div>
+          </a>
+          <ul id="ocultar" class="barra">
+            <li><a href="../Shinemax.html">Home</a></li>
+            <li><a href="Filmes.html">Filmes</a></li>
+            <li><a href="Series.html">Séries</a></li>
+            <li><a href="Animes.html">Animes</a></li>
+            <div>
+              <img
+                onclick="mostrar('pesquisa')"
+                src="../Img/icones/pesquisa.png"
+                height="30px"
+                width="30px"
+              />
             </div>
-
-            <div class="credenciais">
-                <div class="nome">
-                    Nome:
-                    <input id="nome" />
+            <div class="usuario">
+              <span class="icone-login">
+                <img src="../Img/icones/usuario.png" width="70px" />
+                <div class="menu-login">
+                  <a href="Login.html"> Login </a>
+                  Cadastro
+                  <a href="Configuracões.html"> Configurações </a>
                 </div>
-                <div class="email">
-                    E-mail:
-                    <input id="email" />
-                </div>
-                <div class="senha">
-                    Senha:
-                    <input type="password" id="senha" />
-                </div>
-                <div class="confirmar_senha">
-                    Confirmar Senha:
-                    <input type="password" id="ConfirmarSenha" />
-                </div>
-                <button onclick="" class="button">Cadastrar</button>
+              </span>
             </div>
+          </ul>
         </div>
-        <script src="../JS/Shinemax.js" defer></script>
-    </body>
+        <!-- Fim da Barra-->
+      </div>
+      <div id="pesquisa" style="display: none">
+        <div class="buttonpesquisar">
+          <img src="../Img/icones/pesquisa.png" width="20px" alt="Buscar" />
+          <input type="search" class="inputpesquisa" placeholder="Buscar..." />
+        </div>
+      </div>
+
+      <div class="credenciais">
+        <div id="nome">
+          Nome
+          <input id="nome_input" placeholder="Primeiro Nome" />
+        </div>
+        <div id="sobrenome">
+          sobrenome
+          <input id="sobrenome_input" placeholder="Ultimo Nome" />
+        </div>
+        <div id="apelido">
+          apelido
+          <input id="apelido_input" placeholder="Quero ser chamado de:" />
+        </div>
+        <div id="idade">
+          idade
+          <input id="idade_input" placeholder="Quantos Anos Você Tem?" />
+        </div>
+        <div id="nacionalidade">
+          nacionalidade
+          <select id="pais_select">
+            <option value="">Selecione</option>
+            <option value="br">Brasil</option>
+            <option value="eua">Estados Unidos</option>
+          </select>
+        </div>
+        <div id="genero">
+          genero
+          <select id="genero_select">
+            <option value="">Selecione</option>
+            <option value="Masculino">Masculino</option>
+            <option value="Feminino">Feminino</option>
+          </select>
+        </div>
+        <div id="email">
+          E-mail:
+          <input id="email_input" placeholder="email@dominio.com" />
+        </div>
+        <div id="senha">
+          Senha:
+          <input id="senha_input" type="password" placeholder="********" />
+        </div>
+        <div id="confirmar_senha">
+          Confirmar Senha:
+          <input
+            id="ConfirmarSenha_input"
+            type="password"
+            placeholder="********"
+          />
+        </div>
+        <button onclick="" class="button">Cadastrar</button>
+      </div>
+    </div>
+    <script src="../JS/Shinemax.js" defer></script>
+  </body>
 </html>
+<script>
+  function cadastrar() {
+    aguardar();
+
+    //Recupere o valor da nova input pelo nome do id
+    // Agora vá para o método fetch logo abaixo
+    var nomeVar = nome_input.value;
+    var sobrenomeVar = sobrenome_input.value;
+    var apelidoVar = apelido_input.value;
+    var idadeVar = idade_input.value;
+    var paisVar = pais_select.value;
+    var generoVar = genero_select.value;
+    var emailVar = email_input.value;
+    var senhaVar = senha_input.value;
+    var confirmacaoSenhaVar = confirmarSenha_input.value;
+
+    if (
+      nomeVar == "" ||
+      sobrenomeVar == "" ||
+      apelidoVar == "" ||
+      idadeVar == "" ||
+      paisVar == "" ||
+      generoVar == "" ||
+      emailVar == "" ||
+      senhaVar == "" ||
+      confirmacaoSenhaVar == ""
+    ) {
+      cardErro.style.display = "block";
+      mensagem_erro.innerHTML = "Preencha todos os campos!";
+      nome.style.borderColor = "#DC3545";
+      sobrenome.style.borderColor = "#DC3545";
+      apelido.style.borderColor = "#DC3545";
+      idade.style.borderColor = "#DC3545";
+      nacionalidade.style.borderColor = "#DC3545";
+      genero.style.borderColor = "#DC3545";
+      email.style.borderColor = "#DC3545";
+      senha.style.borderColor = "#DC3545";
+      confirmar_senha.style.borderColor = "#DC3545";
+
+      finalizarAguardar();
+      return false;
+    } else if (email.indexOf("@") >= 0 && email.indexOf(".") >= 0) {
+      cardErro.style.display = "block";
+      mensagem_erro.innerHTML = `Insira um e-mail válido!`;
+      email.style.borderColor = "#DC3545";
+
+      finalizarAguardar();
+      return false;
+    } else if (senhaVar != confirmacaoSenhaVar) {
+      cardErro.style.display = "block";
+      mensagem_erro.innerHTML = `As senhas não coicidem!`;
+      senha.style.borderColor = "#DC3545";
+      confirmar_senha.style.borderColor = "#DC3545";
+
+      finalizarAguardar();
+      return false;
+    } else {
+      setInterval(sumirMensagem, 5000);
+    }
+
+    // Enviando o valor da nova input
+    fetch("/usuarios/cadastrar", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        // crie um atributo que recebe o valor recuperado aqui
+        // Agora vá para o arquivo routes/usuario.js
+        nomeServer: nomeVar,
+        sobrenomeServer: sobrenomeVar,
+        apelidoServer: apelidoVar,
+        idadeServer: idadeVar,
+        paisServer: paisVar,
+        generoServer: generoVar,
+        emailServer: emailVar,
+        senhaServer: senhaVar,
+      }),
+    })
+      .then(function (resposta) {
+        console.log("resposta: ", resposta);
+
+        if (resposta.ok) {
+          cardErro.style.display = "block";
+
+          mensagem_erro.innerHTML =
+            "Cadastro realizado com sucesso! Redirecionando para tela de Login...";
+
+          setTimeout(() => {
+            window.location = "login.html";
+          }, "2000");
+
+          limparFormulario();
+          finalizarAguardar();
+        } else {
+          throw "Houve um erro ao tentar realizar o cadastro!";
+        }
+      })
+      .catch(function (resposta) {
+        console.log(`#ERRO: ${resposta}`);
+        finalizarAguardar();
+      });
+
+    return false;
+  }
+
+  function sumirMensagem() {
+    cardErro.style.display = "none";
+  }
+</script>

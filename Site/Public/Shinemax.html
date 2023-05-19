@@ -1,287 +1,343 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-    <head>
-        <meta charset="UTF-8" />
-        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>ShineMax</title>
-        <link rel="stylesheet" href="CSS/Shinemax.css" />
-    </head>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ShineMax</title>
+    <link rel="stylesheet" href="CSS/Shinemax.css" />
+  </head>
 
-    <body>
-        <a name="topo"></a>
-        <div class="carrossel">
-            <div class="container" id="img">
-                <img src="Img/fundos/header.png" width="100%" />
-                <img src="Img/fundos/header1.png" width="100%" />
-                <img src="Img/fundos/header2.png" width="100%" />
-                <img src="Img/fundos/header3.png" width="100%" />
-                <img src="Img/fundos/header4.png" width="100%" />
+  <body>
+    <a name="topo"></a>
+    <div class="carrossel">
+      <div class="container" id="img">
+        <img src="Img/fundos/header.png" width="100%" />
+        <img src="Img/fundos/header1.png" width="100%" />
+        <img src="Img/fundos/header2.png" width="100%" />
+        <img src="Img/fundos/header3.png" width="100%" />
+        <img src="Img/fundos/header4.png" width="100%" />
+      </div>
+    </div>
+
+    <div class="fundo">
+      <!-- Barra de cima -->
+      <div class="container">
+        <div class="barracima">
+          <a href="Shinemax.html">
+            <div id="ocultartitulo" class="titulo">
+              <img src="Img/icones/logo.png" height="45px" />
+              <div class="inicial">S</div>
+              hine
+              <div class="inicial2">M</div>
+              ax
             </div>
-        </div>
-
-        <div class="fundo">
-            <!-- Barra de cima -->
-            <div class="container">
-                <div class="barracima">
-                    <a href="Shinemax.html">
-                        <div id="ocultartitulo" class="titulo">
-                            <img src="Img/icones/logo.png" height="45px" />
-                            <div class="inicial">S</div>
-                            hine
-                            <div class="inicial2">M</div>
-                            ax
-                        </div>
-                    </a>
-                    <ul id="ocultar" class="barra">
-                        <li>Home</li>
-                        <li><a href="HTML/Filmes.html">Filmes</a></li>
-                        <li><a href="HTML/Series.html">Séries</a></li>
-                        <li><a href="HTML/Animes.html">Animes</a></li>
-                        <div>
-                            <img onclick="mostrar('pesquisa')" src="Img/icones/pesquisa.png" height="30px" width="30px" />
-                        </div>
-                        <div class="usuario">
-                            <span class="icone-login">
-                                <img src="Img/icones/usuario.png" width="70px" />
-                                <div class="menu-login">
-                                    <a href="HTML/Login.html"> Login </a>
-                                    <a href="HTML/Cadastro.html"> Cadastro </a>
-                                    <a href="HTML/Configuracões.html"> Configurações </a>
-                                </div>
-                            </span>
-                        </div>
-                    </ul>
+          </a>
+          <ul id="ocultar" class="barra">
+            <li>Home</li>
+            <li><a href="HTML/Filmes.html">Filmes</a></li>
+            <li><a href="HTML/Series.html">Séries</a></li>
+            <li><a href="HTML/Animes.html">Animes</a></li>
+            <div>
+              <img
+                onclick="mostrar('pesquisa')"
+                src="Img/icones/pesquisa.png"
+                height="30px"
+                width="30px"
+              />
+            </div>
+            <div class="usuario">
+              <span class="icone-login">
+                <img src="Img/icones/usuario.png" width="70px" />
+                <div class="menu-login">
+                  <a href="HTML/Login.html"> Login </a>
+                  <a href="HTML/Cadastro.html"> Cadastro </a>
+                  <a href="HTML/Configuracões.html"> Configurações </a>
                 </div>
-                <!-- Fim da Barra-->
+              </span>
+            </div>
+          </ul>
+        </div>
+        <!-- Fim da Barra-->
+      </div>
+      <div id="pesquisa" style="display: none">
+        <div class="buttonpesquisar">
+          <img src="Img/icones/pesquisa.png" width="20px" alt="Buscar" />
+          <input type="search" class="inputpesquisa" placeholder="Buscar..." />
+        </div>
+      </div>
+
+      <div class="conteudo">
+        <div class="destaque">Destaques</div>
+        <div class="informaçao">
+          <div class="titulo">Naruto</div>
+          <div class="resumo">
+            Um jovem ninja que constantemente procura por reconhecimento e sonha
+            em se tornar Hokage, o líder máximo e mais poderoso de sua vila.
+          </div>
+          <a href="">
+            <div class="button">
+              <img src="Img/icones/play.png" height="20px" width="20px" />
+              Assistir
+            </div>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <div class="carrossel-conteudo">
+      <!-- Filmes -->
+      <div class="filmes">
+        <div class="buttons">
+          <button class="buttonrolar" onclick="moverEsquerda()">
+            <div class="before">
+              <div class="arrow-left"></div>
+            </div>
+          </button>
+          <div class="container" id="scroll">
+            <h4 class="title">Filmes Populares</h4>
+            <div class="corpo" id="mylist">
+              <div class="imgs">
+                <img class="img" src="Img/Capas/creed III.png" alt="" />
+                <h4 class="text">Creed III</h4>
               </div>
-              <div id="pesquisa" style="display: none;">
-                <div class="buttonpesquisar">
-                  <img src="Img/icones/pesquisa.png" width="20px" alt="Buscar" />
-                  <input type="search" class="inputpesquisa" placeholder="Buscar..." />
-                </div>
+              <div class="imgs">
+                <img class="img" src="Img/Capas/a mulher rei.png" alt="" />
+                <h4 class="text">A Mulher Rei</h4>
               </div>
-
-            <div class="conteudo">
-                <div class="destaque">Destaques</div>
-                <div class="informaçao">
-                    <div class="titulo">Naruto</div>
-                    <div class="resumo">Um jovem ninja que constantemente procura por reconhecimento e sonha em se tornar Hokage, o líder máximo e mais poderoso de sua vila.</div>
-                    <a href=""
-                        ><div class="button">
-                            <img src="Img/icones/play.png" height="20px" width="20px" />
-                            Assistir
-                        </div></a
-                    >
-                </div>
-            </div>
-        </div>
-        <div class="carrossel-conteudo">
-            <!-- Filmes -->
-            <div class="filmes">
-            <div class="buttons">
-                <button class="buttonrolar" onclick="moverEsquerda()"><div class="before"><div class="arrow-left"></div></div></button>
-                <div class="container" id="scroll">
-                    <h4 class="title">Filmes Populares</h4>
-                    <div class="corpo" id="mylist">
-                        <div class="imgs">
-                            <img class="img" src="Img/Capas/creed III.png" alt="" />
-                            <h4 class="text">Creed III</h4>
-                        </div>
-                        <div class="imgs">
-                            <img class="img" src="Img/Capas/a mulher rei.png" alt="" />
-                            <h4 class="text">A Mulher Rei</h4>
-                        </div>
-                        <div class="imgs">
-                            <img class="img" src="Img/Capas/avatar.png" alt="" />
-                            <h4 class="text">Avatar O Caminho da Água</h4>
-                        </div>
-                        <div class="imgs">
-                            <img class="img" src="Img/Capas/esquema de risco.png" alt="" />
-                            <h4 class="text">Esquema de Risco</h4>
-                        </div>
-                        <div class="imgs">
-                            <img class="img" src="Img/Capas/john wick 4.png" alt="" />
-                            <h4 class="text">John Wick 4</h4>
-                        </div>
-                        <div class="imgs">
-                            <img class="img" src="Img/Capas/kingsman a origem.png" alt="" />
-                            <h4 class="text">Kingsman A Origem</h4>
-                        </div>
-                        <div class="imgs">
-                            <img class="img" src="Img/Capas/uma noite no museu o retorno de kahmurah.png" alt="" />
-                            <h4 class="text">Uma Noite no Museu O Retorno de Kahmurah</h4>
-                        </div>
-                        <div class="imgs">
-                            <img class="img" src="Img/Capas/wifi ralph.png" alt="" />
-                            <h4 class="text">Wifi Ralph</h4>
-                        </div>
-                        <div class="imgs">
-                            <img class="img" src="Img/Capas/adao negro.png" alt="" />
-                            <h4 class="text">Adão Negro</h4>
-                        </div>
-                        <div class="imgs">
-                            <img class="img" src="Img/Capas/shazan.png" alt="" />
-                            <h4 class="text">Shazan</h4>
-                        </div>
-                        <div class="imgs">
-                            <img class="img" src="Img/Capas/homem aranha de volta ao lar.png" alt="" />
-                            <h4 class="text">Homem Aranha de Volta ao Lar</h4>
-                        </div>
-                        <div class="imgs">
-                            <img class="img" src="Img/Capas/homem de ferro 3.png" alt="" />
-                            <h4 class="text">Homem de Ferro 3</h4>
-                        </div>
-                    </div>
-                </div>
-                <button class="buttonrolar" onclick="moverDireita()"><div class="after"><div class="arrow-right"></div></div></button>
-            </div>
-
-            <div class="buttons">
-                <button class="buttonrolar" onclick="moverEsquerda2()"><div class="before"><div class="arrow-left"></div></div></button>
-                <div class="container" id="scroll2">
-                    <h4 class="title">Tops da Semana</h4>
-                    <div class="corpo" id="mylist">
-                        <div class="imgs">
-                            <img class="img" src="Img/Capas/kung fu panda 3.png" alt="" />
-                            <h4 class="text">Kung Fu Panda 3</h4>
-                        </div>
-                        <div class="imgs">
-                            <img class="img" src="Img/Capas/kingsman a origem.png" alt="" />
-                            <h4 class="text">Kingsman A Origem</h4>
-                        </div>
-                        <div class="imgs">
-                            <img class="img" src="Img/Capas/uma noite no museu o retorno de kahmurah.png" alt="" />
-                            <h4 class="text">Uma Noite no Museu O Retorno de Kahmurah</h4>
-                        </div>
-                        <div class="imgs">
-                            <img class="img" src="Img/Capas/avatar.png" alt="" />
-                            <h4 class="text">Avatar o Caminho da Água</h4>
-                        </div>
-                        <div class="imgs">
-                            <img class="img" src="Img/Capas/john wick 4.png" alt="" />
-                            <h4 class="text">John Wick 4</h4>
-                        </div>
-                        <div class="imgs">
-                            <img class="img" src="Img/Capas/gato de botas.png" alt="" />
-                            <h4 class="text">Gato de Botas 3</h4>
-                        </div>
-                        <div class="imgs">
-                            <img class="img" src="Img/Capas/a mulher rei.png" alt="" />
-                            <h4 class="text">A Mulher Rei</h4>
-                        </div>
-                        <div class="imgs">
-                            <img class="img" src="Img/Capas/creed III.png" alt="" />
-                            <h4 class="text">Creed III</h4>
-                        </div>
-                        <div class="imgs">
-                            <img class="img" src="Img/Capas/eu sou a lenda.png" alt="" />
-                            <h4 class="text">Eu sou a Lenda</h4>
-                        </div>
-                        <div class="imgs">
-                            <img class="img" src="Img/Capas/carros 3.png" alt="" />
-                            <h4 class="text">Carros 3</h4>
-                        </div>
-                    </div>
-                </div>
-                <button class="buttonrolar" onclick="moverDireita2()"><div class="after"><div class="arrow-right"></div></div></button>
-            </div>
-
-            <div class="buttons">
-                <button class="buttonrolar" onclick="moverEsquerda3()"><div class="before"><div class="arrow-left"></div></div></button>
-                <div class="container" id="scroll3">
-                    <h4 class="title">Recomendados</h4>
-                    <div class="corpo" id="mylist">
-                        <div class="imgs">
-                            <img class="img" src="Img/Capas/peaky blinders.png" alt="" />
-                            <h4 class="text">Peaky Blinders</h4>
-                        </div>
-                        <div class="imgs">
-                            <img class="img" src="Img/Capas/chicago med.png" alt="" />
-                            <h4 class="text">Chicago Med</h4>
-                        </div>
-                        <div class="imgs">
-                            <img class="img" src="Img/Capas/vingadores guerra infinita.png" alt="" />
-                            <h4 class="text">Vingadores Guerra Infinita</h4>
-                        </div>
-                        <div class="imgs">
-                            <img class="img" src="Img/Capas/the witcher.png" alt="" />
-                            <h4 class="text">The Witcher</h4>
-                        </div>
-                        <div class="imgs">
-                            <img class="img" src="Img/Capas/the last of us.png" alt="" />
-                            <h4 class="text">The Last Of Us</h4>
-                        </div>
-                        <div class="imgs">
-                            <img class="img" src="Img/Capas/homem de ferro 3.png" alt="" />
-                            <h4 class="text">Homem de Ferro 3</h4>
-                        </div>
-                        <div class="imgs">
-                            <img class="img" src="Img/Capas/gato de botas.png" alt="" />
-                            <h4 class="text">Gato de Botas</h4>
-                        </div>
-                        <div class="imgs">
-                            <img class="img" src="Img/Capas/the flash.png" alt="" />
-                            <h4 class="text">The Flash</h4>
-                        </div>
-                        <div class="imgs">
-                            <img class="img" src="Img/Capas/operação big hero.png" alt="" />
-                            <h4 class="text">Operação Big Hero</h4>
-                        </div>
-                        <div class="imgs">
-                            <img class="img" src="Img/Capas/minions 2.png" alt="" />
-                            <h4 class="text">minions 2</h4>
-                        </div>
-                    </div>
-                </div>
-                <button class="buttonrolar" onclick="moverDireita3()"><div class="after"><div class="arrow-right"></div></div></button>
-            </div>
-        </div>
-        </div>
-            <!-- Fim da Parte dos Filmes -->
-        </div>
-
-        <div class="grafico">
-            <div class="avaliacoes">
-                <canvas id="avaliacoes" style="display: block; box-sizing: border-box; height: 500px; width: 500px;"></canvas>
+              <div class="imgs">
+                <img class="img" src="Img/Capas/avatar.png" alt="" />
+                <h4 class="text">Avatar O Caminho da Água</h4>
               </div>
-              <div class="avaliar">
-                  <button class="buttonlike" onclick="like()">Gostei</button>
-                  <button class="buttonlike" onclick="deslike()">Não Gostei</button>
-                  <button class="buttonlike" onclick="adicionar()">Ainda Não Sei</button>
-                </div>
-                <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+              <div class="imgs">
+                <img class="img" src="Img/Capas/esquema de risco.png" alt="" />
+                <h4 class="text">Esquema de Risco</h4>
+              </div>
+              <div class="imgs">
+                <img class="img" src="Img/Capas/john wick 4.png" alt="" />
+                <h4 class="text">John Wick 4</h4>
+              </div>
+              <div class="imgs">
+                <img class="img" src="Img/Capas/kingsman a origem.png" alt="" />
+                <h4 class="text">Kingsman A Origem</h4>
+              </div>
+              <div class="imgs">
+                <img
+                  class="img"
+                  src="Img/Capas/uma noite no museu o retorno de kahmurah.png"
+                  alt=""
+                />
+                <h4 class="text">Uma Noite no Museu O Retorno de Kahmurah</h4>
+              </div>
+              <div class="imgs">
+                <img class="img" src="Img/Capas/wifi ralph.png" alt="" />
+                <h4 class="text">Wifi Ralph</h4>
+              </div>
+              <div class="imgs">
+                <img class="img" src="Img/Capas/adao negro.png" alt="" />
+                <h4 class="text">Adão Negro</h4>
+              </div>
+              <div class="imgs">
+                <img class="img" src="Img/Capas/shazan.png" alt="" />
+                <h4 class="text">Shazan</h4>
+              </div>
+              <div class="imgs">
+                <img
+                  class="img"
+                  src="Img/Capas/homem aranha de volta ao lar.png"
+                  alt=""
+                />
+                <h4 class="text">Homem Aranha de Volta ao Lar</h4>
+              </div>
+              <div class="imgs">
+                <img class="img" src="Img/Capas/homem de ferro 3.png" alt="" />
+                <h4 class="text">Homem de Ferro 3</h4>
+              </div>
+            </div>
+          </div>
+          <button class="buttonrolar" onclick="moverDireita()">
+            <div class="after">
+              <div class="arrow-right"></div>
+            </div>
+          </button>
         </div>
 
-        <div class="footer">
-            <!-- Barra Baixo -->
-            <div class="container">
-                <div class="redes">Siga-nos nas Redes Sociais</div>
-                <div class="redesocial">
-                    <a href="https://github.com/TheoMesquita/Shinemax">
-                        <img src="Img/icones/git.png" width="30px" />
-                    </a>
-                    <a href="https://web.facebook.com/theofilo.mesquita.5">
-                        <img src="Img/icones/facebook.png" width="30px" />
-                    </a>
-                    <a href="https://www.instagram.com/010_theo/">
-                        <img src="Img/icones/instagram.png" width="30px" />
-                    </a>
-                    <a href="">
-                        <img src="Img/icones/youtube.png" width="30px" />
-                    </a>
-                </div>
-                <div class="contato">Algum problema? Contate-nos</div>
-                <div class="contatos">
-                    <li>E-mail: theomesquita@hotmail.com</li>
-                    <li>Celular: (11) 98677-3099</li>
-                </div>
-                <div class="copy">&copy; Copyright Todos os direitos reservados</div>
-                <button class="topo"><a href="#topo">^</a></button>
+        <div class="buttons">
+          <button class="buttonrolar" onclick="moverEsquerda2()">
+            <div class="before">
+              <div class="arrow-left"></div>
             </div>
-            <!-- Fim da Barra -->
+          </button>
+          <div class="container" id="scroll2">
+            <h4 class="title">Tops da Semana</h4>
+            <div class="corpo" id="mylist">
+              <div class="imgs">
+                <img class="img" src="Img/Capas/kung fu panda 3.png" alt="" />
+                <h4 class="text">Kung Fu Panda 3</h4>
+              </div>
+              <div class="imgs">
+                <img class="img" src="Img/Capas/kingsman a origem.png" alt="" />
+                <h4 class="text">Kingsman A Origem</h4>
+              </div>
+              <div class="imgs">
+                <img
+                  class="img"
+                  src="Img/Capas/uma noite no museu o retorno de kahmurah.png"
+                  alt=""
+                />
+                <h4 class="text">Uma Noite no Museu O Retorno de Kahmurah</h4>
+              </div>
+              <div class="imgs">
+                <img class="img" src="Img/Capas/avatar.png" alt="" />
+                <h4 class="text">Avatar o Caminho da Água</h4>
+              </div>
+              <div class="imgs">
+                <img class="img" src="Img/Capas/john wick 4.png" alt="" />
+                <h4 class="text">John Wick 4</h4>
+              </div>
+              <div class="imgs">
+                <img class="img" src="Img/Capas/gato de botas.png" alt="" />
+                <h4 class="text">Gato de Botas 3</h4>
+              </div>
+              <div class="imgs">
+                <img class="img" src="Img/Capas/a mulher rei.png" alt="" />
+                <h4 class="text">A Mulher Rei</h4>
+              </div>
+              <div class="imgs">
+                <img class="img" src="Img/Capas/creed III.png" alt="" />
+                <h4 class="text">Creed III</h4>
+              </div>
+              <div class="imgs">
+                <img class="img" src="Img/Capas/eu sou a lenda.png" alt="" />
+                <h4 class="text">Eu sou a Lenda</h4>
+              </div>
+              <div class="imgs">
+                <img class="img" src="Img/Capas/carros 3.png" alt="" />
+                <h4 class="text">Carros 3</h4>
+              </div>
+            </div>
+          </div>
+          <button class="buttonrolar" onclick="moverDireita2()">
+            <div class="after">
+              <div class="arrow-right"></div>
+            </div>
+          </button>
         </div>
-        <script src="JS/Shinemax.js"></script>
-        <script src="JS/Pesquisar.js"></script>
-    </body>
+
+        <div class="buttons">
+          <button class="buttonrolar" onclick="moverEsquerda3()">
+            <div class="before">
+              <div class="arrow-left"></div>
+            </div>
+          </button>
+          <div class="container" id="scroll3">
+            <h4 class="title">Recomendados</h4>
+            <div class="corpo" id="mylist">
+              <div class="imgs">
+                <img class="img" src="Img/Capas/peaky blinders.png" alt="" />
+                <h4 class="text">Peaky Blinders</h4>
+              </div>
+              <div class="imgs">
+                <img class="img" src="Img/Capas/chicago med.png" alt="" />
+                <h4 class="text">Chicago Med</h4>
+              </div>
+              <div class="imgs">
+                <img
+                  class="img"
+                  src="Img/Capas/vingadores guerra infinita.png"
+                  alt=""
+                />
+                <h4 class="text">Vingadores Guerra Infinita</h4>
+              </div>
+              <div class="imgs">
+                <img class="img" src="Img/Capas/the witcher.png" alt="" />
+                <h4 class="text">The Witcher</h4>
+              </div>
+              <div class="imgs">
+                <img class="img" src="Img/Capas/the last of us.png" alt="" />
+                <h4 class="text">The Last Of Us</h4>
+              </div>
+              <div class="imgs">
+                <img class="img" src="Img/Capas/homem de ferro 3.png" alt="" />
+                <h4 class="text">Homem de Ferro 3</h4>
+              </div>
+              <div class="imgs">
+                <img class="img" src="Img/Capas/gato de botas.png" alt="" />
+                <h4 class="text">Gato de Botas</h4>
+              </div>
+              <div class="imgs">
+                <img class="img" src="Img/Capas/the flash.png" alt="" />
+                <h4 class="text">The Flash</h4>
+              </div>
+              <div class="imgs">
+                <img class="img" src="Img/Capas/operação big hero.png" alt="" />
+                <h4 class="text">Operação Big Hero</h4>
+              </div>
+              <div class="imgs">
+                <img class="img" src="Img/Capas/minions 2.png" alt="" />
+                <h4 class="text">minions 2</h4>
+              </div>
+            </div>
+          </div>
+          <button class="buttonrolar" onclick="moverDireita3()">
+            <div class="after">
+              <div class="arrow-right"></div>
+            </div>
+          </button>
+        </div>
+      </div>
+      <!-- Fim da Parte dos Filmes -->
+    </div>
+
+    <div class="grafico">
+      <div class="avaliacoes">
+        <canvas
+          id="avaliacoes"
+          style="
+            display: block;
+            box-sizing: border-box;
+            height: 500px;
+            width: 500px;
+          "
+        ></canvas>
+      </div>
+      <div class="avaliar">
+        <button class="buttonlike" onclick="like()">Gostei</button>
+        <button class="buttonlike" onclick="deslike()">Não Gostei</button>
+        <button class="buttonlike" onclick="adicionar()">Ainda Não Sei</button>
+      </div>
+      <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    </div>
+
+    <div class="footer">
+      <!-- Barra Baixo -->
+      <div class="container">
+        <div class="redes">Siga-nos nas Redes Sociais</div>
+        <div class="redesocial">
+          <a href="https://github.com/TheoMesquita/Shinemax">
+            <img src="Img/icones/git.png" width="30px" />
+          </a>
+          <a href="https://web.facebook.com/theofilo.mesquita.5">
+            <img src="Img/icones/facebook.png" width="30px" />
+          </a>
+          <a href="https://www.instagram.com/010_theo/">
+            <img src="Img/icones/instagram.png" width="30px" />
+          </a>
+          <a href="">
+            <img src="Img/icones/youtube.png" width="30px" />
+          </a>
+        </div>
+        <div class="contato">Algum problema? Contate-nos</div>
+        <div class="contatos">
+          <li>E-mail: theomesquita@hotmail.com</li>
+          <li>Celular: (11) 98677-3099</li>
+        </div>
+        <div class="copy">&copy; Copyright Todos os direitos reservados</div>
+        <button class="topo"><a href="#topo">^</a></button>
+      </div>
+      <!-- Fim da Barra -->
+    </div>
+    <script src="JS/Shinemax.js"></script>
+    <script src="JS/Pesquisar.js"></script>
+  </body>
 </html>

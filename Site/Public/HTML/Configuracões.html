@@ -1,83 +1,92 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-    <head>
-        <meta charset="UTF-8" />
-        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Configurações</title>
-        <link rel="stylesheet" href="../CSS/Shinemax.css" />
-        <link rel="stylesheet" href="../CSS/Configuracões.css" />
-    </head>
-    <body>
-        <div class="fundomax">
-            <div class="fundo">
-                <!-- Barra de cima -->
-                <div class="container">
-                    <div class="barracima">
-                        <a href="../Shinemax.html">
-                            <div id="ocultartitulo" class="titulo">
-                                <img src="../Img/icones/logo.png" height="45px" />
-                                <div class="inicial">S</div>
-                                hine
-                                <div class="inicial2">M</div>
-                                ax
-                            </div>
-                        </a>
-                        <ul id="ocultar" class="barra">
-                            <li><a href="../Shinemax.html">Home</a></li>
-                            <li><a href="Filmes.html">Filmes</a></li>
-                            <li><a href="Series.html">Séries</a></li>
-                            <li><a href="Animes.html">Animes</a></li>
-                            <div>
-                                <img onclick="mostrar('pesquisa')" src="../Img/icones/pesquisa.png" height="30px" width="30px" />
-                            </div>
-                        </ul>
-                    </div>
-                    <!-- Fim da Barra-->
-                </div>
-                <div id="pesquisa" style="display: none">
-                    <div class="buttonpesquisar">
-                        <img src="../Img/icones/pesquisa.png" width="20px" alt="Buscar" />
-                        <input type="search" class="inputpesquisa" placeholder="Buscar..." />
-                    </div>
-                </div>
-
-                <div class="perfil">
-                    <div class="usuario">
-                        <span class="icone-login">
-                            <img src="../Img/icones/usuario.png" width="70px" />
-                            <li>Usuario</li>
-                            <li>Idade</li>
-                            <li>Nacionalidade</li>
-                            <li>Por Ver</li>
-                            <li>Curtidas</li>
-                            <li>Seguindo</li>
-                        </span>
-                        <div class="opcões">
-                            <div class="trocaNome">
-                                Mudar Nome:
-                                <input id="trocaNome" />
-                            </div>
-                            <div class="trocaAvatar">
-                                Mudar Avatar:
-                                <button onclick="">Procurar</button>
-                            </div>
-                            <div class="trocarPais">
-                                Mudar País:
-                                <select id="cbPais">
-                                    <option value="">Selecione</option>
-                                    <option value="br">Brasil</option>
-                                    <option value="ca">Canada</option>
-                                    <option value="me">Mexico</option>
-                                    <option value="usa">Usa</option>
-                                </select>
-                                <button onclick="">Salvar Alterações</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Configurações</title>
+    <link rel="stylesheet" href="../CSS/Shinemax.css" />
+    <link rel="stylesheet" href="../CSS/Configuracões.css" />
+  </head>
+  <body>
+    <div class="fundomax">
+      <div class="fundo">
+        <!-- Barra de cima -->
+        <div class="container">
+          <div class="barracima">
+            <a href="../Shinemax.html">
+              <div id="ocultartitulo" class="titulo">
+                <img src="../Img/icones/logo.png" height="45px" />
+                <div class="inicial">S</div>
+                hine
+                <div class="inicial2">M</div>
+                ax
+              </div>
+            </a>
+            <ul id="ocultar" class="barra">
+              <li><a href="../Shinemax.html">Home</a></li>
+              <li><a href="Filmes.html">Filmes</a></li>
+              <li><a href="Series.html">Séries</a></li>
+              <li><a href="Animes.html">Animes</a></li>
+              <div>
+                <img
+                  onclick="mostrar('pesquisa')"
+                  src="../Img/icones/pesquisa.png"
+                  height="30px"
+                  width="30px"
+                />
+              </div>
+            </ul>
+          </div>
+          <!-- Fim da Barra-->
         </div>
-        <script src="../JS/Pesquisar.js"></script>
-    </body>
+        <div id="pesquisa" style="display: none">
+          <div class="buttonpesquisar">
+            <img src="../Img/icones/pesquisa.png" width="20px" alt="Buscar" />
+            <input
+              type="search"
+              class="inputpesquisa"
+              placeholder="Buscar..."
+            />
+          </div>
+        </div>
+
+        <div class="perfil">
+          <div class="usuario">
+            <span class="icone-login">
+              <img src="../Img/icones/usuario.png" width="70px" />
+              <li>Usuario</li>
+              <li>Idade</li>
+              <li>Nacionalidade</li>
+              <li>Por Ver</li>
+              <li>Curtidas</li>
+              <li>Seguindo</li>
+            </span>
+            <div class="opcões">
+              <div class="trocaNome">
+                Mudar Nome:
+                <input id="trocaNome" />
+              </div>
+              <div class="trocaAvatar">
+                Mudar Avatar:
+                <button onclick="">Procurar</button>
+              </div>
+              <div class="trocarPais">
+                Mudar País:
+                <select id="cbPais">
+                  <option value="">Selecione</option>
+                  <option value="br">Brasil</option>
+                  <option value="ca">Canada</option>
+                  <option value="me">Mexico</option>
+                  <option value="usa">Usa</option>
+                </select>
+                <button onclick="">Salvar Alterações</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="../JS/Pesquisar.js"></script>
+  </body>
 </html>
