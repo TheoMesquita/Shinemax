@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="../CSS/Login.css" />
     <link rel="stylesheet" href="../CSS/Cadastro.css" />
   </head>
+
   <body>
     <div class="carrossel">
       <div class="container" id="img">
@@ -67,24 +68,24 @@
         </div>
       </div>
 
-      <div class="credenciais">
-        <div id="nome">
+      <div class="credenciaisCadastro">
+        <div class="cadastro">
           Nome
           <input id="nome_input" placeholder="Primeiro Nome" />
         </div>
-        <div id="sobrenome">
+        <div class="cadastro">
           sobrenome
           <input id="sobrenome_input" placeholder="Ultimo Nome" />
         </div>
-        <div id="apelido">
+        <div class="cadastro">
           apelido
           <input id="apelido_input" placeholder="Quero ser chamado de:" />
         </div>
-        <div id="idade">
+        <div class="cadastro">
           idade
           <input id="idade_input" placeholder="Quantos Anos Você Tem?" />
         </div>
-        <div id="nacionalidade">
+        <div class="cadastro">
           nacionalidade
           <select id="pais_select">
             <option value="">Selecione</option>
@@ -92,7 +93,7 @@
             <option value="eua">Estados Unidos</option>
           </select>
         </div>
-        <div id="genero">
+        <div class="cadastro">
           genero
           <select id="genero_select">
             <option value="">Selecione</option>
@@ -100,32 +101,26 @@
             <option value="Feminino">Feminino</option>
           </select>
         </div>
-        <div id="email">
+        <div class="cadastro">
           E-mail:
           <input id="email_input" placeholder="email@dominio.com" />
         </div>
-        <div id="senha">
+        <div class="cadastro">
           Senha:
           <input id="senha_input" type="password" placeholder="********" />
         </div>
-        <div id="confirmar_senha">
+        <div class="cadastro">
           Confirmar Senha:
-          <input
-            id="ConfirmarSenha_input"
-            type="password"
-            placeholder="********"
-          />
+          <input id="confirmarSenha" type="password" placeholder="********" />
         </div>
-        <button onclick="" class="button">Cadastrar</button>
+        <button onclick="cadastrar()" class="button">Cadastrar</button>
       </div>
     </div>
-    <script src="../JS/Shinemax.js" defer></script>
+    <script src="../JS/Pesquisar.js"></script>
   </body>
 </html>
 <script>
   function cadastrar() {
-    aguardar();
-
     //Recupere o valor da nova input pelo nome do id
     // Agora vá para o método fetch logo abaixo
     var nomeVar = nome_input.value;
@@ -136,7 +131,7 @@
     var generoVar = genero_select.value;
     var emailVar = email_input.value;
     var senhaVar = senha_input.value;
-    var confirmacaoSenhaVar = confirmarSenha_input.value;
+    var confirmacaoSenhaVar = confirmarSenha.value;
 
     if (
       nomeVar == "" ||
@@ -149,34 +144,25 @@
       senhaVar == "" ||
       confirmacaoSenhaVar == ""
     ) {
-      cardErro.style.display = "block";
-      mensagem_erro.innerHTML = "Preencha todos os campos!";
-      nome.style.borderColor = "#DC3545";
-      sobrenome.style.borderColor = "#DC3545";
-      apelido.style.borderColor = "#DC3545";
-      idade.style.borderColor = "#DC3545";
-      nacionalidade.style.borderColor = "#DC3545";
-      genero.style.borderColor = "#DC3545";
-      email.style.borderColor = "#DC3545";
-      senha.style.borderColor = "#DC3545";
-      confirmar_senha.style.borderColor = "#DC3545";
+      nome_input.style.borderColor = "#DC3545";
+      sobrenome_input.style.borderColor = "#DC3545";
+      apelido_input.style.borderColor = "#DC3545";
+      idade_input.style.borderColor = "#DC3545";
+      pais_select.style.borderColor = "#DC3545";
+      genero_select.style.borderColor = "#DC3545";
+      email_input.style.borderColor = "#DC3545";
+      senha_input.style.borderColor = "#DC3545";
+      confirmarSenha.style.borderColor = "#DC3545";
 
-      finalizarAguardar();
       return false;
     } else if (email.indexOf("@") >= 0 && email.indexOf(".") >= 0) {
-      cardErro.style.display = "block";
-      mensagem_erro.innerHTML = `Insira um e-mail válido!`;
       email.style.borderColor = "#DC3545";
 
-      finalizarAguardar();
       return false;
     } else if (senhaVar != confirmacaoSenhaVar) {
-      cardErro.style.display = "block";
-      mensagem_erro.innerHTML = `As senhas não coicidem!`;
-      senha.style.borderColor = "#DC3545";
-      confirmar_senha.style.borderColor = "#DC3545";
+      senha_input.style.borderColor = "#DC3545";
+      confirmarSenha.style.borderColor = "#DC3545";
 
-      finalizarAguardar();
       return false;
     } else {
       setInterval(sumirMensagem, 5000);
@@ -205,24 +191,19 @@
         console.log("resposta: ", resposta);
 
         if (resposta.ok) {
-          cardErro.style.display = "block";
-
-          mensagem_erro.innerHTML =
-            "Cadastro realizado com sucesso! Redirecionando para tela de Login...";
+          ("Cadastro realizado com sucesso! Redirecionando para tela de Login...");
 
           setTimeout(() => {
             window.location = "login.html";
           }, "2000");
 
           limparFormulario();
-          finalizarAguardar();
         } else {
           throw "Houve um erro ao tentar realizar o cadastro!";
         }
       })
       .catch(function (resposta) {
         console.log(`#ERRO: ${resposta}`);
-        finalizarAguardar();
       });
 
     return false;

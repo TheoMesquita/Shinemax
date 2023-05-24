@@ -1,4 +1,4 @@
-var database = require("./Database/config");
+var database = require("../Database/config");
 
 function listar() {
   console.log(

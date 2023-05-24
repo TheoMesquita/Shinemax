@@ -1,21 +1,20 @@
 .credenciais {
-  width: 300px;
-  height: 400px;
-  background-color: #2f2a2a;
-  color: white;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-evenly;
-  position: relative;
-  margin: auto;
-  margin-top: 5%;
-  border-radius: 10px;
+  width: 320px;
+    height: 350px;
+    background-color: #2f2a2a;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    margin: auto;
+    margin-top: 5%;
+    border-radius: 10px;
 }
 .credenciais input {
   border-radius: 10px;
-  border: 0;
   height: 20px;
+  width: 200px;
 }
 .email {
   display: flex;

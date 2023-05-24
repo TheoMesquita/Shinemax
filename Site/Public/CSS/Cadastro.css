@@ -1,3 +1,21 @@
+.credenciaisCadastro {
+  width: 320px;
+  height: 550px;
+  background-color: #2f2a2a;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  margin: auto;
+  margin-top: 2%;
+  border-radius: 10px;
+}
+.credenciaisCadastro input {
+  border-radius: 10px;
+  height: 20px;
+  width: 200px;
+}
 .nome {
   display: flex;
   flex-direction: column;
@@ -11,4 +29,11 @@
   height: 60px;
   font-size: 18px;
   justify-content: space-between;
+}
+.cadastro {
+  display: flex;
+  flex-direction: column;
+}
+.cadastro select {
+  width: 200px;
 }
