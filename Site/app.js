@@ -10,6 +10,7 @@ var app = express();
 
 var ShineMaxRouter = require("./Src/Routes/ShineMax");
 var usuarioRouter = require("./Src/Routes/usuarios");
+var graficoRouter = require("./Src/Routes/grafico");
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
@@ -19,6 +20,7 @@ app.use(cors());
 
 app.use("/", ShineMaxRouter);
 app.use("/usuarios", usuarioRouter);
+app.use("/grafico", graficoRouter)
 
 app.listen(PORTA, function () {
     console.log(`Servidor do seu site já está rodando! Acesse o caminho a seguir para visualizar: http://localhost:${PORTA} \n

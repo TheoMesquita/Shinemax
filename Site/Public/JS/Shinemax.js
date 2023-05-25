@@ -1,20 +1,3 @@
-/* Carrossel */
-const imgs = document.getElementById("img");
-const img = document.querySelectorAll("#img img");
-
-let vezes = 0;
-
-function Carrossel() {
-  vezes++;
-  if (vezes > img.length - 1) {
-    vezes = 0;
-  }
-
-  imgs.style.transform = `translateX(${-vezes * 100}%)`;
-  informaçao.style.transform = `translateX(${-vezes * 100}%)`
-}
-setInterval(Carrossel, 5000);
-
 /* Botão Conteudo mover "Esquerda" e "Direita" */
 
 const scroll = document.getElementById("scroll");
@@ -42,7 +25,7 @@ function moverDireita3() {
 /* Gráfico */
 
 var data = {
-  labels: ["Gostaram", "Não gostaram", "Não Sabem"],
+  labels: [" Gostaram " , " Não gostaram " , " Não Sabem " ],
   datasets: [
     {
       data: [10, 5, 15],
@@ -64,7 +47,3 @@ const config = {
   },
 };
 const myChart = new Chart(document.getElementById("avaliacoes"), config);
-
-function like() {
-  data.data.length[1];
-}

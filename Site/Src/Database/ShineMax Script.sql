@@ -40,6 +40,20 @@ pkComposta int,
 constraint pkComposta primary key (idHistorico, fkShineMax, fkUsuario)
 );
 
+create table grafico(
+idGrafico int primary key auto_increment,
+descricao varchar(300)
+);
+
+create table valores (
+	idValores int primary key auto_increment,
+	gostei DECIMAL,
+	naoGostei DECIMAL,
+	aindaNaoSei DECIMAL,
+	momento DATETIME,
+	fk_grafico INT,
+	FOREIGN KEY (fk_grafico) REFERENCES grafico(id)
+);
 insert into usuario values
 	(null, 'Shine', 'Max', 'ShineMax', '2023-05-22', 'Brasil', null, 'shinemax@shine.max', 'S4in3M@x', 'administrador');
     

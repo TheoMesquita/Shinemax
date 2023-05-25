@@ -31,6 +31,16 @@
   color: white;
   font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
 }
+
+.btn-logout {
+  width: 100px;
+  height: 50px;
+  background-color: #32b9cd;
+  color: white;
+  border-radius: 10px;
+  text-align: center;
+  cursor: pointer;
+}
 .trocaNome {
   display: flex;
   flex-direction: column;
