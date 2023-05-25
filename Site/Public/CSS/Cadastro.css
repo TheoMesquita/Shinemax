@@ -8,8 +8,16 @@
   align-items: center;
   justify-content: space-evenly;
   margin: auto;
-  margin-top: 2%;
   border-radius: 10px;
+}
+.containerCadastro .barracima {
+  width: 80%;
+  height: 100px;
+  margin: auto;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
 }
 .credenciaisCadastro input {
   border-radius: 10px;

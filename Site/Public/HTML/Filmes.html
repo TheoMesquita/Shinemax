@@ -1,122 +1,115 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Filmes</title>
-    <link rel="stylesheet" href="../CSS/Shinemax.css" />
-    <link rel="stylesheet" href="../CSS/Filmes.css" />
-  </head>
-  <body>
-    <div class="fundo">
-      <!-- Barra de cima -->
-      <div class="container">
-        <div class="barracima">
-          <a href="../Shinemax.html">
-            <div id="ocultartitulo" class="titulo">
-              <img src="../Img/icones/logo.png" height="45px" />
-              <div class="inicial">S</div>
-              hine
-              <div class="inicial2">M</div>
-              ax
-            </div>
-          </a>
-          <ul id="ocultar" class="barra">
-            <li><a href="../Shinemax.html">Home</a></li>
-            <li>Filmes</li>
-            <li><a href="Series.html">Séries</a></li>
-            <li><a href="Animes.html">Animes</a></li>
-            <div>
-              <img
-                onclick="mostrar('pesquisa')"
-                src="../Img/icones/pesquisa.png"
-                height="30px"
-                width="30px"
-              />
-            </div>
-            <div class="usuario">
-              <span class="icone-login">
-                <img src="../Img/icones/usuario.png" width="70px" />
-                <div class="menu-login">
-                  <a href="Login.html"> Login </a>
-                  <a href="Cadastro.html"> Cadastro </a>
-                  <a href="Configuracões.html"> Configurações </a>
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+        <title>ShineMax | Filmes</title>
+
+        <link rel="icon" href="Img/icones/logo.png" />
+        <link rel="stylesheet" href="../CSS/Shinemax.css" />
+        <link rel="stylesheet" href="../CSS/Filmes.css" />
+    </head>
+    <body>
+        <div class="fundo">
+            <!-- Barra de cima -->
+            <div class="container">
+                <div class="barracima">
+                    <a href="../index.html">
+                        <div id="ocultartitulo" class="titulo">
+                            <img src="../Img/icones/logo.png" height="50px" />
+                            <div class="inicial">S</div>
+                            hine
+                            <div class="inicial2">M</div>
+                            ax
+                        </div>
+                    </a>
+                    <ul id="ocultar" class="barra">
+                        <li><a href="../index.html">Home</a></li>
+                        <li>Filmes</li>
+                        <li><a href="Series.html">Séries</a></li>
+                        <li><a href="Animes.html">Animes</a></li>
+                        <div>
+                            <img onclick="mostrar('pesquisa')" src="../Img/icones/pesquisa.png" style="filter: invert(1)" height="30px" width="30px" />
+                        </div>
+                        <div class="usuario">
+                            <span class="icone-login">
+                                <img src="../Img/icones/usuario.png" width="50px" />
+                                <div class="menu-login">
+                                    <a href="Login.html"> Login </a>
+                                    <a href="Cadastro.html"> Cadastro </a>
+                                    <a href="Configuracões.html"> Configurações </a>
+                                </div>
+                            </span>
+                        </div>
+                    </ul>
                 </div>
-              </span>
+                <!-- Fim da Barra-->
             </div>
-          </ul>
-        </div>
-        <!-- Fim da Barra-->
-      </div>
-      <div id="pesquisa" style="display: none">
-        <div class="buttonpesquisar">
-          <img src="../Img/icones/pesquisa.png" width="20px" alt="Buscar" />
-          <input type="search" class="inputpesquisa" placeholder="Buscar..." />
-        </div>
-      </div>
-
-      <div class="espacoFilmes">
-        <h1>Filmes</h1>
-        <div class="ordenar">
-          <li onclick="ordemRecente()">Recentes</li>
-          <li onclick="ordemAZ()">A a Z</li>
-          <li onclick="ordemZA()">Z a A</li>
-          <li onclick="ordemAvaliacao()">Avaliação</li>
-          <div class="esconder">
-            <div class="aparecer">
-              <li class="genHover">Gênero</li>
-              <div class="generos">
-                <li onclick="">Ação</li>
-                <li onclick="">Romance</li>
-                <li onclick="">Suspense</li>
-              </div>
+            <div id="pesquisa" style="display: none">
+                <div class="buttonpesquisar">
+                    <img src="../Img/icones/pesquisa.png" style="filter: invert(1)" width="20px../Img/Capas/carros 3.png" alt="CapaBuscar" />
+                    <input type="search" class="inputpesquisa" placeholder="Buscar..." />
+                </div>
             </div>
-          </div>
-          <div class="canto">
-            <li onclick="ordemGrid()">
-              <img
-                src="../Img/icones/grid.png"
-                width="25px"
-                style="filter: invert(100%)"
-                alt="Grid"
-              />
-            </li>
-            <li>
-              mostrar
-              <select id="AnimesPorPagina">
-                <option value=""></option>
-                <option value="">30</option>
-                <option value="">50</option>
-              </select>
-            </li>
-          </div>
-        </div>
-        <div class="listaFilmes">
-          <img src="" alt="" />
-          <img src="" alt="" />
-          <img src="" alt="" />
-          <img src="" alt="" />
-          <img src="" alt="" />
-          <img src="" alt="" />
-          <img src="" alt="" />
-          <img src="" alt="" />
-          <img src="" alt="" />
-          <img src="" alt="" />
-          <img src="" alt="" />
-          <img src="" alt="" />
-          <img src="" alt="" />
-          <img src="" alt="" />
-          <img src="" alt="" />
-          <img src="" alt="" />
-          <img src="" alt="" />
-          <img src="" alt="" />
-          <img src="" alt="" />
-          <img src="" alt="" />
-        </div>
-      </div>
-    </div>
 
-    <script src="../JS/Pesquisar.js"></script>
-  </body>
+            <div class="espacoOrdenar">
+                <h1>Filmes</h1>
+                <div class="ordenarFilmes">
+                    <li onclick="ordemRecente()">Recentes</li>
+                    <li onclick="ordemAZ()">A a Z</li>
+                    <li onclick="ordemZA()">Z a A</li>
+                    <li onclick="ordemAvaliacao()">Avaliação</li>
+                    <div class="esconder">
+                        <div class="aparecer">
+                            <li class="genHover">Gênero</li>
+                            <div class="generos">
+                                <li onclick="">Ação</li>
+                                <li onclick="">Romance</li>
+                                <li onclick="">Suspense</li>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="canto">
+                        <li onclick="ordemGrid()">
+                            <img src="../Img/icones/grid.png" width="25px" style="filter: invert(1)" alt="CapaGrid" />
+                        </li>
+                        <li>
+                            mostrar
+                            <select id="filmesPorPagina">
+                                <option value=""></option>
+                                <option value="">30</option>
+                                <option value="">50</option>
+                            </select>
+                        </li>
+                    </div>
+                </div>
+                <div class="listaAssistir">
+                    <img src="../Img/Capas/carros 3.png" alt="Capa" />
+                    <img src="../Img/Capas/carros 3.png" alt="Capa" />
+                    <img src="../Img/Capas/carros 3.png" alt="Capa" />
+                    <img src="../Img/Capas/carros 3.png" alt="Capa" />
+                    <img src="../Img/Capas/carros 3.png" alt="Capa" />
+                    <img src="../Img/Capas/carros 3.png" alt="Capa" />
+                    <img src="../Img/Capas/carros 3.png" alt="Capa" />
+                    <img src="../Img/Capas/carros 3.png" alt="Capa" />
+                    <img src="../Img/Capas/carros 3.png" alt="Capa" />
+                    <img src="../Img/Capas/carros 3.png" alt="Capa" />
+                    <img src="../Img/Capas/carros 3.png" alt="Capa" />
+                    <img src="../Img/Capas/carros 3.png" alt="Capa" />
+                    <img src="../Img/Capas/carros 3.png" alt="Capa" />
+                    <img src="../Img/Capas/carros 3.png" alt="Capa" />
+                    <img src="../Img/Capas/carros 3.png" alt="Capa" />
+                    <img src="../Img/Capas/carros 3.png" alt="Capa" />
+                    <img src="../Img/Capas/carros 3.png" alt="Capa" />
+                    <img src="../Img/Capas/carros 3.png" alt="Capa" />
+                    <img src="../Img/Capas/carros 3.png" alt="Capa" />
+                    <img src="../Img/Capas/carros 3.png" alt="Capa" />
+                </div>
+            </div>
+        </div>
+
+        <script src="../JS/Pesquisar.js"></script>
+    </body>
 </html>

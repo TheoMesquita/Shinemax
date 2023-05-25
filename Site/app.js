@@ -8,7 +8,7 @@ var PORTA = process.env.AMBIENTE_PROCESSO == "desenvolvimento" ? 3333 : 8080;
 
 var app = express();
 
-var indexRouter = require("./Src/Routes/index");
+var ShineMaxRouter = require("./Src/Routes/ShineMax");
 var usuarioRouter = require("./Src/Routes/usuarios");
 
 app.use(express.json());
@@ -17,7 +17,7 @@ app.use(express.static(path.join(__dirname, "Public")));
 
 app.use(cors());
 
-app.use("/", indexRouter);
+app.use("/", ShineMaxRouter);
 app.use("/usuarios", usuarioRouter);
 
 app.listen(PORTA, function () {

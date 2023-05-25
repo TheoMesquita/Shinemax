@@ -11,8 +11,9 @@ function Carrossel() {
   }
 
   imgs.style.transform = `translateX(${-vezes * 100}%)`;
+  informaçao.style.transform = `translateX(${-vezes * 100}%)`
 }
-setInterval(Carrossel, 2000);
+setInterval(Carrossel, 5000);
 
 /* Botão Conteudo mover "Esquerda" e "Direita" */
 

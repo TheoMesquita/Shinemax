@@ -41,6 +41,6 @@ constraint pkComposta primary key (idHistorico, fkShineMax, fkUsuario)
 );
 
 insert into usuario values
-	(null, 'Shine', 'Max', 'ShineMax', '2023-05-22', 'shinemax@shine.max', 'S4in3M@x', 'Brasil', null, 'administrador');
+	(null, 'Shine', 'Max', 'ShineMax', '2023-05-22', 'Brasil', null, 'shinemax@shine.max', 'S4in3M@x', 'administrador');
     
 select * from usuario;
