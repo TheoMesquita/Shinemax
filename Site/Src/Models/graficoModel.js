@@ -1,26 +1,26 @@
 var database = require("../Database/config");
 
-function buscarUltimosValores(idGrafico, limite_linhas) {
+function buscarValores(idGrafico, limite_linhas) {
 
     instrucaoSql = ''
 
     if (process.env.AMBIENTE_PROCESSO == "producao") {
         instrucaoSql = `select top ${limite_linhas}
         gostei as Like, 
-        naoGostei as Deslike,  
+        naoGostei as Deslike,
+        aindaNaoSei as SemLike, 
                         momento,
                         FORMAT(momento, 'HH:mm:ss') as momento_grafico
-                    from valores
-                    where fk_grafico = ${idGrafico}
+                    from grafico
                     order by id desc`;
     } else if (process.env.AMBIENTE_PROCESSO == "desenvolvimento") {
         instrucaoSql = `select 
         gostei as Like, 
-        naoGostei as Deslike,  
+        naoGostei as Deslike,
+        aindaNaoSei as SemLike,
                         momento,
                         DATE_FORMAT(momento,'%H:%i:%s') as momento_grafico
-                    from valores
-                    where fk_grafico = ${idGrafico}
+                    from grafico
                     order by id desc limit ${limite_linhas}`;
     } else {
         console.log("\nO AMBIENTE (produção OU desenvolvimento) NÃO FOI DEFINIDO EM app.js\n");
@@ -39,18 +39,18 @@ function buscarValoresEmTempoReal(idGrafico) {
         instrucaoSql = `select top 1
         gostei as Like, 
         naoGostei as Deslike,
-                        CONVERT(varchar, momento, 108) as momento_grafico, 
-                        fk_grafico 
-                        from valores where fk_grafico = ${idGrafico} 
+        aindaNaoSei as SemLike,
+                        CONVERT(varchar, momento, 108) as momento_grafico 
+                        from grafico
                     order by id desc`;
 
     } else if (process.env.AMBIENTE_PROCESSO == "desenvolvimento") {
         instrucaoSql = `select 
         gostei as Like, 
         naoGostei as Deslike,
-                        DATE_FORMAT(momento,'%H:%i:%s') as momento_grafico, 
-                        fk_grafico
-                        from valores where fk_grafico = ${idGrafico} 
+        aindaNaoSei as SemLike,
+                        DATE_FORMAT(momento,'%H:%i:%s') as momento_grafico
+                        from grafico
                     order by id desc limit 1`;
     } else {
         console.log("\nO AMBIENTE (produção OU desenvolvimento) NÃO FOI DEFINIDO EM app.js\n");
@@ -63,6 +63,6 @@ function buscarValoresEmTempoReal(idGrafico) {
 
 
 module.exports = {
-    buscarUltimosValores,
+    buscarValores,
     buscarValoresEmTempoReal
 }

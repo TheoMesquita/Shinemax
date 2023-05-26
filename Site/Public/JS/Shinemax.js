@@ -21,29 +21,3 @@ function moverEsquerda3() {
 function moverDireita3() {
   scroll3.scrollLeft += 100;
 }
-
-/* Gráfico */
-
-var data = {
-  labels: [" Gostaram " , " Não gostaram " , " Não Sabem " ],
-  datasets: [
-    {
-      data: [10, 5, 15],
-      backgroundColor: ["rgb(0, 0, 255)", "rgb(255, 0, 0)", "rgb(96, 90, 90)"],
-      hoverOffset: 4,
-    },
-  ],
-};
-const config = {
-  type: "doughnut",
-  data: data,
-  options: {
-    plugins: {
-      title: {
-        display: true,
-        text: "Pessoas que gostaram do site",
-      },
-    },
-  },
-};
-const myChart = new Chart(document.getElementById("avaliacoes"), config);

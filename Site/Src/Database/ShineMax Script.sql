@@ -42,23 +42,49 @@ constraint pkComposta primary key (idHistorico, fkShineMax, fkUsuario)
 
 create table grafico(
 idGrafico int primary key auto_increment,
-descricao varchar(300)
+gostei DECIMAL,
+naoGostei DECIMAL,
+aindaNaoSei DECIMAL,
+momento DATETIME
 );
 
-create table valores (
-	idValores int primary key auto_increment,
-	gostei DECIMAL,
-	naoGostei DECIMAL,
-	aindaNaoSei DECIMAL,
-	momento DATETIME,
-	fk_grafico INT,
-	FOREIGN KEY (fk_grafico) REFERENCES grafico(idGrafico)
-);
 insert into usuario values
 	(null, 'Shine', 'Max', 'ShineMax', '2023-05-22', 'Brasil', null, 'shinemax@shine.max', 'S4in3M@x', 'administrador');
-    
-select * from usuario;
 
+insert into grafico values
+	(null, 1, 0, 1, now());
+
+select * from usuario;
 select * from grafico;
 
-select * from valores;
+create table acesso(
+idAcesso int primary key auto_increment,
+nome varchar(45),
+email varchar(45),
+senha varchar(45)
+);
+
+create table voto(
+idVoto int primary key auto_increment,
+nota varchar(45),
+constraint chkNota check (nota = 'gostei' or nota = 'naoGostei' or nota = 'aindaNaoSei'),
+fkAcesso int,
+constraint fkAcesso foreign key (fkAcesso) references acesso(idAcesso)
+);
+
+insert into acesso values
+	(null,'vivian','vivian.silva@sptech.school','vivian123'),
+	(null,'lucas','lucas@gmail.com','1234'),
+	(null,'matheus','matheus@gmail.com','1234'),
+	(null,'edu','edu@gmail.com','1234');
+    
+insert into voto values
+	(null, 'gostei', 1),
+	(null, 'naoGostei', 2),
+	(null, 'aindaNaoSei', 3),
+	(null, 'gostei', 4);
+    
+select * from acesso;
+select * from voto;
+
+select nota, count(fkAcesso) from voto group by nota;
