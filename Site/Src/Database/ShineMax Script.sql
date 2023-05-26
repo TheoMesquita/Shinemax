@@ -52,9 +52,13 @@ create table valores (
 	aindaNaoSei DECIMAL,
 	momento DATETIME,
 	fk_grafico INT,
-	FOREIGN KEY (fk_grafico) REFERENCES grafico(id)
+	FOREIGN KEY (fk_grafico) REFERENCES grafico(idGrafico)
 );
 insert into usuario values
 	(null, 'Shine', 'Max', 'ShineMax', '2023-05-22', 'Brasil', null, 'shinemax@shine.max', 'S4in3M@x', 'administrador');
     
 select * from usuario;
+
+select * from grafico;
+
+select * from valores;

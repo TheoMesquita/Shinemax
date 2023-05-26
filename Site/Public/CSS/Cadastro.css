@@ -45,3 +45,13 @@
 .cadastro select {
   width: 200px;
 }
+.loading-div {
+  width: 50px;
+  margin: auto;
+  display: none;
+}
+
+.loading-div img {
+  height: 50px;
+  width: 50px;
+}
