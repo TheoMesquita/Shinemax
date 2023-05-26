@@ -132,18 +132,18 @@
       <div class="redes">Siga-nos nas Redes Sociais</div>
       <div class="redesocial">
         <a href="https://github.com/TheoMesquita/Shinemax">
-          <img src="Img/icones/git.png" width="30px" />
+          <img src="../Img/icones/git.png" width="30px" />
         </a>
         <a href="https://web.facebook.com/theofilo.mesquita.5">
-          <img src="Img/icones/facebook.png" width="30px" />
+          <img src="../Img/icones/facebook.png" width="30px" />
         </a>
 
 
         <a href="https://www.instagram.com/010_theo/">
-          <img src="Img/icones/instagram.png" width="30px" />
+          <img src="../Img/icones/instagram.png" width="30px" />
         </a>
         <a href="">
-          <img src="Img/icones/youtube.png" width="30px" />
+          <img src="../Img/icones/youtube.png" width="30px" />
         </a>
       </div>
       <div class="contato">Algum problema? Contate-nos</div>
@@ -200,7 +200,7 @@
       confirmarSenha.style.borderColor = "#DC3545";
 
       cardErro.style.display = "block";
-      mensagem_erro.innerHTML = "(Preencha todos os campos!)";
+      mensagem_erro.innerHTML = "Preencha todos os campos!";
 
       finalizarAguardar();
       return false;
@@ -208,7 +208,7 @@
       email_input.style.borderColor = "#DC3545";
 
       cardErro.style.display = "block";
-      mensagem_erro.innerHTML = "(Insira um E-mail válido!)";
+      mensagem_erro.innerHTML = "Insira um E-mail válido!";
 
       finalizarAguardar();
       return false;
@@ -217,7 +217,7 @@
       confirmarSenha.style.borderColor = "#DC3545";
 
       cardErro.style.display = "block";
-      mensagem_erro.innerHTML = "(As Senhas não coincidem!)";
+      mensagem_erro.innerHTML = "As Senhas não coincidem!";
 
       finalizarAguardar();
       return false;
@@ -254,7 +254,7 @@
             "Cadastro realizado com sucesso! Redirecionando para tela de Login...";
 
           setTimeout(() => {
-            window.location = "login.html";
+            window.location = "Login.html";
           }, "2000");
 
           limparFormulario();

@@ -9,6 +9,7 @@
   justify-content: space-evenly;
   margin: auto;
   border-radius: 10px;
+  position: relative;
 }
 .containerCadastro .barracima {
   width: 80%;
