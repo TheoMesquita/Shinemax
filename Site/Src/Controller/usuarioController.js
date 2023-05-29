@@ -68,11 +68,11 @@ function cadastrar(req, res) {
   var sobrenome = req.body.sobrenomeServer;
   var apelido = req.body.apelidoServer;
   var idade = req.body.idadeServer;
-  var nacionalidade = req.body.nacionalidadeServer;
+  var nacionalidade = req.body.paisServer;
   var genero = req.body.generoServer;
   var email = req.body.emailServer;
   var senha = req.body.senhaServer;
-
+  console.log(nome, sobrenome, apelido, idade, nacionalidade, genero, email, senha)
   // Faça as validações dos valores
   if (nome == undefined) {
     res.status(400).send("Seu nome está undefined!");

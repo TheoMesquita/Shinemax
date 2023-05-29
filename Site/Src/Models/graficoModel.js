@@ -5,23 +5,9 @@ function buscarValores(idGrafico, limite_linhas) {
     instrucaoSql = ''
 
     if (process.env.AMBIENTE_PROCESSO == "producao") {
-        instrucaoSql = `select top ${limite_linhas}
-        gostei as Like, 
-        naoGostei as Deslike,
-        aindaNaoSei as SemLike, 
-                        momento,
-                        FORMAT(momento, 'HH:mm:ss') as momento_grafico
-                    from grafico
-                    order by id desc`;
+        instrucaoSql = `select nota, count(fkAcesso) from voto group by nota;`;
     } else if (process.env.AMBIENTE_PROCESSO == "desenvolvimento") {
-        instrucaoSql = `select 
-        gostei as Like, 
-        naoGostei as Deslike,
-        aindaNaoSei as SemLike,
-                        momento,
-                        DATE_FORMAT(momento,'%H:%i:%s') as momento_grafico
-                    from grafico
-                    order by id desc limit ${limite_linhas}`;
+        instrucaoSql = `select nota, count(fkAcesso) from voto group by nota;`;
     } else {
         console.log("\nO AMBIENTE (produção OU desenvolvimento) NÃO FOI DEFINIDO EM app.js\n");
         return
@@ -31,27 +17,15 @@ function buscarValores(idGrafico, limite_linhas) {
     return database.executar(instrucaoSql);
 }
 
-function buscarValoresEmTempoReal(idGrafico) {
+function buscarUltimosValores(idGrafico) {
 
     instrucaoSql = ''
 
     if (process.env.AMBIENTE_PROCESSO == "producao") {
-        instrucaoSql = `select top 1
-        gostei as Like, 
-        naoGostei as Deslike,
-        aindaNaoSei as SemLike,
-                        CONVERT(varchar, momento, 108) as momento_grafico 
-                        from grafico
-                    order by id desc`;
+        instrucaoSql = `select nota, count(fkAcesso) from voto group by nota;`;
 
     } else if (process.env.AMBIENTE_PROCESSO == "desenvolvimento") {
-        instrucaoSql = `select 
-        gostei as Like, 
-        naoGostei as Deslike,
-        aindaNaoSei as SemLike,
-                        DATE_FORMAT(momento,'%H:%i:%s') as momento_grafico
-                        from grafico
-                    order by id desc limit 1`;
+        instrucaoSql = `select nota, count(fkAcesso) from voto group by nota;`;
     } else {
         console.log("\nO AMBIENTE (produção OU desenvolvimento) NÃO FOI DEFINIDO EM app.js\n");
         return
@@ -64,5 +38,5 @@ function buscarValoresEmTempoReal(idGrafico) {
 
 module.exports = {
     buscarValores,
-    buscarValoresEmTempoReal
+    buscarUltimosValores
 }

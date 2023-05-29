@@ -2,13 +2,11 @@ var graficoModel = require("../Models/graficoModel");
 
 function buscarUltimosValores(req, res) {
 
-    const limite_linhas = 7;
-
     var idGrafico = req.params.idGrafico;
 
-    console.log(`Recuperando as ultimas ${limite_linhas} valores`);
+    console.log(`Recuperando as ultimos valores`);
 
-    graficoModel.buscarUltimosValores(idGrafico, limite_linhas).then(function (resultado) {
+    graficoModel.buscarUltimosValores(idGrafico).then(function (resultado) {
         if (resultado.length > 0) {
             res.status(200).json(resultado);
         } else {

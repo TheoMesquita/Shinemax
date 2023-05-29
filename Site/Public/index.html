@@ -392,7 +392,7 @@
     obterDadosGrafico(2);
   }
 
-  verificar_autenticacao();
+  // verificar_autenticacao();
 
   function alterarTitulo(idGrafico) {
     var titulogidGrafico = document.getElementById(`tituloGrafico${idGrafico}`);
@@ -453,8 +453,10 @@
         if (response.ok) {
           response.json().then(function (resposta) {
             console.log(`Dados recebidos: ${JSON.stringify(resposta)}`);
-            resposta.reverse();
-
+            console.log(resposta[0]["count(fkAcesso)"])
+            console.log(resposta[1]["count(fkAcesso)"])
+            console.log(resposta[2]["count(fkAcesso)"])
+            
             plotarGrafico(resposta, idGrafico);
           });
         } else {
@@ -515,9 +517,9 @@
     for (i = 0; i < resposta.length; i++) {
       var registro = resposta[i];
       labels.push(registro.momento_grafico);
-      dados.datasets[0].data.push(registro.gostei);
-      dados.datasets[1].data.push(registro.naoGostei);
-      dados.datasets[2].data.push(registro.aindaNaoSei);
+      dados.datasets[0].data.push(resposta[0]["count(fkAcesso)"]);
+      dados.datasets[1].data.push(resposta[1]["count(fkAcesso)"]);
+      dados.datasets[2].data.push(resposta[2]["count(fkAcesso)"]);
     }
 
     console.log("----------------------------------------------");
@@ -530,7 +532,7 @@
 
     // Criando estrutura para plotar gráfico - config
     const config = {
-      type: "line",
+      type: "bar",
       data: dados,
     };
 

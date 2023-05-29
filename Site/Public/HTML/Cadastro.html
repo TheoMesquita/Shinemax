@@ -226,28 +226,25 @@
     }
 
     // Enviando o valor da nova input
-    fetch("/usuarios/cadastrar", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify({
-        // crie um atributo que recebe o valor recuperado aqui
-        // Agora vá para o arquivo routes/usuario.js
-        nomeServer: nomeVar,
-        sobrenomeServer: sobrenomeVar,
-        apelidoServer: apelidoVar,
-        idadeServer: idadeVar,
-        paisServer: paisVar,
-        generoServer: generoVar,
-        emailServer: emailVar,
-        senhaServer: senhaVar,
-      }),
-    })
-      .then(function (resposta) {
+      fetch("/usuarios/cadastrar", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          nomeServer: nomeVar,
+          sobrenomeServer: sobrenomeVar,
+          apelidoServer: apelidoVar,
+          idadeServer: idadeVar,
+          paisServer: paisVar,
+          generoServer: generoVar,
+          emailServer: emailVar,
+          senhaServer: senhaVar,
+        }),
+      }).then(function (resposta) {
         console.log("resposta: ", resposta);
 
-        if (resposta.ok) {
+        if (resposta.ok == true) {
           cardErro.style.display = "block";
 
           mensagem_erro.innerHTML =
@@ -262,8 +259,7 @@
         } else {
           throw "Houve um erro ao tentar realizar o cadastro!";
         }
-      })
-      .catch(function (resposta) {
+      }).catch(function (resposta) {
         console.log(`#ERRO: ${resposta}`);
         finalizarAguardar();
       });
