@@ -93,9 +93,8 @@ a {
 }
 .usuario .icone-login:hover > .menu-login {
   display: flex;
-  height: 100px;
+  height: 60px;
   justify-content: space-around;
-  text-align-last: auto;
   flex-direction: column;
   position: absolute;
   background-color: #272525;
@@ -113,7 +112,7 @@ a {
 
 .conteudo {
   width: 80%;
-  height: 540px;
+  height: 520px;
   margin: auto;
   position: relative;
 }
@@ -290,18 +289,6 @@ a {
 
 .label-captura {
   height: 80px;
-}
-
-.display-none {
-  display: none;
-}
-
-.display-flex {
-  display: flex;
-}
-
-.display-block {
-  display: block;
 }
 
 canvas {

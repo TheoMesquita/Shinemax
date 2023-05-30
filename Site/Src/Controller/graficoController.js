@@ -2,11 +2,11 @@ var graficoModel = require("../Models/graficoModel");
 
 function buscarUltimosValores(req, res) {
 
-    var idGrafico = req.params.idGrafico;
+    var idVoto = req.params.idVoto;
 
     console.log(`Recuperando as ultimos valores`);
 
-    graficoModel.buscarUltimosValores(idGrafico).then(function (resultado) {
+    graficoModel.buscarUltimosValores(idVoto).then(function (resultado) {
         if (resultado.length > 0) {
             res.status(200).json(resultado);
         } else {
@@ -20,13 +20,13 @@ function buscarUltimosValores(req, res) {
 }
 
 
-function buscarValoresEmTempoReal(req, res) {
+function buscarValoresTempoReal(req, res) {
 
-    var idGrafico = req.params.idGrafico;
+    var idVoto = req.params.idVoto;
 
     console.log(`Recuperando valores em tempo real`);
 
-    graficoModel.buscarValoresEmTempoReal(idGrafico).then(function (resultado) {
+    graficoModel.buscarValoresTempoReal(idVoto).then(function (resultado) {
         if (resultado.length > 0) {
             res.status(200).json(resultado);
         } else {
@@ -41,6 +41,6 @@ function buscarValoresEmTempoReal(req, res) {
 
 module.exports = {
     buscarUltimosValores,
-    buscarValoresEmTempoReal
+    buscarValoresTempoReal
 
 }

@@ -8,7 +8,7 @@ router.get("/ultimas/:grafico", function (req, res) {
 });
 
 router.get("/tempo-real/:grafico", function (req, res) {
-    graficoController.buscarValoresEmTempoReal(req, res);
+    graficoController.buscarValoresTempoReal(req, res);
 })
 
 module.exports = router;

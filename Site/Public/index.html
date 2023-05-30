@@ -1,384 +1,335 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <title>ShineMax | Página Inicial</title>
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <link rel="icon" href="Img/icones/logo.png" />
-    <link rel="stylesheet" href="CSS/Shinemax.css" />
-  </head>
+  <title>ShineMax | Página Inicial</title>
 
-  <body>
-    <a name="topo"></a>
+  <link rel="icon" href="Img/icones/logo.png" />
+  <link rel="stylesheet" href="CSS/Shinemax.css" />
+</head>
 
-    <div class="carrossel">
-      <div class="container" id="img">
-        <img src="Img/fundos/fundo.png" width="100%" />
-        <img src="Img/fundos/fundo1.png" width="100%" />
-        <img src="Img/fundos/fundo2.png" width="100%" />
-        <img src="Img/fundos/fundo3.png" width="100%" />
-        <img src="Img/fundos/fundo4.png" width="100%" />
-      </div>
+<body>
+  <a name="topo"></a>
+
+  <div class="carrossel">
+    <div class="container" id="img">
+      <img src="Img/fundos/fundo.png" width="100%" />
+      <img src="Img/fundos/fundo1.png" width="100%" />
+      <img src="Img/fundos/fundo2.png" width="100%" />
+      <img src="Img/fundos/fundo3.png" width="100%" />
+      <img src="Img/fundos/fundo4.png" width="100%" />
     </div>
+  </div>
 
-    <div class="header">
-      <div class="container">
-        <!-- Barra de cima -->
-        <a href="index.html">
-          <div id="ocultartitulo" class="titulo">
-            <img src="Img/icones/logo.png" height="50px" />
-            ShineMax
-          </div>
-        </a>
-        <ul id="ocultar" class="barra">
-          <li>Home</li>
-          <li><a href="HTML/Filmes.html">Filmes</a></li>
-          <li><a href="HTML/Series.html">Séries</a></li>
-          <li><a href="HTML/Animes.html">Animes</a></li>
-          <div>
-            <img
-              onclick="mostrar('pesquisa')"
-              style="filter: invert(1)"
-              src="Img/icones/pesquisa.png"
-              height="30px"
-              width="30px"
-            />
-          </div>
-          <div class="usuario">
-            <span class="icone-login">
-              <img src="Img/icones/usuario.png" width="50px" />
-              <div class="menu-login">
-                <div class="loginRealizado">
-                    <li id="c_usuario">Usuario</li>
-                    <li id="d_usuario">Nacionalidade</li>
-                    <a href="HTML/Configuracões.html"> Configurações </a>
-                    <a href="index.html" onclick="limparSessao()">sair</a>
-                </div>
-                <a href="HTML/Login.html"> Login </a>
-                <a href="HTML/Cadastro.html"> Cadastro </a>
+  <div class="header">
+    <div class="container">
+      <!-- Barra de cima -->
+      <a href="index.html">
+        <div id="ocultartitulo" class="titulo">
+          <img src="Img/icones/logo.png" height="50px" />
+          ShineMax
+        </div>
+      </a>
+      <ul id="ocultar" class="barra">
+        <li>Home</li>
+        <li><a href="HTML/Filmes.html">Filmes</a></li>
+        <li><a href="HTML/Series.html">Séries</a></li>
+        <li><a href="HTML/Animes.html">Animes</a></li>
+        <div>
+          <img onclick="mostrar('pesquisa')" style="filter: invert(1)" src="Img/icones/pesquisa.png" height="30px"
+            width="30px" />
+        </div>
+        <div class="usuario">
+          <span class="icone-login">
+            <img src="Img/icones/usuario.png" width="50px" />
+            <div class="menu-login">
+              <div id="online" style="display: none;">
+                <li id="c_usuario">Usuario</li>
+                <li><a href="HTML/Configuracões.html"> Configurações </a></li>
+                <li><a href="index.html" onclick="limparSessao()">sair</a></li>
               </div>
-            </span>
-          </div>
-        </ul>
-        <!-- Fim da Barra-->
-      </div>
-
-      <div id="pesquisa" style="display: none">
-        <div class="buttonpesquisar">
-          <img
-            src="Img/icones/pesquisa.png"
-            style="filter: invert(1)"
-            width="20px"
-            alt="Buscar"
-          />
-          <input type="search" class="inputpesquisa" placeholder="Buscar..." />
+              <div id="offline">
+                <li><a href="HTML/Login.html"> Login </a></li>
+                <li><a href="HTML/Cadastro.html"> Cadastro </a></li>
+              </div>
+            </div>
+          </span>
         </div>
-      </div>
+      </ul>
+      <!-- Fim da Barra-->
     </div>
 
-    <div class="conteudo">
-      <div class="destaque">Destaques</div>
-      <div class="informaçao" id="informaçao">
-        <div class="titulo">Naruto</div>
-        <div class="resumo">
-          Um jovem ninja que constantemente procura por reconhecimento e sonha
-          em se tornar Hokage, o líder máximo e mais poderoso de sua vila.
+    <div id="pesquisa" style="display: none">
+      <div class="buttonpesquisar">
+        <img src="Img/icones/pesquisa.png" style="filter: invert(1)" width="20px" alt="Buscar" />
+        <input type="search" class="inputpesquisa" placeholder="Buscar..." />
+      </div>
+    </div>
+  </div>
+
+  <div class="conteudo">
+    <div class="destaque">Destaques</div>
+    <div class="informaçao" id="informaçao">
+      <div class="titulo">Naruto</div>
+      <div class="resumo">
+        Um jovem ninja que constantemente procura por reconhecimento e sonha
+        em se tornar Hokage, o líder máximo e mais poderoso de sua vila.
+      </div>
+      <a href="">
+        <div class="button">
+          <img src="Img/icones/play.png" height="20px" width="20px" />
+          Assistir
         </div>
-        <a href="">
-          <div class="button">
-            <img src="Img/icones/play.png" height="20px" width="20px" />
-            Assistir
+      </a>
+    </div>
+  </div>
+
+  <div class="filmes">
+    <!-- Sessão de Filmes -->
+    <div class="buttons">
+      <button class="buttonrolar" onclick="moverEsquerda()">
+        <div class="before">
+          <div class="arrow-left"></div>
+        </div>
+      </button>
+      <div class="container" id="scroll">
+        <h4 class="title">Filmes Populares</h4>
+        <div class="corpo" id="mylist">
+          <div class="imgs">
+            <img class="img" src="Img/Capas/creed III.png" alt="" />
+            <h4 class="text">Creed III</h4>
           </div>
+          <div class="imgs">
+            <img class="img" src="Img/Capas/a mulher rei.png" alt="" />
+            <h4 class="text">A Mulher Rei</h4>
+          </div>
+          <div class="imgs">
+            <img class="img" src="Img/Capas/avatar.png" alt="" />
+            <h4 class="text">Avatar O Caminho da Água</h4>
+          </div>
+          <div class="imgs">
+            <img class="img" src="Img/Capas/esquema de risco.png" alt="" />
+            <h4 class="text">Esquema de Risco</h4>
+          </div>
+          <div class="imgs">
+            <img class="img" src="Img/Capas/john wick 4.png" alt="" />
+            <h4 class="text">John Wick 4</h4>
+          </div>
+          <div class="imgs">
+            <img class="img" src="Img/Capas/kingsman a origem.png" alt="" />
+            <h4 class="text">Kingsman A Origem</h4>
+          </div>
+          <div class="imgs">
+            <img class="img" src="Img/Capas/uma noite no museu o retorno de kahmurah.png" alt="" />
+            <h4 class="text">Uma Noite no Museu O Retorno de Kahmurah</h4>
+          </div>
+          <div class="imgs">
+            <img class="img" src="Img/Capas/wifi ralph.png" alt="" />
+            <h4 class="text">Wifi Ralph</h4>
+          </div>
+          <div class="imgs">
+            <img class="img" src="Img/Capas/adao negro.png" alt="" />
+            <h4 class="text">Adão Negro</h4>
+          </div>
+          <div class="imgs">
+            <img class="img" src="Img/Capas/shazan.png" alt="" />
+            <h4 class="text">Shazan</h4>
+          </div>
+          <div class="imgs">
+            <img class="img" src="Img/Capas/homem aranha de volta ao lar.png" alt="" />
+            <h4 class="text">Homem Aranha de Volta ao Lar</h4>
+          </div>
+          <div class="imgs">
+            <img class="img" src="Img/Capas/homem de ferro 3.png" alt="" />
+            <h4 class="text">Homem de Ferro 3</h4>
+          </div>
+        </div>
+      </div>
+      <button class="buttonrolar" onclick="moverDireita()">
+        <div class="after">
+          <div class="arrow-right"></div>
+        </div>
+      </button>
+    </div>
+
+    <div class="buttons">
+      <button class="buttonrolar" onclick="moverEsquerda2()">
+        <div class="before">
+          <div class="arrow-left"></div>
+        </div>
+      </button>
+      <div class="container" id="scroll2">
+        <h4 class="title">Tops da Semana</h4>
+        <div class="corpo" id="mylist">
+          <div class="imgs">
+            <img class="img" src="Img/Capas/kung fu panda 3.png" alt="" />
+            <h4 class="text">Kung Fu Panda 3</h4>
+          </div>
+          <div class="imgs">
+            <img class="img" src="Img/Capas/kingsman a origem.png" alt="" />
+            <h4 class="text">Kingsman A Origem</h4>
+          </div>
+          <div class="imgs">
+            <img class="img" src="Img/Capas/uma noite no museu o retorno de kahmurah.png" alt="" />
+            <h4 class="text">Uma Noite no Museu O Retorno de Kahmurah</h4>
+          </div>
+          <div class="imgs">
+            <img class="img" src="Img/Capas/avatar.png" alt="" />
+            <h4 class="text">Avatar o Caminho da Água</h4>
+          </div>
+          <div class="imgs">
+            <img class="img" src="Img/Capas/john wick 4.png" alt="" />
+            <h4 class="text">John Wick 4</h4>
+          </div>
+          <div class="imgs">
+            <img class="img" src="Img/Capas/gato de botas.png" alt="" />
+            <h4 class="text">Gato de Botas 3</h4>
+          </div>
+          <div class="imgs">
+            <img class="img" src="Img/Capas/a mulher rei.png" alt="" />
+            <h4 class="text">A Mulher Rei</h4>
+          </div>
+          <div class="imgs">
+            <img class="img" src="Img/Capas/creed III.png" alt="" />
+            <h4 class="text">Creed III</h4>
+          </div>
+          <div class="imgs">
+            <img class="img" src="Img/Capas/eu sou a lenda.png" alt="" />
+            <h4 class="text">Eu sou a Lenda</h4>
+          </div>
+          <div class="imgs">
+            <img class="img" src="Img/Capas/carros 3.png" alt="" />
+            <h4 class="text">Carros 3</h4>
+          </div>
+        </div>
+      </div>
+      <button class="buttonrolar" onclick="moverDireita2()">
+        <div class="after">
+          <div class="arrow-right"></div>
+        </div>
+      </button>
+    </div>
+
+    <div class="buttons">
+      <button class="buttonrolar" onclick="moverEsquerda3()">
+        <div class="before">
+          <div class="arrow-left"></div>
+        </div>
+      </button>
+      <div class="container" id="scroll3">
+        <h4 class="title">Recomendados</h4>
+        <div class="corpo" id="mylist">
+          <div class="imgs">
+            <img class="img" src="Img/Capas/peaky blinders.png" alt="" />
+            <h4 class="text">Peaky Blinders</h4>
+          </div>
+          <div class="imgs">
+            <img class="img" src="Img/Capas/chicago med.png" alt="" />
+            <h4 class="text">Chicago Med</h4>
+          </div>
+          <div class="imgs">
+            <img class="img" src="Img/Capas/vingadores guerra infinita.png" alt="" />
+            <h4 class="text">Vingadores Guerra Infinita</h4>
+          </div>
+          <div class="imgs">
+            <img class="img" src="Img/Capas/the witcher.png" alt="" />
+            <h4 class="text">The Witcher</h4>
+          </div>
+          <div class="imgs">
+            <img class="img" src="Img/Capas/the last of us.png" alt="" />
+            <h4 class="text">The Last Of Us</h4>
+          </div>
+          <div class="imgs">
+            <img class="img" src="Img/Capas/homem de ferro 3.png" alt="" />
+            <h4 class="text">Homem de Ferro 3</h4>
+          </div>
+          <div class="imgs">
+            <img class="img" src="Img/Capas/gato de botas.png" alt="" />
+            <h4 class="text">Gato de Botas</h4>
+          </div>
+          <div class="imgs">
+            <img class="img" src="Img/Capas/the flash.png" alt="" />
+            <h4 class="text">The Flash</h4>
+          </div>
+          <div class="imgs">
+            <img class="img" src="Img/Capas/operação big hero.png" alt="" />
+            <h4 class="text">Operação Big Hero</h4>
+          </div>
+          <div class="imgs">
+            <img class="img" src="Img/Capas/minions 2.png" alt="" />
+            <h4 class="text">minions 2</h4>
+          </div>
+        </div>
+      </div>
+      <button class="buttonrolar" onclick="moverDireita3()">
+        <div class="after">
+          <div class="arrow-right"></div>
+        </div>
+      </button>
+    </div>
+    <!-- Fim da Parte dos Filmes -->
+  </div>
+
+  <div class="btns-dash">
+    <span class="btn-chart btn-pink" onclick="exibirGrafico(1)" id="btnPessoasGostaram">
+      Número de Usuarios que Curtiram o Site
+    </span>
+  </div>
+
+  <div id="graficos">
+    <div id="grafico1">
+      <h3 id="tituloGraficos">
+        <span id="Curtidas"></span>
+      </h3>
+      <div class="graph">
+        <canvas id="myChartCanvas"></canvas>
+      </div>
+      <div class="label-captura">
+        <p id="avisoCaptura1" style="color: white"></p>
+      </div>
+    </div>
+  </div>
+  </div>
+  </div>
+
+  <div class="footer">
+    <!-- Barra Baixo -->
+    <div class="container">
+      <div class="redes">Siga-nos nas Redes Sociais</div>
+      <div class="redesocial">
+        <a href="https://github.com/TheoMesquita/Shinemax">
+          <img src="Img/icones/git.png" style="filter: invert(1)" width="30px" />
+        </a>
+        <a href="https://web.facebook.com/theofilo.mesquita.5">
+          <img src="Img/icones/facebook.png" width="30px" />
+        </a>
+        <a href="https://www.instagram.com/010_theo/">
+          <img src="Img/icones/instagram.png" width="30px" />
+        </a>
+        <a href="">
+          <img src="Img/icones/youtube.png" width="30px" />
         </a>
       </div>
+      <div class="contato">Algum problema? Contate-nos</div>
+      <div class="contatos">
+        <li>E-mail: theomesquita@hotmail.com</li>
+        <li>Celular: (11) 98677-3099</li>
+      </div>
+      <div class="copy">&copy; Copyright Todos os direitos reservados</div>
+      <button class="topo"><a href="#topo">^</a></button>
     </div>
+    <!-- Fim da Barra -->
+  </div>
 
-    <div class="filmes">
-      <!-- Sessão de Filmes -->
-      <div class="buttons">
-        <button class="buttonrolar" onclick="moverEsquerda()">
-          <div class="before">
-            <div class="arrow-left"></div>
-          </div>
-        </button>
-        <div class="container" id="scroll">
-          <h4 class="title">Filmes Populares</h4>
-          <div class="corpo" id="mylist">
-            <div class="imgs">
-              <img class="img" src="Img/Capas/creed III.png" alt="" />
-              <h4 class="text">Creed III</h4>
-            </div>
-            <div class="imgs">
-              <img class="img" src="Img/Capas/a mulher rei.png" alt="" />
-              <h4 class="text">A Mulher Rei</h4>
-            </div>
-            <div class="imgs">
-              <img class="img" src="Img/Capas/avatar.png" alt="" />
-              <h4 class="text">Avatar O Caminho da Água</h4>
-            </div>
-            <div class="imgs">
-              <img class="img" src="Img/Capas/esquema de risco.png" alt="" />
-              <h4 class="text">Esquema de Risco</h4>
-            </div>
-            <div class="imgs">
-              <img class="img" src="Img/Capas/john wick 4.png" alt="" />
-              <h4 class="text">John Wick 4</h4>
-            </div>
-            <div class="imgs">
-              <img class="img" src="Img/Capas/kingsman a origem.png" alt="" />
-              <h4 class="text">Kingsman A Origem</h4>
-            </div>
-            <div class="imgs">
-              <img
-                class="img"
-                src="Img/Capas/uma noite no museu o retorno de kahmurah.png"
-                alt=""
-              />
-              <h4 class="text">Uma Noite no Museu O Retorno de Kahmurah</h4>
-            </div>
-            <div class="imgs">
-              <img class="img" src="Img/Capas/wifi ralph.png" alt="" />
-              <h4 class="text">Wifi Ralph</h4>
-            </div>
-            <div class="imgs">
-              <img class="img" src="Img/Capas/adao negro.png" alt="" />
-              <h4 class="text">Adão Negro</h4>
-            </div>
-            <div class="imgs">
-              <img class="img" src="Img/Capas/shazan.png" alt="" />
-              <h4 class="text">Shazan</h4>
-            </div>
-            <div class="imgs">
-              <img
-                class="img"
-                src="Img/Capas/homem aranha de volta ao lar.png"
-                alt=""
-              />
-              <h4 class="text">Homem Aranha de Volta ao Lar</h4>
-            </div>
-            <div class="imgs">
-              <img class="img" src="Img/Capas/homem de ferro 3.png" alt="" />
-              <h4 class="text">Homem de Ferro 3</h4>
-            </div>
-          </div>
-        </div>
-        <button class="buttonrolar" onclick="moverDireita()">
-          <div class="after">
-            <div class="arrow-right"></div>
-          </div>
-        </button>
-      </div>
+  <script src="JS/Carrossel.js"></script>
+  <script src="JS/Pesquisar.js"></script>
+  <script src="JS/Shinemax.js"></script>
+</body>
 
-      <div class="buttons">
-        <button class="buttonrolar" onclick="moverEsquerda2()">
-          <div class="before">
-            <div class="arrow-left"></div>
-          </div>
-        </button>
-        <div class="container" id="scroll2">
-          <h4 class="title">Tops da Semana</h4>
-          <div class="corpo" id="mylist">
-            <div class="imgs">
-              <img class="img" src="Img/Capas/kung fu panda 3.png" alt="" />
-              <h4 class="text">Kung Fu Panda 3</h4>
-            </div>
-            <div class="imgs">
-              <img class="img" src="Img/Capas/kingsman a origem.png" alt="" />
-              <h4 class="text">Kingsman A Origem</h4>
-            </div>
-            <div class="imgs">
-              <img
-                class="img"
-                src="Img/Capas/uma noite no museu o retorno de kahmurah.png"
-                alt=""
-              />
-              <h4 class="text">Uma Noite no Museu O Retorno de Kahmurah</h4>
-            </div>
-            <div class="imgs">
-              <img class="img" src="Img/Capas/avatar.png" alt="" />
-              <h4 class="text">Avatar o Caminho da Água</h4>
-            </div>
-            <div class="imgs">
-              <img class="img" src="Img/Capas/john wick 4.png" alt="" />
-              <h4 class="text">John Wick 4</h4>
-            </div>
-            <div class="imgs">
-              <img class="img" src="Img/Capas/gato de botas.png" alt="" />
-              <h4 class="text">Gato de Botas 3</h4>
-            </div>
-            <div class="imgs">
-              <img class="img" src="Img/Capas/a mulher rei.png" alt="" />
-              <h4 class="text">A Mulher Rei</h4>
-            </div>
-            <div class="imgs">
-              <img class="img" src="Img/Capas/creed III.png" alt="" />
-              <h4 class="text">Creed III</h4>
-            </div>
-            <div class="imgs">
-              <img class="img" src="Img/Capas/eu sou a lenda.png" alt="" />
-              <h4 class="text">Eu sou a Lenda</h4>
-            </div>
-            <div class="imgs">
-              <img class="img" src="Img/Capas/carros 3.png" alt="" />
-              <h4 class="text">Carros 3</h4>
-            </div>
-          </div>
-        </div>
-        <button class="buttonrolar" onclick="moverDireita2()">
-          <div class="after">
-            <div class="arrow-right"></div>
-          </div>
-        </button>
-      </div>
-
-      <div class="buttons">
-        <button class="buttonrolar" onclick="moverEsquerda3()">
-          <div class="before">
-            <div class="arrow-left"></div>
-          </div>
-        </button>
-        <div class="container" id="scroll3">
-          <h4 class="title">Recomendados</h4>
-          <div class="corpo" id="mylist">
-            <div class="imgs">
-              <img class="img" src="Img/Capas/peaky blinders.png" alt="" />
-              <h4 class="text">Peaky Blinders</h4>
-            </div>
-            <div class="imgs">
-              <img class="img" src="Img/Capas/chicago med.png" alt="" />
-              <h4 class="text">Chicago Med</h4>
-            </div>
-            <div class="imgs">
-              <img
-                class="img"
-                src="Img/Capas/vingadores guerra infinita.png"
-                alt=""
-              />
-              <h4 class="text">Vingadores Guerra Infinita</h4>
-            </div>
-            <div class="imgs">
-              <img class="img" src="Img/Capas/the witcher.png" alt="" />
-              <h4 class="text">The Witcher</h4>
-            </div>
-            <div class="imgs">
-              <img class="img" src="Img/Capas/the last of us.png" alt="" />
-              <h4 class="text">The Last Of Us</h4>
-            </div>
-            <div class="imgs">
-              <img class="img" src="Img/Capas/homem de ferro 3.png" alt="" />
-              <h4 class="text">Homem de Ferro 3</h4>
-            </div>
-            <div class="imgs">
-              <img class="img" src="Img/Capas/gato de botas.png" alt="" />
-              <h4 class="text">Gato de Botas</h4>
-            </div>
-            <div class="imgs">
-              <img class="img" src="Img/Capas/the flash.png" alt="" />
-              <h4 class="text">The Flash</h4>
-            </div>
-            <div class="imgs">
-              <img class="img" src="Img/Capas/operação big hero.png" alt="" />
-              <h4 class="text">Operação Big Hero</h4>
-            </div>
-            <div class="imgs">
-              <img class="img" src="Img/Capas/minions 2.png" alt="" />
-              <h4 class="text">minions 2</h4>
-            </div>
-          </div>
-        </div>
-        <button class="buttonrolar" onclick="moverDireita3()">
-          <div class="after">
-            <div class="arrow-right"></div>
-          </div>
-        </button>
-      </div>
-      <!-- Fim da Parte dos Filmes -->
-    </div>
-
-      <div class="btns-dash">
-        <button
-          class="btn-chart btn-pink"
-          onclick="exibirGrafico(1)"
-          id="btnNumeroPessoas"
-        >
-          Acessos
-        </button>
-        <button
-          class="btn-chart btn-pink"
-          onclick="exibirGrafico(2)"
-          id="btnPessoasGostaram"
-        >
-          Curtidas
-        </button>
-      </div>
-
-      <div id="graficos">
-        <div id="grafico1" class="display-block">
-          <h3 id="tituloGraficos">
-            <span id="pessoasAcessaram">123</span>
-          </h3>
-          <div class="graph">
-            <canvas id="myChartCanvas1"></canvas>
-          </div>
-          <div class="label-captura">
-            <p id="avisoCaptura1" style="color: white"></p>
-          </div>
-        </div>
-
-        <div id="grafico2" class="display-none">
-          <h3 id="tituloGraficos1">
-            <span id="pessoasGostaram"></span>
-          </h3>
-          <div class="graph">
-            <canvas id="myChartCanvas2"></canvas>
-          </div>
-          <div class="label-captura">
-            <p id="avisoCaptura2" style="color: white"></p>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="footer">
-      <!-- Barra Baixo -->
-      <div class="container">
-        <div class="redes">Siga-nos nas Redes Sociais</div>
-        <div class="redesocial">
-          <a href="https://github.com/TheoMesquita/Shinemax">
-            <img
-              src="Img/icones/git.png"
-              style="filter: invert(1)"
-              width="30px"
-            />
-          </a>
-          <a href="https://web.facebook.com/theofilo.mesquita.5">
-            <img src="Img/icones/facebook.png" width="30px" />
-          </a>
-          <a href="https://www.instagram.com/010_theo/">
-            <img src="Img/icones/instagram.png" width="30px" />
-          </a>
-          <a href="">
-            <img src="Img/icones/youtube.png" width="30px" />
-          </a>
-        </div>
-        <div class="contato">Algum problema? Contate-nos</div>
-        <div class="contatos">
-          <li>E-mail: theomesquita@hotmail.com</li>
-          <li>Celular: (11) 98677-3099</li>
-        </div>
-        <div class="copy">&copy; Copyright Todos os direitos reservados</div>
-        <button class="topo"><a href="#topo">^</a></button>
-      </div>
-      <!-- Fim da Barra -->
-    </div>
-
-    <script src="JS/Carrossel.js"></script>
-    <script src="JS/Pesquisar.js"></script>
-    <script src="JS/Shinemax.js"></script>
-  </body>
 </html>
 <script>
   c_usuario.innerHTML = sessionStorage.APELIDO_USUARIO;
@@ -389,45 +340,6 @@
 
   function obterDadosGraficos() {
     obterDadosGrafico(1);
-    obterDadosGrafico(2);
-  }
-
-  // verificar_autenticacao();
-
-  function alterarTitulo(idGrafico) {
-    var titulogidGrafico = document.getElementById(`tituloGrafico${idGrafico}`);
-    tituloGraficos.innerHTML = "Número de Pessoas que Acessam o Site";
-    tituloGraficos1.innerHTML = "Avaliações das Pessoas Cadastradas";
-  }
-
-  function exibirgidGrafico(idGrafico) {
-    let todosOsGraficos = document.getElementById("graficos");
-
-    for (i = 1; i <= todosOsGraficos.childElementCount; i++) {
-      // exibindo - ou não - o gráfico
-      let elementoAtual = document.getElementById(`grafico${i}`);
-      if (elementoAtual.classList.contains("display-block")) {
-        elementoAtual.classList.remove("display-block");
-      }
-      elementoAtual.classList.add("display-none");
-
-      // alterando estilo do botão
-      let btnAtual = document.getElementById(`btngidGrafico${i}`);
-      if (btnAtual.classList.contains("btn-pink")) {
-        btnAtual.classList.remove("btn-pink");
-      }
-      btnAtual.classList.add("btn-white");
-    }
-
-    // exibindo - ou não - o gráfico
-    let graficoExibir = document.getElementById(`grafico${idGrafico}`);
-    graficoExibir.classList.remove("display-none");
-    graficoExibir.classList.add("display-block");
-
-    // alterando estilo do botão
-    let btnExibir = document.getElementById(`btnGrafico${idGrafico}`);
-    btnExibir.classList.remove("btn-white");
-    btnExibir.classList.add("btn-pink");
   }
 
   // O gráfico é construído com três funções:
@@ -435,29 +347,25 @@
   // 2. plotarGrafico -> Monta o gráfico com os dados trazidos e exibe em tela
   // 3. atualizarGrafico -> Atualiza o gráfico, trazendo novamente dados do Banco
 
-  // Esta função *obterDadosGrafico* busca os últimos dados inseridos em tabela de medidas.
+  // Esta função *obterDadosGrafico* busca os últimos dados inseridos em tabela de voto.
   // para, quando carregar o gráfico da primeira vez, já trazer com vários dados.
   // A função *obterDadosGrafico* também invoca a função *plotarGrafico*
 
   //     Se quiser alterar a busca, ajuste as regras de negócio em src/controllers
   //     Para ajustar o "select", ajuste o comando sql em src/models
-  function obterDadosGrafico(idGrafico) {
-    alterarTitulo(idGrafico);
+  function obterDadosGrafico(idVoto) {
 
     if (proximaAtualizacao != undefined) {
       clearTimeout(proximaAtualizacao);
     }
 
-    fetch(`/grafico/ultimas/${idGrafico}`, { cache: "no-store" })
+    fetch(`/grafico/ultimas/${idVoto}`, { cache: "no-store" })
       .then(function (response) {
         if (response.ok) {
           response.json().then(function (resposta) {
             console.log(`Dados recebidos: ${JSON.stringify(resposta)}`);
-            console.log(resposta[0]["count(fkAcesso)"])
-            console.log(resposta[1]["count(fkAcesso)"])
-            console.log(resposta[2]["count(fkAcesso)"])
-            
-            plotarGrafico(resposta, idGrafico);
+
+            plotarGrafico(resposta, idVoto);
           });
         } else {
           console.error("Nenhum dado encontrado ou erro na API");
@@ -473,7 +381,7 @@
   // Esta função *plotarGrafico* usa os dados capturados na função anterior para criar o gráfico
   // Configura o gráfico (cores, tipo, etc), materializa-o na página e,
   // A função *plotarGrafico* também invoca a função *atualizarGrafico*
-  function plotarGrafico(resposta, idGrafico) {
+  function plotarGrafico(resposta, idVoto) {
     console.log("iniciando plotagem do gráfico...");
 
     // Criando estrutura para plotar gráfico - labels
@@ -506,20 +414,21 @@
         },
       ],
     };
-
+    
     console.log("----------------------------------------------");
     console.log(
       'Estes dados foram recebidos pela funcao "obterDadosGrafico" e passados para "plotarGrafico":'
-    );
-    console.log(resposta);
-
-    // Inserindo valores recebidos em estrutura para plotar o gráfico
-    for (i = 0; i < resposta.length; i++) {
-      var registro = resposta[i];
-      labels.push(registro.momento_grafico);
-      dados.datasets[0].data.push(resposta[0]["count(fkAcesso)"]);
-      dados.datasets[1].data.push(resposta[1]["count(fkAcesso)"]);
-      dados.datasets[2].data.push(resposta[2]["count(fkAcesso)"]);
+      );
+      console.log(resposta);
+      
+      // Inserindo valores recebidos em estrutura para plotar o gráfico
+      for (i = 0; i < resposta.length; i++) {
+        var registro = resposta[i];
+        labels.push(registro.momento_grafico);
+        console.log("essa é a resposta" + labels[0])
+      dados.datasets[0].data.push(resposta[0]['count(fkUsuarioVoto)']);
+      dados.datasets[1].data.push(resposta[1]['count(fkUsuarioVoto)']);
+      dados.datasets[2].data.push(resposta[2]['count(fkUsuarioVoto)']);
     }
 
     console.log("----------------------------------------------");
@@ -538,11 +447,11 @@
 
     // Adicionando gráfico criado em div na tela
     let myChart = new Chart(
-      document.getElementById(`myChartCanvas${idGrafico}`),
+      document.getElementById(`myChartCanvas`),
       config
     );
 
-    setTimeout(() => atualizarGrafico(idGrafico, dados, myChart), 2000);
+    setTimeout(() => atualizarGrafico(idVoto, dados, myChart), 2000);
   }
 
   // Esta função *atualizarGrafico* atualiza o gráfico que foi renderizado na página,
@@ -550,19 +459,18 @@
 
   //     Se quiser alterar a busca, ajuste as regras de negócio em src/controllers
   //     Para ajustar o "select", ajuste o comando sql em src/models
-  function atualizarGrafico(idGrafico, dados, myChart) {
-    fetch(`/grafico/tempo-real/${idGrafico}`, { cache: "no-store" })
+  function atualizarGrafico(idVoto, dados, myChart) {
+    fetch(`/grafico/tempo-real/${idVoto}`, { cache: "no-store" })
       .then(function (response) {
         if (response.ok) {
           response.json().then(function (novoRegistro) {
-            obterdados(idGrafico);
-            // alertar(novoRegistro, idGrafico);
+            obterdados(idVoto); 
             console.log(`Dados recebidos: ${JSON.stringify(novoRegistro)}`);
             console.log(`Dados atuais do gráfico:`);
             console.log(dados);
 
             let avisoCaptura = document.getElementById(
-              `avisoCaptura${idGrafico}`
+              `avisoCaptura`
             );
             avisoCaptura.innerHTML = "";
 
@@ -585,24 +493,24 @@
               );
             } else {
               // tirando e colocando valores no gráfico
-              dados.labels.shift(); // apagar o primeiro
+              // dados.labels.shift(); // apagar o primeiro
               dados.labels.push(novoRegistro[0].momento_grafico); // incluir um novo momento
 
-              dados.datasets[0].data.shift(); // apagar o primeiro de umidade
-              dados.datasets[0].data.push(novoRegistro[0].umidade); // incluir uma nova medida de umidade
+              // dados.datasets[0].data.shift(); // apagar o primeiro de umidade
+              dados.datasets[0].data.push(novoRegistro[0].gostei); // incluir uma nova medida de umidade
 
-              dados.datasets[1].data.shift(); // apagar o primeiro de temperatura
-              dados.datasets[1].data.push(novoRegistro[0].temperatura); // incluir uma nova medida de temperatura
+              // dados.datasets[1].data.shift(); // apagar o primeiro de temperatura
+              dados.datasets[1].data.push(novoRegistro[0].naoGostei); // incluir uma nova medida de temperatura
 
-              dados.datasets[2].data.shift(); // apagar o primeiro de temperatura
-              dados.datasets[2].data.push(novoRegistro[0].temperatura); // incluir uma nova medida de temperatura
+              // dados.datasets[2].data.shift(); // apagar o primeiro de temperatura
+              dados.datasets[2].data.push(novoRegistro[0].aindaNaoSei); // incluir uma nova medida de temperatura
 
               myChart.update();
             }
 
             // Altere aqui o valor em ms se quiser que o gráfico atualize mais rápido ou mais devagar
             proximaAtualizacao = setTimeout(
-              () => atualizarGrafico(idGrafico, dados, myChart),
+              () => atualizarGrafico(idVoto, dados, myChart),
               2000
             );
           });
@@ -610,7 +518,7 @@
           console.error("Nenhum dado encontrado ou erro na API");
           // Altere aqui o valor em ms se quiser que o gráfico atualize mais rápido ou mais devagar
           proximaAtualizacao = setTimeout(
-            () => atualizarGrafico(idGrafico, dados, myChart),
+            () => atualizarGrafico(idVoto, dados, myChart),
             2000
           );
         }

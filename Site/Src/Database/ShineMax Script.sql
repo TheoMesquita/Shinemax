@@ -13,7 +13,7 @@ idUsuario int primary key auto_increment,
 nome varchar(45),
 Sobrenome varchar(45),
 apelido varchar(45),
-idade date,
+idade int,
 nacionalidade varchar(45),
 genero char(10), constraint chkGenero check (genero in ('Masculino','Feminino')),
 email varchar(45), 
@@ -41,7 +41,7 @@ constraint pkComposta primary key (idHistorico, fkShineMax, fkUsuario)
 );
 
 insert into usuario values
-	(null, 'Shine', 'Max', 'ShineMax', '2023-05-22', 'Brasil', null, 'shinemax@shine.max', 'S4in3M@x', 'administrador');
+	(null, 'Shine', 'Max', 'ShineMax', 1, 'Brasil', null, 'shinemax@shine.max', 'S4in3M@x', 'administrador');
 
 select * from usuario;	
 
@@ -49,16 +49,14 @@ create table voto(
 idVoto int primary key auto_increment,
 nota varchar(45),
 constraint chkNota check (nota = 'gostei' or nota = 'naoGostei' or nota = 'aindaNaoSei'),
-fkAcesso int,
-constraint fkAcesso foreign key (fkAcesso) references acesso(idAcesso)
+momento datetime,
+fkUsuarioVoto int,
+constraint fkUsuarioVoto foreign key (fkUsuarioVoto) references usuario(idUsuario)
 );
     
 insert into voto values
-	(null, 'gostei', 1),
-	(null, 'naoGostei', 2),
-	(null, 'aindaNaoSei', 3),
-	(null, 'gostei', 4);
+	(null, 'aindaNaoSei', now(), 1);
 
 select * from voto;
 
-select nota, count(fkAcesso) from voto group by nota;
+select nota, count(fkUsuarioVoto) from voto group by nota;
