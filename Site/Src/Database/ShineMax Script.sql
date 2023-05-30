@@ -55,8 +55,10 @@ constraint fkUsuarioVoto foreign key (fkUsuarioVoto) references usuario(idUsuari
 );
     
 insert into voto values
+	(null, 'gostei', now(), 1),
+	(null, 'NaoGostei', now(), 1),
 	(null, 'aindaNaoSei', now(), 1);
 
 select * from voto;
 
-select nota, count(fkUsuarioVoto) from voto group by nota;
+select nota, momento, count(fkUsuarioVoto) from voto group by nota order by nota;

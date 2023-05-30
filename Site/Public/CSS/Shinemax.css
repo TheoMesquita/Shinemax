@@ -12,6 +12,7 @@ body {
   position: absolute;
   filter: brightness(0.5);
 }
+
 .carrossel .container {
   display: flex;
   transition: transform 0.5s ease-in-out;
@@ -25,6 +26,7 @@ body {
   height: 150px;
   position: relative;
 }
+
 .header .container {
   width: 80%;
   margin: auto;
@@ -53,6 +55,7 @@ body {
   align-items: center;
   list-style: none;
 }
+
 .barra li,
 a {
   font-size: 20px;
@@ -67,6 +70,7 @@ a {
   position: absolute;
   left: 50%;
 }
+
 .buttonpesquisar {
   width: 510px;
   height: 40px;
@@ -91,7 +95,8 @@ a {
 .usuario .menu-login {
   display: none;
 }
-.usuario .icone-login:hover > .menu-login {
+
+.usuario .icone-login:hover>.menu-login {
   display: flex;
   height: 60px;
   justify-content: space-around;
@@ -102,6 +107,7 @@ a {
   padding: 15px;
   font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
 }
+
 .usuario .menu-login a:hover {
   background-color: white;
   color: black;
@@ -116,12 +122,14 @@ a {
   margin: auto;
   position: relative;
 }
+
 .destaque {
   font-size: 25px;
   margin-top: 25px;
   margin-left: 40px;
   color: white;
 }
+
 .informaçao {
   height: 440px;
   display: flex;
@@ -130,11 +138,13 @@ a {
   font-size: 20px;
   color: white;
 }
+
 .resumo {
   width: 445px;
   margin-top: 10px;
   text-align: justify;
 }
+
 .button {
   display: flex;
   flex-direction: row;
@@ -154,10 +164,12 @@ a {
 .filmes {
   background-color: #0d0d0d;
 }
+
 .buttons {
   display: flex;
   align-items: center;
 }
+
 .buttons .container {
   width: 85%;
   height: 300px;
@@ -166,11 +178,13 @@ a {
   display: flex;
   flex-direction: column;
 }
+
 .corpo {
   width: max-content;
   display: flex;
   flex-direction: row;
 }
+
 .corpo .img {
   float: left;
   width: 150px;
@@ -178,11 +192,13 @@ a {
   transition: all 0.2s ease;
   background: #000;
 }
+
 .corpo .img:hover {
   margin-top: -20px;
   transition: all 0.4s ease;
   position: relative;
 }
+
 .text {
   display: none;
   width: 130px;
@@ -198,6 +214,7 @@ a {
   align-items: center;
   text-align: center;
 }
+
 .imgs {
   display: flex;
   flex-direction: column;
@@ -205,9 +222,11 @@ a {
   left: 2px;
   word-wrap: break-word;
 }
+
 .imgs:hover .text {
   display: flex;
 }
+
 .title {
   color: white;
   text-align: left;
@@ -215,28 +234,33 @@ a {
   font-size: 20px;
   margin-left: 10px;
 }
+
 .before {
   float: left;
   margin-left: 3%;
   padding: 20px;
 }
+
 .after {
   float: right;
   margin-right: 3%;
   padding: 20px;
 }
+
 .arrow-left {
   border-top: 15px solid transparent;
   border-bottom: 15px solid transparent;
   border-right: 15px solid #ccc;
   cursor: pointer;
 }
+
 .arrow-right {
   border-top: 15px solid transparent;
   border-bottom: 15px solid transparent;
   border-left: 15px solid #ccc;
   cursor: pointer;
 }
+
 .buttonrolar {
   background-color: transparent;
   border: none;
@@ -245,55 +269,17 @@ a {
 
 /* Gráfico */
 
-.btns-dash {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-top: 30px;
-}
-
 .graph {
   width: 80%;
   margin: auto;
   padding-top: 10px;
 }
 
-.tituloGraficos {
-  color: rgb(216, 216, 216);
+.btngrafico {
+  height: 100px;
   display: flex;
-  justify-content: center;
-}
-
-.btn-chart {
-  font-family: "Exo 2", sans-serif;
-  border: 0;
-  font-weight: 600;
-  font-size: 18px;
-  padding: 10px 15px;
-  color: #e6005a;
-  background-color: white;
-  margin: 5px;
-  border-radius: 3px;
-}
-
-.btn-pink {
-  color: white;
-  background-color: #e6005a;
-}
-
-.btn-white {
-  color: #e6005a;
-  background-color: white;
-
-}
-
-.label-captura {
-  height: 80px;
-}
-
-canvas {
-  width: 100% !important;
-  height: 100% !important;
+  align-items: center;
+  justify-content: space-evenly;
 }
 
 /* Footer */
@@ -305,6 +291,7 @@ canvas {
   color: white;
   font-size: 18px;
 }
+
 .footer .container {
   width: 80%;
   height: 250px;
@@ -312,28 +299,34 @@ canvas {
   display: grid;
   align-items: center;
 }
+
 .redes {
   display: flex;
   justify-content: center;
   margin-top: 50px;
 }
+
 .redesocial {
   display: flex;
   justify-content: space-evenly;
 }
+
 .contato {
   display: flex;
   justify-content: center;
 }
+
 .contatos {
   display: flex;
   justify-content: space-around;
   list-style: none;
 }
+
 .copy {
   display: flex;
   justify-content: center;
 }
+
 .topo {
   position: fixed;
   right: 5%;
