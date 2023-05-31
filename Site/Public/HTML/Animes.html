@@ -40,9 +40,17 @@
             <span class="icone-login">
               <img src="../Img/icones/usuario.png" width="50px" />
               <div class="menu-login">
-                <a href="Login.html"> Login </a>
-                <a href="Cadastro.html"> Cadastro </a>
-                <a href="Configuracões.html"> Configurações </a>
+                <div id="online" style="display: none">
+                  <li id="c_usuario">Usuario</li>
+                  <li><a href="Configuracões.html"> Configurações </a></li>
+                  <li>
+                    <a href="../index.html" onclick="limparSessao()">sair</a>
+                  </li>
+                </div>
+                <div id="offline">
+                  <li><a href="Login.html"> Login </a></li>
+                  <li><a href="Cadastro.html"> Cadastro </a></li>
+                </div>
               </div>
             </span>
           </div>
@@ -202,32 +210,36 @@
     </div>
 
     <div class="footer">
-        <!-- Barra Baixo -->
-        <div class="container">
-            <div class="redes">Siga-nos nas Redes Sociais</div>
-            <div class="redesocial">
-                <a href="https://github.com/TheoMesquita/Shinemax">
-                    <img src="../Img/icones/git.png" style="filter: invert(1);" width="30px" />
-                </a>
-                <a href="https://web.facebook.com/theofilo.mesquita.5">
-                    <img src="../Img/icones/facebook.png" width="30px" />
-                </a>
-                <a href="https://www.instagram.com/010_theo/">
-                    <img src="../Img/icones/instagram.png" width="30px" />
-                </a>
-                <a href="">
-                    <img src="../Img/icones/youtube.png" width="30px" />
-                </a>
-            </div>
-            <div class="contato">Algum problema? Contate-nos</div>
-            <div class="contatos">
-                <li>E-mail: theomesquita@hotmail.com</li>
-                <li>Celular: (11) 98677-3099</li>
-            </div>
-            <div class="copy">&copy; Copyright Todos os direitos reservados</div>
-            <button class="topo"><a href="#topo">^</a></button>
+      <!-- Barra Baixo -->
+      <div class="container">
+        <div class="redes">Siga-nos nas Redes Sociais</div>
+        <div class="redesocial">
+          <a href="https://github.com/TheoMesquita/Shinemax">
+            <img
+              src="../Img/icones/git.png"
+              style="filter: invert(1)"
+              width="30px"
+            />
+          </a>
+          <a href="https://web.facebook.com/theofilo.mesquita.5">
+            <img src="../Img/icones/facebook.png" width="30px" />
+          </a>
+          <a href="https://www.instagram.com/010_theo/">
+            <img src="../Img/icones/instagram.png" width="30px" />
+          </a>
+          <a href="">
+            <img src="../Img/icones/youtube.png" width="30px" />
+          </a>
         </div>
-        <!-- Fim da Barra -->
+        <div class="contato">Algum problema? Contate-nos</div>
+        <div class="contatos">
+          <li>E-mail: theomesquita@hotmail.com</li>
+          <li>Celular: (11) 98677-3099</li>
+        </div>
+        <div class="copy">&copy; Copyright Todos os direitos reservados</div>
+        <button class="topo"><a href="#topo">^</a></button>
+      </div>
+      <!-- Fim da Barra -->
     </div>
 
     <script src="../JS/Pesquisar.js"></script>

@@ -1,69 +1,86 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-<head>
-  <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ShineMax | Cadastrar</title>
 
-  <title>ShineMax | Cadastrar</title>
+    <link rel="icon" href="Img/icones/logo.png" />
+    <link rel="stylesheet" href="../CSS/Shinemax.css" />
+    <link rel="stylesheet" href="../CSS/Cadastro.css" />
+    <link rel="stylesheet" href="../CSS/Erros.css" />
+  </head>
 
-  <link rel="icon" href="Img/icones/logo.png" />
-  <link rel="stylesheet" href="../CSS/Shinemax.css">
-  <link rel="stylesheet" href="../CSS/Cadastro.css" />
-  <link rel="stylesheet" href="../CSS/Erros.css">
-</head>
-
-<body>
-  <div class="carrossel">
-    <div class="container" id="img">
-      <img src="../Img/fundos/fundo.png" width="100%" />
-      <img src="../Img/fundos/fundo1.png" width="100%" />
-      <img src="../Img/fundos/fundo2.png" width="100%" />
-      <img src="../Img/fundos/fundo3.png" width="100%" />
-      <img src="../Img/fundos/fundo4.png" width="100%" />
-    </div>
-  </div>
-
-  <div class="header">
-    <div class="container">
-      <!-- Barra de cima -->
-      <a href="../index.html">
-        <div id="ocultartitulo" class="titulo">
-          <img src="../Img/icones/logo.png" height="50px" />
-          ShineMax
-        </div>
-      </a>
-      <ul id="ocultar" class="barra">
-        <li><a href="../index.html">Home</a></li>
-        <li>Filmes</li>
-        <li><a href="Series.html">Séries</a></li>
-        <li><a href="Animes.html">Animes</a></li>
-        <div>
-          <img onclick="mostrar('pesquisa')" style="filter: invert(1);" src="../Img/icones/pesquisa.png" height="30px"
-            width="30px" />
-        </div>
-        <div class="usuario">
-          <span class="icone-login">
-            <img src="../Img/icones/usuario.png" width="50px" />
-            <div class="menu-login">
-              <a href="Login.html"> Login </a>
-              <a href="Cadastro.html"> Cadastro </a>
-              <a href="Configuracões.html"> Configurações </a>
-            </div>
-          </span>
-        </div>
-      </ul>
-      <!-- Fim da Barra-->
-    </div>
-
-    <div id="pesquisa" style="display: none">
-      <div class="buttonpesquisar">
-        <img src="../Img/icones/pesquisa.png" style="filter: invert(1);" width="20px" alt="Buscar" />
-        <input type="search" class="inputpesquisa" placeholder="Buscar..." />
+  <body>
+    <div class="carrossel">
+      <div class="container" id="img">
+        <img src="../Img/fundos/fundo.png" width="100%" />
+        <img src="../Img/fundos/fundo1.png" width="100%" />
+        <img src="../Img/fundos/fundo2.png" width="100%" />
+        <img src="../Img/fundos/fundo3.png" width="100%" />
+        <img src="../Img/fundos/fundo4.png" width="100%" />
       </div>
     </div>
-  </div>
+
+    <div class="header">
+      <div class="container">
+        <!-- Barra de cima -->
+        <a href="../index.html">
+          <div id="ocultartitulo" class="titulo">
+            <img src="../Img/icones/logo.png" height="50px" />
+            ShineMax
+          </div>
+        </a>
+        <ul id="ocultar" class="barra">
+          <li><a href="../index.html">Home</a></li>
+          <li>Filmes</li>
+          <li><a href="Series.html">Séries</a></li>
+          <li><a href="Animes.html">Animes</a></li>
+          <div>
+            <img
+              onclick="mostrar('pesquisa')"
+              style="filter: invert(1)"
+              src="../Img/icones/pesquisa.png"
+              height="30px"
+              width="30px"
+            />
+          </div>
+          <div class="usuario">
+            <span class="icone-login">
+              <img src="../Img/icones/usuario.png" width="50px" />
+              <div class="menu-login">
+                <div id="online" style="display: none">
+                  <li id="c_usuario">Usuario</li>
+                  <li><a href="Configuracões.html"> Configurações </a></li>
+                  <li>
+                    <a href="../index.html" onclick="limparSessao()">sair</a>
+                  </li>
+                </div>
+                <div id="offline">
+                  <li><a href="Login.html"> Login </a></li>
+                  <li><a href="Cadastro.html"> Cadastro </a></li>
+                </div>
+              </div>
+            </span>
+          </div>
+        </ul>
+        <!-- Fim da Barra-->
+      </div>
+
+      <div id="pesquisa" style="display: none">
+        <div class="buttonpesquisar">
+          <img
+            src="../Img/icones/pesquisa.png"
+            style="filter: invert(1)"
+            width="20px"
+            alt="Buscar"
+          />
+          <input type="search" class="inputpesquisa" placeholder="Buscar..." />
+        </div>
+      </div>
+    </div>
 
     <div class="credenciaisCadastro">
       <div class="alerta_erro">
@@ -122,45 +139,41 @@
       </div>
 
       <div id="div_erros_login"></div>
-
     </div>
-  </div>
 
-  <div class="footer">
-    <!-- Barra Baixo -->
-    <div class="container">
-      <div class="redes">Siga-nos nas Redes Sociais</div>
-      <div class="redesocial">
-        <a href="https://github.com/TheoMesquita/Shinemax">
-          <img src="../Img/icones/git.png" width="30px" />
-        </a>
-        <a href="https://web.facebook.com/theofilo.mesquita.5">
-          <img src="../Img/icones/facebook.png" width="30px" />
-        </a>
+    <div class="footer">
+      <!-- Barra Baixo -->
+      <div class="container">
+        <div class="redes">Siga-nos nas Redes Sociais</div>
+        <div class="redesocial">
+          <a href="https://github.com/TheoMesquita/Shinemax">
+            <img src="../Img/icones/git.png" width="30px" />
+          </a>
+          <a href="https://web.facebook.com/theofilo.mesquita.5">
+            <img src="../Img/icones/facebook.png" width="30px" />
+          </a>
 
-
-        <a href="https://www.instagram.com/010_theo/">
-          <img src="../Img/icones/instagram.png" width="30px" />
-        </a>
-        <a href="">
-          <img src="../Img/icones/youtube.png" width="30px" />
-        </a>
+          <a href="https://www.instagram.com/010_theo/">
+            <img src="../Img/icones/instagram.png" width="30px" />
+          </a>
+          <a href="">
+            <img src="../Img/icones/youtube.png" width="30px" />
+          </a>
+        </div>
+        <div class="contato">Algum problema? Contate-nos</div>
+        <div class="contatos">
+          <li>E-mail: theomesquita@hotmail.com</li>
+          <li>Celular: (11) 98677-3099</li>
+        </div>
+        <div class="copy">&copy; Copyright Todos os direitos reservados</div>
+        <button class="topo"><a href="#topo">^</a></button>
       </div>
-      <div class="contato">Algum problema? Contate-nos</div>
-      <div class="contatos">
-        <li>E-mail: theomesquita@hotmail.com</li>
-        <li>Celular: (11) 98677-3099</li>
-      </div>
-      <div class="copy">&copy; Copyright Todos os direitos reservados</div>
-      <button class="topo"><a href="#topo">^</a></button>
+      <!-- Fim da Barra -->
     </div>
-    <!-- Fim da Barra -->
-  </div>
 
-  <script src="../JS/Acesso.js"></script>
-  <script src="../JS/Pesquisar.js"></script>
-</body>
-
+    <script src="../JS/Acesso.js"></script>
+    <script src="../JS/Pesquisar.js"></script>
+  </body>
 </html>
 <script>
   function cadastrar() {
@@ -226,22 +239,23 @@
     }
 
     // Enviando o valor da nova input
-      fetch("/usuarios/cadastrar", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({
-          nomeServer: nomeVar,
-          sobrenomeServer: sobrenomeVar,
-          apelidoServer: apelidoVar,
-          idadeServer: idadeVar,
-          paisServer: paisVar,
-          generoServer: generoVar,
-          emailServer: emailVar,
-          senhaServer: senhaVar,
-        }),
-      }).then(function (resposta) {
+    fetch("/usuarios/cadastrar", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        nomeServer: nomeVar,
+        sobrenomeServer: sobrenomeVar,
+        apelidoServer: apelidoVar,
+        idadeServer: idadeVar,
+        paisServer: paisVar,
+        generoServer: generoVar,
+        emailServer: emailVar,
+        senhaServer: senhaVar,
+      }),
+    })
+      .then(function (resposta) {
         console.log("resposta: ", resposta);
 
         if (resposta.ok == true) {
@@ -259,7 +273,8 @@
         } else {
           throw "Houve um erro ao tentar realizar o cadastro!";
         }
-      }).catch(function (resposta) {
+      })
+      .catch(function (resposta) {
         console.log(`#ERRO: ${resposta}`);
         finalizarAguardar();
       });

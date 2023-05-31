@@ -465,10 +465,10 @@
               );
             } else {
               // tirando e colocando valores no gráfico
-              // dados.labels.shift(); // apagar o primeiro
-              // dados.labels.push(novoRegistro[0].nota ); // incluir um novo momento
+              dados.labels.shift(); // apagar o primeiro
+              dados.labels.push(novoRegistro[0].nota ); // incluir um novo momento
 
-              // dados.datasets[0].data.shift(); // apagar o primeiro de umidade
+              dados.datasets[0].data.shift(); // apagar o primeiro de umidade
               dados.datasets[0].data.push(novoRegistro[0]['count(fkUsuarioVoto)'], novoRegistro[1]['count(fkUsuarioVoto)'], novoRegistro[2]['count(fkUsuarioVoto)']); // incluir uma nova medida de umidade
               console.log("esse é o novo registro" + novoRegistro[1]['count(fkUsuarioVoto)'])
               

@@ -40,9 +40,17 @@
             <span class="icone-login">
               <img src="../Img/icones/usuario.png" width="50px" />
               <div class="menu-login">
-                <a href="Login.html"> Login </a>
-                <a href="Cadastro.html"> Cadastro </a>
-                <a href="Configuracões.html"> Configurações </a>
+                <div id="online" style="display: none">
+                  <li id="c_usuario">Usuario</li>
+                  <li><a href="Configuracões.html"> Configurações </a></li>
+                  <li>
+                    <a href="../index.html" onclick="limparSessao()">sair</a>
+                  </li>
+                </div>
+                <div id="offline">
+                  <li><a href="Login.html"> Login </a></li>
+                  <li><a href="Cadastro.html"> Cadastro </a></li>
+                </div>
               </div>
             </span>
           </div>
