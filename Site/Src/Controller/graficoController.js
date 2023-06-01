@@ -19,6 +19,33 @@ function buscarUltimosValores(req, res) {
     });
 }
 
+function cadastrarAvaliacao(req, res) {
+// Crie uma variável que vá recuperar os valores do arquivo index.html
+var avaliacao = req.body.avaliacaoServer;
+
+console.log(avaliacao)
+// Faça as validações dos valores
+if (avaliacao == undefined) {
+  res.status(400).send("Seu avaliacao está undefined!");
+} else {
+  // Passe os valores como parâmetro e vá para o arquivo graficoModel.js
+  graficoModel
+    .cadastrarAvaliacao(
+        avaliacao
+    )
+    .then(function (resultado) {
+      res.json(resultado);
+    })
+    .catch(function (erro) {
+      console.log(erro);
+      console.log(
+        "\nHouve um erro ao realizar o cadastro! Erro: ",
+        erro.sqlMessage
+      );
+      res.status(500).json(erro.sqlMessage);
+    });
+}
+}
 
 function buscarValoresTempoReal(req, res) {
 
@@ -41,6 +68,7 @@ function buscarValoresTempoReal(req, res) {
 
 module.exports = {
     buscarUltimosValores,
+    cadastrarAvaliacao,
     buscarValoresTempoReal
 
 }

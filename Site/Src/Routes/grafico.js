@@ -11,4 +11,8 @@ router.get("/tempo-real/:grafico", function (req, res) {
     graficoController.buscarValoresTempoReal(req, res);
 })
 
+router.post("/cadastrar", function (req, res) {
+    graficoController.cadastrarAvaliacao(req, res);
+})
+
 module.exports = router;

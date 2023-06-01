@@ -38,11 +38,17 @@ body {
 
 /* Titulo */
 
-.titulo {
+.shinemax {
   display: flex;
   flex-direction: row;
   color: white;
   font-size: 40px;
+}
+#titulo{
+  display: flex;
+  flex-direction: row;
+  color: white;
+  font-size: 30px;
 }
 
 /* Home */
@@ -139,13 +145,13 @@ a {
   color: white;
 }
 
-.resumo {
+#texto {
   width: 445px;
   margin-top: 10px;
   text-align: justify;
 }
 
-.button {
+#button {
   display: flex;
   flex-direction: row;
   height: 40px;

@@ -1,21 +1,8 @@
 // sessão
-function validarSessao() {
-    aguardar();
-
-    var email = sessionStorage.EMAIL_USUARIO;
-    var nome = sessionStorage.NOME_USUARIO;
-    var apelido = sessionStorage.APELIDO_USUARIO;
-
-    var b_usuario = document.getElementById("b_usuario");
-
-    if (email != null && nome != null) {
-        window.alert(`Seja bem-vindo, ${apelido}!`);
-        b_usuario.innerHTML = apelido;
-
-        finalizarAguardar();
-    } else {
-        window.location = "Login.html";
-    }
+function onlineOffline(resposta) {
+    var pessoa = {
+        nome: resposta[0], 
+        idade: resposta[0]}
 }
 
 function limparSessao() {
@@ -41,16 +28,3 @@ function finalizarAguardar(texto) {
         divErrosLogin.innerHTML = texto;
     }
 }
-
-
-// modal
-function mostrarModal() {
-    var divModal = document.getElementById("div_modal");
-    divModal.style.display = "flex";
-}
-
-function fecharModal() {
-    var divModal = document.getElementById("div_modal");
-    divModal.style.display = "none";
-}
-
