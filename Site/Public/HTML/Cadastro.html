@@ -261,13 +261,26 @@
         if (resposta.ok == true) {
           cardErro.style.display = "block";
 
-          mensagem_erro.innerHTML =
+          resposta.json().then((json) => {
+            console.log(json);
+            console.log(JSON.stringify(json));
+
+            sessionStorage.nome = json.nome
+            sessionStorage.sobrenome = json.sobrenome
+            sessionStorage.apelido = json.apelido
+            sessionStorage.idade = json.idade
+            sessionStorage.pais = json.pais
+            sessionStorage.genero = json.genero
+            sessionStorage.email = json.email
+
+            
+            mensagem_erro.innerHTML =
             "Cadastro realizado com sucesso! Redirecionando para tela de Login...";
 
-          setTimeout(() => {
-            window.location = "Login.html";
-          }, "2000");
-
+            setTimeout(function () {
+              window.location = "../index.html";
+            }, 1000); // apenas para exibir o loading
+          });
           limparFormulario();
           finalizarAguardar();
         } else {

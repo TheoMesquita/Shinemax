@@ -1,15 +1,21 @@
 // sessão
-function onlineOffline(resposta) {
+function onlineOffline() {
     var pessoa = {
-        nome: resposta[0], 
-        idade: resposta[0]}
+        nome: sessionStorage.nome,
+        sobrenome: sessionStorage.sobrenome,
+        apelido: sessionStorage.apelido,
+        idade: sessionStorage.idade,
+        pais: sessionStorage.pais,
+        genero: sessionStorage.genero,
+        email: sessionStorage.email
+    }
 }
 
 function limparSessao() {
     aguardar();
     sessionStorage.clear();
     finalizarAguardar();
-    window.location = "Login.html";
+    window.location = "index.html";
 }
 
 // carregamento (loading)
