@@ -379,14 +379,14 @@
     console.log("iniciando plotagem do gráfico...");
     console.log(resposta)
     // Criando estrutura para plotar gráfico - labels
-    let labels = [resposta[0].nota, resposta[1].nota, resposta[2].nota];
+    let labels = ['Gostei', 'Não Gostei', 'Ainda Não Sabe'];
 
     // Criando estrutura para plotar gráfico - dados
     let dados = {
       labels: labels,
       datasets: [{
         label: "Avaliações dos Usuarios",
-        data: [resposta[0]['count(fkUsuarioVoto)'], resposta[1]['count(fkUsuarioVoto)'], resposta[2]['count(fkUsuarioVoto)']],
+        data: [resposta[0]['count(nota)'], resposta[1]['count(nota)'], resposta[2]['count(nota)']],
         Color: "rgb(255, 0, 0)",
         borderWidth: 1
       }],
