@@ -5,9 +5,9 @@ function buscarUltimosValores(idVoto) {
     instrucaoSql = ''
 
     if (process.env.AMBIENTE_PROCESSO == "producao") {
-        instrucaoSql = `select nota, count(fkUsuarioVoto) from voto group by nota order by nota;`;
+        instrucaoSql = `select count(nota) from voto group by nota order by nota;`;
     } else if (process.env.AMBIENTE_PROCESSO == "desenvolvimento") {
-        instrucaoSql = `select nota, count(fkUsuarioVoto) from voto group by nota order by nota;`;
+        instrucaoSql = `select count(nota) from voto group by nota order by nota;`;
     } else {
         console.log("\nO AMBIENTE (produção OU desenvolvimento) NÃO FOI DEFINIDO EM app.js\n");
         return

@@ -1,3 +1,4 @@
+drop database ShineMax;
 create database ShineMax;
 use ShineMax;
 
@@ -6,6 +7,14 @@ idShineMax int primary key auto_increment,
 filmes varchar(45),
 series varchar(45),
 animes varchar(45)
+);
+
+create table voto(
+idVoto int primary key auto_increment,
+nota varchar(45),
+constraint chkNota check (nota = 'gostei' or nota = 'naoGostei' or nota = 'aindaNaoSei'),
+fkVotoShineMax int,
+constraint fkVotoShineMax foreign key (fkVotoShineMax) references shinemax(idShineMax)
 );
 
 create table usuario(
@@ -26,7 +35,9 @@ constraint chkEmail check (
 ),
 senha varchar(45),
 Tipo varchar(45),
-constraint chkTipo check (Tipo in('administrador','normal'))
+constraint chkTipo check (Tipo in('administrador','normal')),
+fkVoto int,
+constraint fkVoto foreign key (fkVoto) references voto(idVoto)
 );
 
 create table historico(
@@ -41,24 +52,16 @@ constraint pkComposta primary key (idHistorico, fkShineMax, fkUsuario)
 );
 
 insert into usuario values
-	(null, 'Shine', 'Max', 'ShineMax', 1, 'Brasil', null, 'shinemax@shine.max', 'S4in3M@x', 'administrador');
+	(null, 'Shine', 'Max', 'ShineMax', 1, 'Brasil', null, 'shinemax@shine.max', 'S4in3M@x', 'administrador', null);
 
-select * from usuario;	
+select * from usuario;
 
-create table voto(
-idVoto int primary key auto_increment,
-nota varchar(45),
-constraint chkNota check (nota = 'gostei' or nota = 'naoGostei' or nota = 'aindaNaoSei'),
-momento datetime,
-fkUsuarioVoto int,
-constraint fkUsuarioVoto foreign key (fkUsuarioVoto) references usuario(idUsuario)
-);
     
 insert into voto values
-	(null, 'gostei', now(), 1),
-	(null, 'NaoGostei', now(), 1),
-	(null, 'aindaNaoSei', now(), 1);
+	(null, 'gostei', null),
+	(null, 'NaoGostei', null),
+	(null, 'aindaNaoSei', null);
 
 select * from voto;
 
-select nota, momento, count(fkUsuarioVoto) from voto group by nota order by nota;
+select count(nota) from voto group by nota order by nota;
