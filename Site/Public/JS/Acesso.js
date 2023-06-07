@@ -1,13 +1,13 @@
 // sessão
 function onlineOffline() {
-    var pessoa = {
-        nome: sessionStorage.nome,
-        sobrenome: sessionStorage.sobrenome,
-        apelido: sessionStorage.apelido,
-        idade: sessionStorage.idade,
-        pais: sessionStorage.pais,
-        genero: sessionStorage.genero,
-        email: sessionStorage.email
+    var on = document.getElementById("online");
+    var of = document.getElementById("offline");
+    if (!sessionStorage.getItem("")) {
+        on.style.display = "block"
+        Of.style.display = "none"
+    } else {
+        on.style.display = "none"
+        Of.style.display = "block"
     }
 }
 
