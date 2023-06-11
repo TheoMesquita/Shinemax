@@ -483,16 +483,6 @@
     );
     console.log(resposta);
 
-    // Inserindo valores recebidos em estrutura para plotar o gráfico
-    //   for (i = 0; i < resposta.length; i++) {
-    //     var registro = resposta[i];
-    //     labels.push(registro.nota);
-    //     console.log("essa é a resposta" + labels[0])
-    //   dados.datasets[0].data.push(resposta[0]['count(fkUsuarioVoto)']);
-    //   dados.datasets[1].data.push(resposta[1]['count(fkUsuarioVoto)']);
-    //   dados.datasets[2].data.push(resposta[2]['count(fkUsuarioVoto)']);
-    // }
-
     console.log("----------------------------------------------");
     console.log("O gráfico será plotado com os respectivos valores:");
     console.log("Labels:");
@@ -545,9 +535,9 @@
             } else {
               // tirando e colocando valores no gráfico
               // dados.labels.shift(); // apagar o primeiro
-              dados.labels.push(novoRegistro[0].nota); // incluir um novo momento
+              dados.labels.push(novoRegistro[0].momento); // incluir um novo momento
 
-              dados.datasets[0].data.shift(); // apagar o primeiro de umidade
+              // dados.datasets[0].data.shift(); // apagar o primeiro de umidade
               dados.datasets[0].data.push(
                 novoRegistro[0]["count(fkUsuarioVoto)"],
                 novoRegistro[1]["count(fkUsuarioVoto)"],

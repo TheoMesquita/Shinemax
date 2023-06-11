@@ -11,8 +11,13 @@ animes varchar(45)
 
 create table voto(
 idVoto int primary key auto_increment,
-nota varchar(45),
-constraint chkNota check (nota = 'gostei' or nota = 'naoGostei' or nota = 'aindaNaoSei'),
+momento date,
+gostei varchar(45),
+constraint chkNota check (nota = 'gostei'),
+naoGostei varchar(45),
+constraint chkNota check (nota = 'naoGostei'),
+aindaNaoSei varchar(45),
+constraint chkNota check (nota = 'aindaNaoSei'),
 fkVotoShineMax int,
 constraint fkVotoShineMax foreign key (fkVotoShineMax) references shinemax(idShineMax)
 );
@@ -58,10 +63,10 @@ select * from usuario;
 
     
 insert into voto values
-	(null, 'gostei', null),
-	(null, 'NaoGostei', null),
-	(null, 'aindaNaoSei', null);
+	(null, now(), 'gostei', null),
+	(null, now(), 'NaoGostei', null),
+	(null, now(), 'aindaNaoSei', null);
 
 select * from voto;
 
-select count(nota) from voto group by nota order by nota;
+select momento, count(nota) from voto group by nota order by nota;
