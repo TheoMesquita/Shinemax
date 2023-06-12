@@ -16,17 +16,17 @@
       <div class="header">
         <div class="container">
           <!-- Barra de cima -->
-          <a href="../index.html">
+          <a href="./logado/index.html">
             <div class="shinemax">
               <img src="../Img/icones/logo.png" height="50px" />
               ShineMax
             </div>
           </a>
           <ul id="ocultar" class="barra">
-            <li><a href="../index.html">Home</a></li>
-            <li><a href="Filmes.html">Filmes</a></li>
-            <li><a href="Series.html">Séries</a></li>
-            <li><a href="Animes.html">Animes</a></li>
+            <li><a href="./logado/index.html">Home</a></li>
+            <li><a href="./logado/Filmes.html">Filmes</a></li>
+            <li><a href="./logado/Series.html">Séries</a></li>
+            <li><a href="./logado/Animes.html">Animes</a></li>
             <div>
               <img onclick="mostrar('pesquisa')" style="filter: invert(1);" src="../Img/icones/pesquisa.png" height="30px"
                 width="30px" />
@@ -46,9 +46,9 @@
               <img src="../Img/icones/usuario.png" width="70px" />
               <div class="hello">
                 <h3>Olá, <span id="b_usuario">usuário</span>!</h3>
+                <h4><span id="c_usuario">Idade</span></h4>
+                <h4><span id="d_usuario">Nacionalidade</span></h4>
             </div>
-              <li>Idade</li>
-              <li>Nacionalidade</li>
               <li>Por Ver</li>
               <li>Curtidas</li>
               <li>Seguindo</li>
@@ -115,3 +115,10 @@
     <script src="../JS/Acesso.js"></script>
   </body>
 </html>
+<script>
+
+b_usuario.innerHTML = sessionStorage.apelido;
+c_usuario.innerHTML = sessionStorage.idade;
+d_usuario.innerHTML = sessionStorage.pais;
+
+</script>

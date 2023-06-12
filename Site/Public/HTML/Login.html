@@ -198,6 +198,7 @@
             sessionStorage.email = json.email;
             sessionStorage.nome = json.nome;
             sessionStorage.apelido = json.apelido;
+            sessionStorage.idade = json.idade;
             sessionStorage.genero = json.genero;
             sessionStorage.pais = json.nacionalidade;
             
@@ -205,7 +206,7 @@
             "Cadastro realizado com sucesso! Redirecionando para tela de Login...";
 
             setTimeout(function () {
-              window.location = "../index.html";
+              window.location = "./logado/index.html";
             }, 1000); // apenas para exibir o loading
           });
         } else {

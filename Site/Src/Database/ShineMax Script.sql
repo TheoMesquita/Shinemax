@@ -11,13 +11,9 @@ animes varchar(45)
 
 create table voto(
 idVoto int primary key auto_increment,
-momento date,
-gostei varchar(45),
-constraint chkNota check (nota = 'gostei'),
-naoGostei varchar(45),
-constraint chkNota check (nota = 'naoGostei'),
-aindaNaoSei varchar(45),
-constraint chkNota check (nota = 'aindaNaoSei'),
+momento datetime,
+nota varchar(45),
+constraint chkNota check (nota = 'gostei' or nota = 'naoGostei' or nota = 'aindaNaoSei'),
 fkVotoShineMax int,
 constraint fkVotoShineMax foreign key (fkVotoShineMax) references shinemax(idShineMax)
 );
@@ -27,7 +23,7 @@ idUsuario int primary key auto_increment,
 nome varchar(45),
 Sobrenome varchar(45),
 apelido varchar(45),
-idade int,
+idade date,
 nacionalidade varchar(45),
 genero char(10), constraint chkGenero check (genero in ('Masculino','Feminino')),
 email varchar(45), 
@@ -57,7 +53,7 @@ constraint pkComposta primary key (idHistorico, fkShineMax, fkUsuario)
 );
 
 insert into usuario values
-	(null, 'Shine', 'Max', 'ShineMax', 1, 'Brasil', null, 'shinemax@shine.max', 'S4in3M@x', 'administrador', null);
+	(null, 'Shine', 'Max', 'ShineMax', '2003-09-29', 'Brasil', null, 'shinemax@shine.max', 'S4in3M@x', 'administrador', null);
 
 select * from usuario;
 
@@ -70,3 +66,5 @@ insert into voto values
 select * from voto;
 
 select momento, count(nota) from voto group by nota order by nota;
+
+select year(idade) from usuario;
