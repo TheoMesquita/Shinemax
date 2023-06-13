@@ -11,7 +11,6 @@ animes varchar(45)
 
 create table voto(
 idVoto int primary key auto_increment,
-momento datetime,
 nota varchar(45),
 constraint chkNota check (nota = 'gostei' or nota = 'naoGostei' or nota = 'aindaNaoSei'),
 fkVotoShineMax int,
@@ -59,12 +58,12 @@ select * from usuario;
 
     
 insert into voto values
-	(null, now(), 'gostei', null),
-	(null, now(), 'NaoGostei', null),
-	(null, now(), 'aindaNaoSei', null);
+	(null, 'gostei', null),
+	(null, 'NaoGostei', null),
+	(null, 'aindaNaoSei', null);
 
 select * from voto;
 
-select momento, count(nota) from voto group by nota order by nota;
+select count(nota) from voto group by nota order by nota;
 
 select year(idade) from usuario;
