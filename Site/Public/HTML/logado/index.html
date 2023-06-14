@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-  <head>
+
+<head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -9,590 +10,484 @@
 
     <link rel="icon" href="../../Img/icones/logo.png" />
     <link rel="stylesheet" href="../../CSS/Shinemax.css" />
-  </head>
+</head>
 
-  <body>
+<body>
     <a name="topo"></a>
 
     <div class="carrossel">
-      <div class="container" id="img">
-        <img id="img1" src="../../Img/fundos/fundo.png" width="100%" />
-        <img id="img2" src="../../Img/fundos/fundo1.png" width="100%" />
-        <img id="img3" src="../../Img/fundos/fundo2.png" width="100%" />
-        <img id="img4" src="../../Img/fundos/fundo3.png" width="100%" />
-        <img id="img5" src="../../Img/fundos/fundo4.png" width="100%" />
-      </div>
+        <div class="container" id="img">
+            <img id="img1" src="../../Img/fundos/fundo.png" width="100%" />
+            <img id="img2" src="../../Img/fundos/fundo1.png" width="100%" />
+            <img id="img3" src="../../Img/fundos/fundo2.png" width="100%" />
+            <img id="img4" src="../../Img/fundos/fundo3.png" width="100%" />
+            <img id="img5" src="../../Img/fundos/fundo4.png" width="100%" />
+        </div>
     </div>
 
     <div class="header">
-      <div class="container">
-        <!-- Barra de cima -->
-        <a href="index.html">
-          <div class="shinemax">
-            <img src="../../Img/icones/logo.png" height="50px" />
-            ShineMax
-          </div>
-        </a>
-        <ul id="ocultar" class="barra">
-          <li>Home</li>
-          <li><a href="Filmes.html">Filmes</a></li>
-          <li><a href="Series.html">Séries</a></li>
-          <li><a href="Animes.html">Animes</a></li>
-          <div>
-            <img
-              onclick="mostrar('pesquisa')"
-              style="filter: invert(1)"
-              src="../../Img/icones/pesquisa.png"
-              height="30px"
-              width="30px"
-            />
-          </div>
-          <div class="usuario">
-            <span class="icone-login">
-              <img src="../../Img/icones/usuario.png" width="50px" />
-              <div class="menu-login">
-                <div id="online">
-                  <li id="b_usuario">Usuario</li>
-                  <li><a href="../Configuracões.html"> Configurações </a></li>
-                  <li>
-                    <a href="../../index.html" onclick="limparSessao()">sair</a>
-                  </li>
+        <div class="container">
+            <!-- Barra de cima -->
+            <a href="index.html">
+                <div class="shinemax">
+                    <img src="../../Img/icones/logo.png" height="50px" />
+                    ShineMax
                 </div>
-                <div id="offline" style="display: none">
-                  <li><a href="../Login.html"> Login </a></li>
-                  <li><a href="../Cadastro.html"> Cadastro </a></li>
+            </a>
+            <ul id="ocultar" class="barra">
+                <li>Home</li>
+                <li><a href="Filmes.html">Filmes</a></li>
+                <li><a href="Series.html">Séries</a></li>
+                <li><a href="Animes.html">Animes</a></li>
+                <div>
+                    <img onclick="mostrar('pesquisa')" style="filter: invert(1)" src="../../Img/icones/pesquisa.png"
+                        height="30px" width="30px" />
                 </div>
-              </div>
-            </span>
-          </div>
-        </ul>
-        <!-- Fim da Barra-->
-      </div>
-
-      <div id="pesquisa" style="display: none">
-        <div class="buttonpesquisar">
-          <img
-            src="../../Img/icones/pesquisa.png"
-            style="filter: invert(1)"
-            width="20px"
-            alt="Buscar"
-          />
-          <input type="search" class="inputpesquisa" placeholder="Buscar..." />
+                <div class="usuario">
+                    <span class="icone-login">
+                        <img src="../../Img/icones/usuario.png" width="50px" />
+                        <div class="menu-login">
+                            <div id="online">
+                                <li id="b_usuario">Usuario</li>
+                                <li><a href="../Configuracões.html"> Configurações </a></li>
+                                <li>
+                                    <a href="../../index.html" onclick="limparSessao()">sair</a>
+                                </li>
+                            </div>
+                            <div id="offline" style="display: none">
+                                <li><a href="../Login.html"> Login </a></li>
+                                <li><a href="../Cadastro.html"> Cadastro </a></li>
+                            </div>
+                        </div>
+                    </span>
+                </div>
+            </ul>
+            <!-- Fim da Barra-->
         </div>
-      </div>
+
+        <div id="pesquisa" style="display: none">
+            <div class="buttonpesquisar">
+                <img src="../../Img/icones/pesquisa.png" style="filter: invert(1)" width="20px" alt="Buscar" />
+                <input type="search" class="inputpesquisa" placeholder="Buscar..." />
+            </div>
+        </div>
     </div>
 
     <div class="conteudo">
-      <div class="destaque">Destaques</div>
-      <div class="informaçao">
-        <div id="titulo"></div>
-        <div id="texto"></div>
+        <div class="destaque">Destaques</div>
+        <div class="informaçao">
+            <div id="titulo"></div>
+            <div id="texto"></div>
 
-        <div id="button">
-          <a href="">
-            <img src="../../Img/icones/play.png" height="20px" width="20px" />
-            Assistir
-          </a>
+            <div id="button">
+                <a href="" class="alinhar">
+                    <img src="../../Img/icones/play.png" height="20px" width="20px" />
+                    Assistir
+                </a>
+            </div>
         </div>
-      </div>
     </div>
 
     <div class="filmes">
-      <!-- Sessão de Filmes -->
-      <div class="buttons">
-        <button class="buttonrolar" onclick="moverEsquerda()">
-          <div class="before">
-            <div class="arrow-left"></div>
-          </div>
-        </button>
-        <div class="container" id="scroll">
-          <h4 class="title">Filmes Populares</h4>
-          <div class="corpo" id="mylist">
-            <div class="imgs">
-              <img class="img" src="../../Img/Capas/Filmes/creed III.png" alt="" />
-              <h4 class="text">Creed III</h4>
+        <!-- Sessão de Filmes -->
+        <h4 class="title">Filmes Populares</h4>
+        <div class="buttons">
+            <button class="buttonrolar" onclick="moverEsquerda()">
+                <div class="arrow-left"></div>
+            </button>
+            <div class="container" id="scroll">
+                <div class="corpo" id="mylist">
+                    <div class="imgs">
+                        <img class="img" src="../../Img/Capas/Filmes/creed III.png" alt="" />
+                        <h4 class="text">Creed III</h4>
+                    </div>
+                    <div class="imgs">
+                        <img class="img" src="../../Img/Capas/Filmes/a mulher rei.png" alt="" />
+                        <h4 class="text">A Mulher Rei</h4>
+                    </div>
+                    <div class="imgs">
+                        <img class="img" src="../../Img/Capas/Filmes/avatar.png" alt="" />
+                        <h4 class="text">Avatar O Caminho da Água</h4>
+                    </div>
+                    <div class="imgs">
+                        <img class="img" src="../../Img/Capas/Filmes/esquema de risco.png" alt="" />
+                        <h4 class="text">Esquema de Risco</h4>
+                    </div>
+                    <div class="imgs">
+                        <img class="img" src="../../Img/Capas/Filmes/john wick 4.png" alt="" />
+                        <h4 class="text">John Wick 4</h4>
+                    </div>
+                    <div class="imgs">
+                        <img class="img" src="../../Img/Capas/Filmes/kingsman a origem.png" alt="" />
+                        <h4 class="text">Kingsman A Origem</h4>
+                    </div>
+                    <div class="imgs">
+                        <img class="img" src="../../Img/Capas/Filmes/uma noite no museu o retorno de kahmurah.png"
+                            alt="" />
+                        <h4 class="text">Uma Noite no Museu O Retorno de Kahmurah</h4>
+                    </div>
+                    <div class="imgs">
+                        <img class="img" src="../../Img/Capas/Filmes/wifi ralph.png" alt="" />
+                        <h4 class="text">Wifi Ralph</h4>
+                    </div>
+                    <div class="imgs">
+                        <img class="img" src="../../Img/Capas/Filmes/adao negro.png" alt="" />
+                        <h4 class="text">Adão Negro</h4>
+                    </div>
+                    <div class="imgs">
+                        <img class="img" src="../../Img/Capas/Filmes/shazan.png" alt="" />
+                        <h4 class="text">Shazan</h4>
+                    </div>
+                    <div class="imgs">
+                        <img class="img" src="../../Img/Capas/Filmes/homem aranha de volta ao lar.png" alt="" />
+                        <h4 class="text">Homem Aranha de Volta ao Lar</h4>
+                    </div>
+                    <div class="imgs">
+                        <img class="img" src="../../Img/Capas/Filmes/homem de ferro 3.png" alt="" />
+                        <h4 class="text">Homem de Ferro 3</h4>
+                    </div>
+                </div>
             </div>
-            <div class="imgs">
-              <img class="img" src="../../Img/Capas/Filmes/a mulher rei.png" alt="" />
-              <h4 class="text">A Mulher Rei</h4>
-            </div>
-            <div class="imgs">
-              <img class="img" src="../../Img/Capas/Filmes/avatar.png" alt="" />
-              <h4 class="text">Avatar O Caminho da Água</h4>
-            </div>
-            <div class="imgs">
-              <img
-                class="img"
-                src="../../Img/Capas/Filmes/esquema de risco.png"
-                alt=""
-              />
-              <h4 class="text">Esquema de Risco</h4>
-            </div>
-            <div class="imgs">
-              <img class="img" src="../../Img/Capas/Filmes/john wick 4.png" alt="" />
-              <h4 class="text">John Wick 4</h4>
-            </div>
-            <div class="imgs">
-              <img
-                class="img"
-                src="../../Img/Capas/Filmes/kingsman a origem.png"
-                alt=""
-              />
-              <h4 class="text">Kingsman A Origem</h4>
-            </div>
-            <div class="imgs">
-              <img
-                class="img"
-                src="../../Img/Capas/Filmes/uma noite no museu o retorno de kahmurah.png"
-                alt=""
-              />
-              <h4 class="text">Uma Noite no Museu O Retorno de Kahmurah</h4>
-            </div>
-            <div class="imgs">
-              <img class="img" src="../../Img/Capas/Filmes/wifi ralph.png" alt="" />
-              <h4 class="text">Wifi Ralph</h4>
-            </div>
-            <div class="imgs">
-              <img class="img" src="../../Img/Capas/Filmes/adao negro.png" alt="" />
-              <h4 class="text">Adão Negro</h4>
-            </div>
-            <div class="imgs">
-              <img class="img" src="../../Img/Capas/Filmes/shazan.png" alt="" />
-              <h4 class="text">Shazan</h4>
-            </div>
-            <div class="imgs">
-              <img
-                class="img"
-                src="../../Img/Capas/Filmes/homem aranha de volta ao lar.png"
-                alt=""
-              />
-              <h4 class="text">Homem Aranha de Volta ao Lar</h4>
-            </div>
-            <div class="imgs">
-              <img
-                class="img"
-                src="../../Img/Capas/Filmes/homem de ferro 3.png"
-                alt=""
-              />
-              <h4 class="text">Homem de Ferro 3</h4>
-            </div>
-          </div>
+            <button class="buttonrolar" onclick="moverDireita()">
+                <div class="arrow-right"></div>
+            </button>
         </div>
-        <button class="buttonrolar" onclick="moverDireita()">
-          <div class="after">
-            <div class="arrow-right"></div>
-          </div>
-        </button>
-      </div>
+        <h4 class="title">Tops da Semana</h4>
 
-      <div class="buttons">
-        <button class="buttonrolar" onclick="moverEsquerda2()">
-          <div class="before">
-            <div class="arrow-left"></div>
-          </div>
-        </button>
-        <div class="container" id="scroll2">
-          <h4 class="title">Tops da Semana</h4>
-          <div class="corpo" id="mylist">
-            <div class="imgs">
-              <img
-                class="img"
-                src="../../Img/Capas/Filmes/kung fu panda 3.png"
-                alt=""
-              />
-              <h4 class="text">Kung Fu Panda 3</h4>
+        <div class="buttons">
+            <button class="buttonrolar" onclick="moverEsquerda2()">
+                <div class="arrow-left"></div>
+            </button>
+            <div class="container" id="scroll2">
+                <div class="corpo" id="mylist">
+                    <div class="imgs">
+                        <img class="img" src="../../Img/Capas/Filmes/kung fu panda 3.png" alt="" />
+                        <h4 class="text">Kung Fu Panda 3</h4>
+                    </div>
+                    <div class="imgs">
+                        <img class="img" src="../../Img/Capas/Filmes/kingsman a origem.png" alt="" />
+                        <h4 class="text">Kingsman A Origem</h4>
+                    </div>
+                    <div class="imgs">
+                        <img class="img" src="../../Img/Capas/Filmes/uma noite no museu o retorno de kahmurah.png"
+                            alt="" />
+                        <h4 class="text">Uma Noite no Museu O Retorno de Kahmurah</h4>
+                    </div>
+                    <div class="imgs">
+                        <img class="img" src="../../Img/Capas/Filmes/avatar.png" alt="" />
+                        <h4 class="text">Avatar o Caminho da Água</h4>
+                    </div>
+                    <div class="imgs">
+                        <img class="img" src="../../Img/Capas/Filmes/john wick 4.png" alt="" />
+                        <h4 class="text">John Wick 4</h4>
+                    </div>
+                    <div class="imgs">
+                        <img class="img" src="../../Img/Capas/Filmes/gato de botas.png" alt="" />
+                        <h4 class="text">Gato de Botas 3</h4>
+                    </div>
+                    <div class="imgs">
+                        <img class="img" src="../../Img/Capas/Filmes/a mulher rei.png" alt="" />
+                        <h4 class="text">A Mulher Rei</h4>
+                    </div>
+                    <div class="imgs">
+                        <img class="img" src="../../Img/Capas/Filmes/creed III.png" alt="" />
+                        <h4 class="text">Creed III</h4>
+                    </div>
+                    <div class="imgs">
+                        <img class="img" src="../../Img/Capas/Filmes/eu sou a lenda.png" alt="" />
+                        <h4 class="text">Eu sou a Lenda</h4>
+                    </div>
+                    <div class="imgs">
+                        <img class="img" src="../../Img/Capas/Filmes/carros 3.png" alt="" />
+                        <h4 class="text">Carros 3</h4>
+                    </div>
+                </div>
             </div>
-            <div class="imgs">
-              <img
-                class="img"
-                src="../../Img/Capas/Filmes/kingsman a origem.png"
-                alt=""
-              />
-              <h4 class="text">Kingsman A Origem</h4>
-            </div>
-            <div class="imgs">
-              <img
-                class="img"
-                src="../../Img/Capas/Filmes/uma noite no museu o retorno de kahmurah.png"
-                alt=""
-              />
-              <h4 class="text">Uma Noite no Museu O Retorno de Kahmurah</h4>
-            </div>
-            <div class="imgs">
-              <img class="img" src="../../Img/Capas/Filmes/avatar.png" alt="" />
-              <h4 class="text">Avatar o Caminho da Água</h4>
-            </div>
-            <div class="imgs">
-              <img class="img" src="../../Img/Capas/Filmes/john wick 4.png" alt="" />
-              <h4 class="text">John Wick 4</h4>
-            </div>
-            <div class="imgs">
-              <img
-                class="img"
-                src="../../Img/Capas/Filmes/gato de botas.png"
-                alt=""
-              />
-              <h4 class="text">Gato de Botas 3</h4>
-            </div>
-            <div class="imgs">
-              <img class="img" src="../../Img/Capas/Filmes/a mulher rei.png" alt="" />
-              <h4 class="text">A Mulher Rei</h4>
-            </div>
-            <div class="imgs">
-              <img class="img" src="../../Img/Capas/Filmes/creed III.png" alt="" />
-              <h4 class="text">Creed III</h4>
-            </div>
-            <div class="imgs">
-              <img
-                class="img"
-                src="../../Img/Capas/Filmes/eu sou a lenda.png"
-                alt=""
-              />
-              <h4 class="text">Eu sou a Lenda</h4>
-            </div>
-            <div class="imgs">
-              <img class="img" src="../../Img/Capas/Filmes/carros 3.png" alt="" />
-              <h4 class="text">Carros 3</h4>
-            </div>
-          </div>
+            <button class="buttonrolar" onclick="moverDireita2()">
+                <div class="arrow-right"></div>
+            </button>
         </div>
-        <button class="buttonrolar" onclick="moverDireita2()">
-          <div class="after">
-            <div class="arrow-right"></div>
-          </div>
-        </button>
-      </div>
 
-      <div class="buttons">
-        <button class="buttonrolar" onclick="moverEsquerda3()">
-          <div class="before">
-            <div class="arrow-left"></div>
-          </div>
-        </button>
-        <div class="container" id="scroll3">
-          <h4 class="title">Recomendados</h4>
-          <div class="corpo" id="mylist">
-            <div class="imgs">
-              <img
-                class="img"
-                src="../../Img/Capas/Series/peaky blinders.png"
-                alt=""
-              />
-              <h4 class="text">Peaky Blinders</h4>
+        <h4 class="title">Recomendados</h4>
+        <div class="buttons">
+            <button class="buttonrolar" onclick="moverEsquerda3()">
+                <div class="arrow-left"></div>
+            </button>
+            <div class="container" id="scroll3">
+                <div class="corpo" id="mylist">
+                    <div class="imgs">
+                        <img class="img" src="../../Img/Capas/Series/peaky blinders.png" alt="" />
+                        <h4 class="text">Peaky Blinders</h4>
+                    </div>
+                    <div class="imgs">
+                        <img class="img" src="../../Img/Capas/Series/chicago med.png" alt="" />
+                        <h4 class="text">Chicago Med</h4>
+                    </div>
+                    <div class="imgs">
+                        <img class="img" src="../../Img/Capas/Filmes/vingadores guerra infinita.png" alt="" />
+                        <h4 class="text">Vingadores Guerra Infinita</h4>
+                    </div>
+                    <div class="imgs">
+                        <img class="img" src="../../Img/Capas/Series/the witcher.png" alt="" />
+                        <h4 class="text">The Witcher</h4>
+                    </div>
+                    <div class="imgs">
+                        <img class="img" src="../../Img/Capas/Series/the last of us.png" alt="" />
+                        <h4 class="text">The Last Of Us</h4>
+                    </div>
+                    <div class="imgs">
+                        <img class="img" src="../../Img/Capas/Filmes/homem de ferro 3.png" alt="" />
+                        <h4 class="text">Homem de Ferro 3</h4>
+                    </div>
+                    <div class="imgs">
+                        <img class="img" src="../../Img/Capas/Filmes/gato de botas.png" alt="" />
+                        <h4 class="text">Gato de Botas</h4>
+                    </div>
+                    <div class="imgs">
+                        <img class="img" src="../../Img/Capas/Series/the flash.png" alt="" />
+                        <h4 class="text">The Flash</h4>
+                    </div>
+                    <div class="imgs">
+                        <img class="img" src="../../Img/Capas/Filmes/operação big hero.png" alt="" />
+                        <h4 class="text">Operação Big Hero</h4>
+                    </div>
+                    <div class="imgs">
+                        <img class="img" src="../../Img/Capas/Filmes/minions 2.png" alt="" />
+                        <h4 class="text">minions 2</h4>
+                    </div>
+                </div>
             </div>
-            <div class="imgs">
-              <img class="img" src="../../Img/Capas/Series/chicago med.png" alt="" />
-              <h4 class="text">Chicago Med</h4>
-            </div>
-            <div class="imgs">
-              <img
-                class="img"
-                src="../../Img/Capas/Filmes/vingadores guerra infinita.png"
-                alt=""
-              />
-              <h4 class="text">Vingadores Guerra Infinita</h4>
-            </div>
-            <div class="imgs">
-              <img class="img" src="../../Img/Capas/Series/the witcher.png" alt="" />
-              <h4 class="text">The Witcher</h4>
-            </div>
-            <div class="imgs">
-              <img
-                class="img"
-                src="../../Img/Capas/Series/the last of us.png"
-                alt=""
-              />
-              <h4 class="text">The Last Of Us</h4>
-            </div>
-            <div class="imgs">
-              <img
-                class="img"
-                src="../../Img/Capas/Filmes/homem de ferro 3.png"
-                alt=""
-              />
-              <h4 class="text">Homem de Ferro 3</h4>
-            </div>
-            <div class="imgs">
-              <img
-                class="img"
-                src="../../Img/Capas/Filmes/gato de botas.png"
-                alt=""
-              />
-              <h4 class="text">Gato de Botas</h4>
-            </div>
-            <div class="imgs">
-              <img class="img" src="../../Img/Capas/Series/the flash.png" alt="" />
-              <h4 class="text">The Flash</h4>
-            </div>
-            <div class="imgs">
-              <img
-                class="img"
-                src="../../Img/Capas/Filmes/operação big hero.png"
-                alt=""
-              />
-              <h4 class="text">Operação Big Hero</h4>
-            </div>
-            <div class="imgs">
-              <img class="img" src="../../Img/Capas/Filmes/minions 2.png" alt="" />
-              <h4 class="text">minions 2</h4>
-            </div>
-          </div>
+            <button class="buttonrolar" onclick="moverDireita3()">
+                <div class="arrow-right"></div>
+            </button>
         </div>
-        <button class="buttonrolar" onclick="moverDireita3()">
-          <div class="after">
-            <div class="arrow-right"></div>
-          </div>
-        </button>
-      </div>
-      <!-- Fim da Parte dos Filmes -->
+        <!-- Fim da Parte dos Filmes -->
     </div>
 
     <div id="graficos">
-      <div id="grafico1">
-        <div class="graph">
-          <canvas id="myChartCanvas"></canvas>
+        <div id="grafico1">
+            <div class="graph" style="width: 450px">
+                <canvas id="myChartCanvas"></canvas>
+            </div>
+            <h3 class="votosContados">Total de Votos: <div id="votosContados"></div></h3>
+            <div class="btngrafico">
+                <button id="button" onclick="cadastrarAvaliacao('aindaNaoSei')">Ainda Não Sei</button>
+                <button id="button" onclick="cadastrarAvaliacao('gostei')">Gostei</button>
+                <button id="button" onclick="cadastrarAvaliacao('naoGostei')">Não Gostei</button>
+            </div>
         </div>
-        <div class="btngrafico">
-          <button onclick="cadastrarAvaliacao('gostei')">Gostei</button>
-          <button onclick="cadastrarAvaliacao('naoGostei')">Não Gostei</button>
-          <button onclick="cadastrarAvaliacao('aindaNaoSei')">
-            Ainda Não Sei
-          </button>
-        </div>
-      </div>
     </div>
 
     <div class="footer">
-      <!-- Barra Baixo -->
-      <div class="container">
-        <div class="redes">Siga-nos nas Redes Sociais</div>
-        <div class="redesocial">
-          <a href="https://github.com/TheoMesquita/Shinemax">
-            <img
-              src="../../Img/icones/git.png"
-              style="filter: invert(1)"
-              width="30px"
-            />
-          </a>
-          <a href="https://web.facebook.com/theofilo.mesquita.5">
-            <img src="../../Img/icones/facebook.png" width="30px" />
-          </a>
-          <a href="https://www.instagram.com/010_theo/">
-            <img src="../../Img/icones/instagram.png" width="30px" />
-          </a>
-          <a href="">
-            <img src="../../Img/icones/youtube.png" width="30px" />
-          </a>
+        <!-- Barra Baixo -->
+        <div class="container">
+            <div class="redes">Siga-nos nas Redes Sociais</div>
+            <div class="redesocial">
+                <a href="https://github.com/TheoMesquita/Shinemax">
+                    <img src="../../Img/icones/git.png" style="filter: invert(1)" width="30px" />
+                </a>
+                <a href="https://web.facebook.com/theofilo.mesquita.5">
+                    <img src="../../Img/icones/facebook.png" width="30px" />
+                </a>
+                <a href="https://www.instagram.com/010_theo/">
+                    <img src="../../Img/icones/instagram.png" width="30px" />
+                </a>
+                <a href="">
+                    <img src="../../Img/icones/youtube.png" width="30px" />
+                </a>
+            </div>
+            <a href="#" class="contato">Algum problema? Contate-nos</a>
+            <div class="contatos">
+                <a href="mailto:theomesquita@hotmail.com">E-mail: theomesquita@hotmail.com</a>
+                <a href="https://wa.me/5511986773099">Celular: (11) 98677-3099</a>
+            </div>
+            <div class="copy">&copy; Copyright Todos os direitos reservados</div>
+            <a class="topo" href="#topo">^</a>
         </div>
-        <div class="contato">Algum problema? Contate-nos</div>
-        <div class="contatos">
-          <li>E-mail: theomesquita@hotmail.com</li>
-          <li>Celular: (11) 98677-3099</li>
-        </div>
-        <div class="copy">&copy; Copyright Todos os direitos reservados</div>
-        <button class="topo"><a href="#topo">^</a></button>
-      </div>
-      <!-- Fim da Barra -->
+        <!-- Fim da Barra -->
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-    <script src="../../JS/Carrossel.js"></script>
+    <script src="Carrossel_logado.js"></script>
     <script src="../../JS/Pesquisar.js"></script>
     <script src="../../JS/Shinemax.js"></script>
-  </body>
+    <script src="../../JS/Acesso.js"></script>
+</body>
+
 </html>
 <script>
-  b_usuario.innerHTML = sessionStorage.apelido;
+    var conta = 1 + 1
 
-  let proximaAtualizacao;
+    b_usuario.innerHTML = sessionStorage.apelido;
 
-  function logado() {
-    onlineOffline()
-  }
+    let proximaAtualizacao;
 
-  window.onload = obterDadosGraficos();
+    window.onload = obterDadosGraficos();
 
-  function obterDadosGraficos() {
-    obterDadosGrafico(1);
-  }
-
-  // O gráfico é construído com três funções:
-  // 1. obterDadosGrafico -> Traz dados do Banco de Dados para montar o gráfico da primeira vez
-  // 2. plotarGrafico -> Monta o gráfico com os dados trazidos e exibe em tela
-  // 3. atualizarGrafico -> Atualiza o gráfico, trazendo novamente dados do Banco
-
-  // Esta função *obterDadosGrafico* busca os últimos dados inseridos em tabela de voto.
-  // para, quando carregar o gráfico da primeira vez, já trazer com vários dados.
-  // A função *obterDadosGrafico* também invoca a função *plotarGrafico*
-
-  //     Se quiser alterar a busca, ajuste as regras de negócio em src/controllers
-  //     Para ajustar o "select", ajuste o comando sql em src/models
-  function obterDadosGrafico(idVoto) {
-    if (proximaAtualizacao != undefined) {
-      clearTimeout(proximaAtualizacao);
+    function obterDadosGraficos() {
+        obterDadosGrafico(1);
     }
 
-    fetch(`/grafico/ultimas/${idVoto}`, { cache: "no-store" })
-      .then(function (response) {
-        if (response.ok) {
-          response.json().then(function (resposta) {
-            console.log(`Dados recebidos: ${JSON.stringify(resposta)}`);
+    // O gráfico é construído com três funções:
+    // 1. obterDadosGrafico -> Traz dados do Banco de Dados para montar o gráfico da primeira vez
+    // 2. plotarGrafico -> Monta o gráfico com os dados trazidos e exibe em tela
+    // 3. atualizarGrafico -> Atualiza o gráfico, trazendo novamente dados do Banco
 
-            plotarGrafico(resposta, idVoto);
-          });
-        } else {
-          console.error("Nenhum dado encontrado ou erro na API");
+    // Esta função *obterDadosGrafico* busca os últimos dados inseridos em tabela de voto.
+    // para, quando carregar o gráfico da primeira vez, já trazer com vários dados.
+    // A função *obterDadosGrafico* também invoca a função *plotarGrafico*
+
+    //     Se quiser alterar a busca, ajuste as regras de negócio em src/controllers
+    //     Para ajustar o "select", ajuste o comando sql em src/models
+    function obterDadosGrafico(idVoto) {
+        if (proximaAtualizacao != undefined) {
+            clearTimeout(proximaAtualizacao);
         }
-      })
-      .catch(function (error) {
-        console.error(
-          `Erro na obtenção dos dados p/ gráfico: ${error.message}`
-        );
-      });
-  }
 
-  // Esta função *plotarGrafico* usa os dados capturados na função anterior para criar o gráfico
-  // Configura o gráfico (cores, tipo, etc), materializa-o na página e,
-  // A função *plotarGrafico* também invoca a função *atualizarGrafico*
-  function plotarGrafico(resposta, idVoto) {
-    console.log("iniciando plotagem do gráfico...");
-    console.log(resposta);
-    // Criando estrutura para plotar gráfico - labels
-    let labels = ["Ainda Não Sabe", "Gostei", "Não Gostei"];
+        fetch(`/grafico/ultimas/${idVoto}`, { cache: "no-store" })
+            .then(function (response) {
+                if (response.ok) {
+                    response.json().then(function (resposta) {
+                        console.log(`Dados recebidos: ${JSON.stringify(resposta)}`);
 
-    // Criando estrutura para plotar gráfico - dados
-    let dados = {
-      labels: labels,
-      datasets: [
-        {
-          label: "Avaliações dos Usuarios",
-          data: [
-            resposta[0]["count(nota)"],
-            resposta[1]["count(nota)"],
-            resposta[2]["count(nota)"],
-          ],
-          Color: "rgb(255, 0, 0)",
-          borderWidth: 1,
-        },
-      ],
-    };
+                        plotarGrafico(resposta, idVoto);
+                    });
+                } else {
+                    console.error("Nenhum dado encontrado ou erro na API");
+                }
+            })
+            .catch(function (error) {
+                console.error(`Erro na obtenção dos dados p/ gráfico: ${error.message}`);
+            });
+    }
 
-    console.log("----------------------------------------------");
-    console.log(
-      'Estes dados foram recebidos pela funcao "obterDadosGrafico" e passados para "plotarGrafico":'
-    );
-    console.log(resposta);
+    // Esta função *plotarGrafico* usa os dados capturados na função anterior para criar o gráfico
+    // Configura o gráfico (cores, tipo, etc), materializa-o na página e,
+    // A função *plotarGrafico* também invoca a função *atualizarGrafico*
+    function plotarGrafico(resposta, idVoto) {
+        console.log("iniciando plotagem do gráfico...");
+        console.log(resposta);
+        // Criando estrutura para plotar gráfico - labels
+        let labels = ["Ainda não sabem", "Gostei", "Não gostei"];
 
-    console.log("----------------------------------------------");
-    console.log("O gráfico será plotado com os respectivos valores:");
-    console.log("Labels:");
-    // console.log(labels);
-    console.log("Dados:");
-    // console.log(dados.datasets);
-    console.log("----------------------------------------------");
+        // Criando estrutura para plotar gráfico - dados
+        let dados = {
+            labels: labels,
+            datasets: [
+                {
+                    label: "Avaliações dos Usuarios",
+                    data: [resposta[0]["count(nota)"], resposta[1]["count(nota)"], resposta[2]["count(nota)"]],
+                    Color: "rgb(255, 0, 0)",
+                    borderWidth: 1,
+                },
+            ],
+        };
 
-    // Criando estrutura para plotar gráfico - config
-    const config = {
-      type: "bar",
-      data: dados,
-    };
+        console.log("----------------------------------------------");
+        console.log('Estes dados foram recebidos pela funcao "obterDadosGrafico" e passados para "plotarGrafico":');
+        console.log(resposta);
 
-    // Adicionando gráfico criado em div na tela
-    let myChart = new Chart(document.getElementById(`myChartCanvas`), config);
+        console.log("----------------------------------------------");
+        console.log("O gráfico será plotado com os respectivos valores:");
+        console.log("Labels:");
+        // console.log(labels);
+        console.log("Dados:");
+        // console.log(dados.datasets);
+        console.log("----------------------------------------------");
 
-    setTimeout(() => atualizarGrafico(idVoto, dados, myChart), 1000);
-  }
+        // Criando estrutura para plotar gráfico - config
+        const config = {
+            type: "doughnut",
+            data: dados,
+            options: { animation: false },
+        };
 
-  // Esta função *atualizarGrafico* atualiza o gráfico que foi renderizado na página,
-  // buscando a última medida inserida em tabela contendo as capturas,
+        // Adicionando gráfico criado em div na tela
+        let myChart = new Chart(document.getElementById(`myChartCanvas`), config);
 
-  //     Se quiser alterar a busca, ajuste as regras de negócio em src/controllers
-  //     Para ajustar o "select", ajuste o comando sql em src/models
-  function atualizarGrafico(idVoto, dados, myChart) {
-    fetch(`/grafico/tempo-real/${idVoto}`, { cache: "no-store" })
-      .then(function (response) {
-        if (response.ok) {
-          response.json().then(function (novoRegistro) {
-            // console.log(`Dados recebidos: ${JSON.stringify(novoRegistro)}`);
-            // console.log(`Dados atuais do gráfico:`);
-            // console.log(dados);
+        setTimeout(() => atualizarGrafico(idVoto, dados, myChart), 10);
+    }
 
-            if (
-              novoRegistro[0].momento == dados.labels[dados.labels.length - 1]
-            ) {
-              console.log(
-                "---------------------------------------------------------------"
-              );
-              console.log(
-                "Como não há dados novos para captura, o gráfico não atualizará."
-              );
-              console.log("Horário do novo dado capturado:");
-              console.log('novo registro ' + novoRegistro[0].nota);
-              console.log("Horário do último dado capturado:");
-              console.log(
-                "---------------------------------------------------------------"
-              );
-            } else {
-              // tirando e colocando valores no gráfico
-              // dados.labels.shift(); // apagar o primeiro
-              dados.labels.push(novoRegistro[0].momento); // incluir um novo momento
+    // Esta função *atualizarGrafico* atualiza o gráfico que foi renderizado na página,
+    // buscando a última medida inserida em tabela contendo as capturas,
 
-              // dados.datasets[0].data.shift(); // apagar o primeiro de umidade
-              dados.datasets[0].data.push(
-                novoRegistro[0]["count(fkUsuarioVoto)"],
-                novoRegistro[1]["count(fkUsuarioVoto)"],
-                novoRegistro[2]["count(fkUsuarioVoto)"]
-              ); // incluir uma nova medida de umidade
-              // console.log("esse é o novo registro" + novoRegistro[0]['count(fkUsuarioVoto)'])
+    //     Se quiser alterar a busca, ajuste as regras de negócio em src/controllers
+    //     Para ajustar o "select", ajuste o comando sql em src/models
+    function atualizarGrafico(idVoto, dados, myChart) {
+        fetch(`/grafico/tempo-real/${idVoto}`, { cache: "no-store" })
+            .then(function (response) {
+                if (response.ok) {
+                    response.json().then(function (novoRegistro) {
+                        // console.log(`Dados recebidos: ${JSON.stringify(novoRegistro)}`);
+                        // console.log(`Dados atuais do gráfico:`);
+                        // console.log(dados);
 
-              myChart.update();
-            }
+                        if (novoRegistro[0].nota == dados.labels[dados.labels.length - 1]) {
+                            console.log("---------------------------------------------------------------");
+                            console.log("Como não há dados novos para captura, o gráfico não atualizará.");
+                            console.log("Horário do novo dado capturado:");
+                            console.log("novo registro " + novoRegistro[0].nota);
+                            console.log("Horário do último dado capturado:");
+                            console.log("---------------------------------------------------------------");
+                        } else {
+                            // tirando e colocando valores no gráfico
+                            dados.labels.shift(); // apagar o primeiro
+                            dados.labels.push("Ainda não sabem"); // incluir um novo momento
+                            dados.labels.shift(); // apagar o primeiro
+                            dados.labels.push("Gostei"); // incluir um novo momento
+                            dados.labels.shift(); // apagar o primeiro
+                            dados.labels.push("Não gostei");
 
-            // Altere aqui o valor em ms se quiser que o gráfico atualize mais rápido ou mais devagar
-            proximaAtualizacao = setTimeout(
-              () => atualizarGrafico(idVoto, dados, myChart),
-              2000
-            );
-          });
-        } else {
-          console.error("Nenhum dado encontrado ou erro na API");
-          // Altere aqui o valor em ms se quiser que o gráfico atualize mais rápido ou mais devagar
-          proximaAtualizacao = setTimeout(
-            () => atualizarGrafico(idVoto, dados, myChart),
-            2000
-          );
-        }
-      })
-      .catch(function (error) {
-        console.error(
-          `Erro na obtenção dos dados p/ gráfico: ${error.message}`
-        );
-      });
-  }
+                            dados.datasets[0].data.shift(); // apagar o primeiro de umidade
+                            dados.datasets[0].data.push(novoRegistro[0]["count(nota)"]); // incluir uma nova medida de umidade
+                            dados.datasets[0].data.shift(); // apagar o primeiro de umidade
+                            dados.datasets[0].data.push(novoRegistro[1]["count(nota)"]); // incluir uma nova medida de umidade
+                            dados.datasets[0].data.shift(); // apagar o primeiro de umidade
+                            dados.datasets[0].data.push(novoRegistro[2]["count(nota)"]); // incluir uma nova medida de umidade
 
-  function cadastrarAvaliacao(avaliacao) {
-    fetch("/grafico/cadastrar", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify({
-        avaliacaoServer: avaliacao,
-      }),
-    })
-      .then(function (resposta) {
-        console.log("resposta: ", resposta);
+                            votosContados.innerHTML = `${novoRegistro[0]["count(nota)"] + novoRegistro[1]["count(nota)"] + novoRegistro[2]["count(nota)"]}`
+                            console.log("esse é o novo registro " + novoRegistro[0]["count(nota)"], novoRegistro[1]["count(nota)"], novoRegistro[2]["count(nota)"]);
 
-        if (resposta.ok == true) {
-          console.log("Cadastro ok");
-        } else {
-          throw "Houve um erro ao tentar realizar o cadastro!";
-        }
-      })
-      .catch(function (resposta) {
-        console.log(`#ERRO: ${resposta}`);
-      });
+                            myChart.update();
+                        }
 
-    return false;
-  }
+                        // Altere aqui o valor em ms se quiser que o gráfico atualize mais rápido ou mais devagar
+                        proximaAtualizacao = setTimeout(() => atualizarGrafico(idVoto, dados, myChart), 2000);
+                    });
+                } else {
+                    console.error("Nenhum dado encontrado ou erro na API");
+                    // Altere aqui o valor em ms se quiser que o gráfico atualize mais rápido ou mais devagar
+                    proximaAtualizacao = setTimeout(() => atualizarGrafico(idVoto, dados, myChart), 2000);
+                }
+            })
+            .catch(function (error) {
+                console.error(`Erro na obtenção dos dados p/ gráfico: ${error.message}`);
+            });
+    }
+
+    function cadastrarAvaliacao(avaliacao) {
+        fetch("/grafico/cadastrar", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json",
+            },
+            body: JSON.stringify({
+                avaliacaoServer: avaliacao,
+            }),
+        })
+            .then(function (resposta) {
+                console.log("resposta: ", resposta);
+
+                if (resposta.ok == true) {
+                    console.log("Cadastro ok");
+                } else {
+                    throw "Houve um erro ao tentar realizar o cadastro!";
+                }
+            })
+            .catch(function (resposta) {
+                console.log(`#ERRO: ${resposta}`);
+            });
+
+        return false;
+    }
 </script>

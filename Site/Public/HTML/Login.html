@@ -1,148 +1,136 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <title>ShineMax | Entrar</title>
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <link rel="icon" href="../Img/icones/logo.png" />
-    <link rel="stylesheet" href="../CSS/Shinemax.css" />
-    <link rel="stylesheet" href="../CSS/Login.css" />
-    <link rel="stylesheet" href="../CSS/Erros.css" />
-  </head>
+  <title>ShineMax | Entrar</title>
 
-  <body>
-    <div class="carrossel">
-      <div class="container" id="img">
-        <img src="../Img/fundos/fundo.png" width="100%" />
-        <img src="../Img/fundos/fundo1.png" width="100%" />
-        <img src="../Img/fundos/fundo2.png" width="100%" />
-        <img src="../Img/fundos/fundo3.png" width="100%" />
-        <img src="../Img/fundos/fundo4.png" width="100%" />
-      </div>
+  <link rel="icon" href="../Img/icones/logo.png" />
+  <link rel="stylesheet" href="../CSS/Shinemax.css" />
+  <link rel="stylesheet" href="../CSS/Login.css" />
+  <link rel="stylesheet" href="../CSS/Erros.css" />
+</head>
+
+<body>
+  <div class="carrossel">
+    <div class="container" id="img">
+      <img src="../Img/fundos/fundo.png" width="100%" />
+      <img src="../Img/fundos/fundo1.png" width="100%" />
+      <img src="../Img/fundos/fundo2.png" width="100%" />
+      <img src="../Img/fundos/fundo3.png" width="100%" />
+      <img src="../Img/fundos/fundo4.png" width="100%" />
     </div>
+  </div>
 
-    <div class="header">
-      <div class="container">
-        <!-- Barra de cima -->
-        <a href="../index.html">
-          <div class="shinemax">
-            <img src="../Img/icones/logo.png" height="50px" />
-            ShineMax
-          </div>
-        </a>
-        <ul id="ocultar" class="barra">
-          <li>Home</li>
-          <li><a href="Filmes.html">Filmes</a></li>
-          <li><a href="Series.html">Séries</a></li>
-          <li><a href="Animes.html">Animes</a></li>
-          <div>
-            <img
-              onclick="mostrar('pesquisa')"
-              style="filter: invert(1)"
-              src="../Img/icones/pesquisa.png"
-              height="30px"
-              width="30px"
-            />
-          </div>
-          <div class="usuario">
-            <span class="icone-login">
-              <img src="../Img/icones/usuario.png" width="50px" />
-              <div class="menu-login">
-                <div id="online" style="display: none">
-                  <li id="c_usuario">Usuario</li>
-                  <li><a href="Configuracões.html"> Configurações </a></li>
-                  <li>
-                    <a href="../index.html" onclick="limparSessao()">sair</a>
-                  </li>
-                </div>
-                <div id="offline">
-                  <li>Login</li>
-                  <li><a href="Cadastro.html"> Cadastro </a></li>
-                </div>
+  <div class="header">
+    <div class="container">
+      <!-- Barra de cima -->
+      <a href="../index.html">
+        <div class="shinemax">
+          <img src="../Img/icones/logo.png" height="50px" />
+          ShineMax
+        </div>
+      </a>
+      <ul id="ocultar" class="barra">
+        <li>Home</li>
+        <li><a href="Filmes.html">Filmes</a></li>
+        <li><a href="Series.html">Séries</a></li>
+        <li><a href="Animes.html">Animes</a></li>
+        <div>
+          <img onclick="mostrar('pesquisa')" style="filter: invert(1)" src="../Img/icones/pesquisa.png" height="30px"
+            width="30px" />
+        </div>
+        <div class="usuario">
+          <span class="icone-login">
+            <img src="../Img/icones/usuario.png" width="50px" />
+            <div class="menu-login">
+              <div id="online" style="display: none">
+                <li id="c_usuario">Usuario</li>
+                <li><a href="Configuracões.html"> Configurações </a></li>
+                <li>
+                  <a href="../index.html" onclick="limparSessao()">sair</a>
+                </li>
               </div>
-            </span>
-          </div>
-        </ul>
-        <!-- Fim da Barra-->
-      </div>
-
-      <div id="pesquisa" style="display: none">
-        <div class="buttonpesquisar">
-          <img
-            src="../Img/icones/pesquisa.png"
-            style="filter: invert(1)"
-            width="20px"
-            alt="Buscar"
-          />
-          <input type="search" class="inputpesquisa" placeholder="Buscar..." />
+              <div id="offline">
+                <li>Login</li>
+                <li><a href="Cadastro.html"> Cadastro </a></li>
+              </div>
+            </div>
+          </span>
         </div>
-      </div>
+      </ul>
+      <!-- Fim da Barra-->
     </div>
 
-    <div class="login">
-      <div class="credenciais">
-        <div class="alerta_erro">
-          <div class="card_erro" id="cardErro">
-            <span id="mensagem_erro"></span>
-          </div>
-        </div>
-        <div class="email">
-          E-mail:
-          <input id="email_input" />
-        </div>
-        <div class="senha">
-          Senha:
-          <input type="password" id="senha_input" />
-        </div>
-        <button onclick="entrar()" id="button">Entrar</button>
-        
-        <div id="div_aguardar" class="loading-div">
-          <img src="../Img/Gifs/circle-loading.gif" id="loading-gif" />
-        </div>
-  
-        <div id="div_erros_login"></div>
+    <div id="pesquisa" style="display: none">
+      <div class="buttonpesquisar">
+        <img src="../Img/icones/pesquisa.png" style="filter: invert(1)" width="20px" alt="Buscar" />
+        <input type="search" class="inputpesquisa" placeholder="Buscar..." />
       </div>
-      </div>
-
-    <div class="footer">
-      <!-- Barra Baixo -->
-      <div class="container">
-        <div class="redes">Siga-nos nas Redes Sociais</div>
-        <div class="redesocial">
-          <a href="https://github.com/TheoMesquita/Shinemax">
-            <img
-              src="../Img/icones/git.png"
-              style="filter: invert(1)"
-              width="30px"
-            />
-          </a>
-          <a href="https://web.facebook.com/theofilo.mesquita.5">
-            <img src="../Img/icones/facebook.png" width="30px" />
-          </a>
-          <a href="https://www.instagram.com/010_theo/">
-            <img src="../Img/icones/instagram.png" width="30px" />
-          </a>
-          <a href="">
-            <img src="../Img/icones/youtube.png" width="30px" />
-          </a>
-        </div>
-        <div class="contato">Algum problema? Contate-nos</div>
-        <div class="contatos">
-          <li>E-mail: theomesquita@hotmail.com</li>
-          <li>Celular: (11) 98677-3099</li>
-        </div>
-        <div class="copy">&copy; Copyright Todos os direitos reservados</div>
-        <button class="topo"><a href="#topo">^</a></button>
-      </div>
-      <!-- Fim da Barra -->
     </div>
+  </div>
 
-    <script src="../JS/Acesso.js"></script>
-    <script src="../JS/Pesquisar.js" defer></script>
-  </body>
+  <div class="login">
+    <div class="credenciais">
+      <div class="alerta_erro">
+        <div class="card_erro" id="cardErro">
+          <span id="mensagem_erro"></span>
+        </div>
+      </div>
+      <div class="email">
+        E-mail:
+        <input id="email_input" />
+      </div>
+      <div class="senha">
+        Senha:
+        <input type="password" id="senha_input" />
+      </div>
+      <button onclick="entrar()" id="button">Entrar</button>
+
+      <div id="div_aguardar" class="loading-div">
+        <img src="../Img/Gifs/circle-loading.gif" id="loading-gif" />
+      </div>
+
+      <div id="div_erros_login"></div>
+    </div>
+  </div>
+
+  <div class="footer">
+    <!-- Barra Baixo -->
+    <div class="container">
+      <div class="redes">Siga-nos nas Redes Sociais</div>
+      <div class="redesocial">
+        <a href="https://github.com/TheoMesquita/Shinemax">
+          <img src="../Img/icones/git.png" style="filter: invert(1)" width="30px" />
+        </a>
+        <a href="https://web.facebook.com/theofilo.mesquita.5">
+          <img src="../Img/icones/facebook.png" width="30px" />
+        </a>
+        <a href="https://www.instagram.com/010_theo/">
+          <img src="../Img/icones/instagram.png" width="30px" />
+        </a>
+        <a href="">
+          <img src="../Img/icones/youtube.png" width="30px" />
+        </a>
+      </div>
+      <div class="contato">Algum problema? Contate-nos</div>
+      <div class="contatos">
+        <li>E-mail: theomesquita@hotmail.com</li>
+        <li>Celular: (11) 98677-3099</li>
+      </div>
+      <div class="copy">&copy; Copyright Todos os direitos reservados</div>
+      <button class="topo"><a href="#topo">^</a></button>
+    </div>
+    <!-- Fim da Barra -->
+  </div>
+
+  <script src="../JS/Acesso.js"></script>
+  <script src="../JS/Pesquisar.js" defer></script>
+</body>
+
 </html>
 <script>
   function entrar() {
@@ -201,9 +189,9 @@
             sessionStorage.idade = json.idade;
             sessionStorage.genero = json.genero;
             sessionStorage.pais = json.nacionalidade;
-            
-          mensagem_erro.innerHTML =
-            "Cadastro realizado com sucesso! Redirecionando para tela de Login...";
+
+            mensagem_erro.innerHTML =
+              "Cadastro realizado com sucesso! Redirecionando para tela de Login...";
 
             setTimeout(function () {
               window.location = "./logado/index.html";

@@ -1,124 +1,146 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    
-    <title>ShineMax | Configurações</title>
-    
-    <link rel="icon" href="../Img/icones/logo.png" />
-    <link rel="stylesheet" href="../CSS/Shinemax.css">
-    <link rel="stylesheet" href="../CSS/Configuracões.css" />
-  </head>
-  <body>
-    <div class="fundomax">
-      <div class="header">
-        <div class="container">
-          <!-- Barra de cima -->
-          <a href="./logado/index.html">
-            <div class="shinemax">
-              <img src="../Img/icones/logo.png" height="50px" />
-              ShineMax
-            </div>
-          </a>
-          <ul id="ocultar" class="barra">
-            <li><a href="./logado/index.html">Home</a></li>
-            <li><a href="./logado/Filmes.html">Filmes</a></li>
-            <li><a href="./logado/Series.html">Séries</a></li>
-            <li><a href="./logado/Animes.html">Animes</a></li>
-            <div>
-              <img onclick="mostrar('pesquisa')" style="filter: invert(1);" src="../Img/icones/pesquisa.png" height="30px"
-                width="30px" />
-            </div>
-    
-        <div id="pesquisa" style="display: none">
-          <div class="buttonpesquisar">
-            <img src="../Img/icones/pesquisa.png" style="filter: invert(1);" width="20px" alt="Buscar" />
-            <input type="search" class="inputpesquisa" placeholder="Buscar..." />
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>ShineMax | Configurações</title>
+
+  <link rel="icon" href="../Img/icones/logo.png" />
+  <link rel="stylesheet" href="../CSS/Shinemax.css">
+  <link rel="stylesheet" href="../CSS/Configuracões.css" />
+</head>
+
+<body>
+  <div class="fundomax">
+    <div class="header">
+      <div class="container">
+        <!-- Barra de cima -->
+        <a href="./logado/index.html">
+          <div class="shinemax">
+            <img src="../Img/icones/logo.png" height="50px" />
+            ShineMax
           </div>
-        </div>
+        </a>
+        <ul id="ocultar" class="barra">
+          <li><a href="./logado/index.html">Home</a></li>
+          <li><a href="./logado/Filmes.html">Filmes</a></li>
+          <li><a href="./logado/Series.html">Séries</a></li>
+          <li><a href="./logado/Animes.html">Animes</a></li>
+          <div>
+            <img onclick="mostrar('pesquisa')" style="filter: invert(1);" src="../Img/icones/pesquisa.png" height="30px"
+              width="30px" />
+          </div>
+
+          <div id="pesquisa" style="display: none">
+            <div class="buttonpesquisar">
+              <img src="../Img/icones/pesquisa.png" style="filter: invert(1);" width="20px" alt="Buscar" />
+              <input type="search" class="inputpesquisa" placeholder="Buscar..." />
+            </div>
+          </div>
       </div>
 
-        <div class="perfil">
-          <div class="usuario">
-            <span class="icone-login">
-              <img src="../Img/icones/usuario.png" width="70px" />
-              <div class="hello">
-                <h3>Olá, <span id="b_usuario">usuário</span>!</h3>
-                <h4><span id="c_usuario">Idade</span></h4>
-                <h4><span id="d_usuario">Nacionalidade</span></h4>
+      <div class="perfil">
+        <div class="usuario">
+          <span class="icone-login">
+            <img src="../Img/icones/usuario.png" width="70px" />
+            <div class="hello">
+              <h3>Olá, <span id="b_usuario">usuário</span>!</h3>
+              <h4><span id="c_usuario">Idade</span></h4>
+              <h4><span id="d_usuario">Nacionalidade</span></h4>
             </div>
-              <li>Por Ver</li>
-              <li>Curtidas</li>
-              <li>Seguindo</li>
-              <div class="btn-logout" onclick="limparSessao()">
-                <h3>Sair</h3>
-              </div>
+            <li>Por Ver</li>
+            <li>Curtidas</li>
+            <li>Seguindo</li>
+            <div class="btn-logout" onclick="limparSessao()">
+              <h3>Sair</h3>
+            </div>
+
+            <span class="criador">
+              <h3>Dados do Criador</h3>
+              <div id="Criador"></div>
             </span>
-            <div class="opcões">
-              <div class="trocaNome">
-                Mudar Nome:
-                <input id="trocaNome" />
-              </div>
-              <div class="trocaAvatar">
-                Mudar Avatar:
-                <button onclick="">Procurar</button>
-              </div>
-              <div class="trocarPais">
-                Mudar País:
-                <select id="cbPais">
-                  <option value="">Selecione</option>
-                  <option value="br">Brasil</option>
-                  <option value="ca">Canada</option>
-                  <option value="me">Mexico</option>
-                  <option value="usa">Usa</option>
-                </select>
-                <button onclick="">Salvar Alterações</button>
-              </div>
+          </span>
+
+          <div class="opcões">
+            <div class="trocaNome">
+              Mudar Nome:
+              <input id="trocaNome" />
+            </div>
+            <div class="trocaAvatar">
+              Mudar Avatar:
+              <button onclick="">Procurar</button>
+            </div>
+            <div class="trocarPais">
+              Mudar País:
+              <select id="cbPais">
+                <option value="">Selecione</option>
+                <option value="br">Brasil</option>
+                <option value="ca">Canada</option>
+                <option value="me">Mexico</option>
+                <option value="usa">Usa</option>
+              </select>
+              <button onclick="">Salvar Alterações</button>
             </div>
           </div>
         </div>
       </div>
     </div>
-
-    <div class="footer">
-      <!-- Barra Baixo -->
-      <div class="container">
-          <div class="redes">Siga-nos nas Redes Sociais</div>
-          <div class="redesocial">
-              <a href="https://github.com/TheoMesquita/Shinemax">
-                  <img src="../Img/icones/git.png" style="filter: invert(1);" width="30px" />
-              </a>
-              <a href="https://web.facebook.com/theofilo.mesquita.5">
-                  <img src="../Img/icones/facebook.png" width="30px" />
-              </a>
-              <a href="https://www.instagram.com/010_theo/">
-                  <img src="../Img/icones/instagram.png" width="30px" />
-              </a>
-              <a href="">
-                  <img src="../Img/icones/youtube.png" width="30px" />
-              </a>
-          </div>
-          <div class="contato">Algum problema? Contate-nos</div>
-          <div class="contatos">
-              <li>E-mail: theomesquita@hotmail.com</li>
-              <li>Celular: (11) 98677-3099</li>
-          </div>
-          <div class="copy">&copy; Copyright Todos os direitos reservados</div>
-          <button class="topo"><a href="#topo">^</a></button>
-      </div>
-      <!-- Fim da Barra -->
   </div>
 
-    <script src="../JS/Pesquisar.js"></script>
-    <script src="../JS/Acesso.js"></script>
-  </body>
+  <div class="footer">
+    <!-- Barra Baixo -->
+    <div class="container">
+      <div class="redes">Siga-nos nas Redes Sociais</div>
+      <div class="redesocial">
+        <a href="https://github.com/TheoMesquita/Shinemax">
+          <img src="../Img/icones/git.png" style="filter: invert(1);" width="30px" />
+        </a>
+        <a href="https://web.facebook.com/theofilo.mesquita.5">
+          <img src="../Img/icones/facebook.png" width="30px" />
+        </a>
+        <a href="https://www.instagram.com/010_theo/">
+          <img src="../Img/icones/instagram.png" width="30px" />
+        </a>
+        <a href="">
+          <img src="../Img/icones/youtube.png" width="30px" />
+        </a>
+      </div>
+      <div class="contato">Algum problema? Contate-nos</div>
+      <div class="contatos">
+        <li>E-mail: theomesquita@hotmail.com</li>
+        <li>Celular: (11) 98677-3099</li>
+      </div>
+      <div class="copy">&copy; Copyright Todos os direitos reservados</div>
+      <button class="topo"><a href="#topo">^</a></button>
+    </div>
+    <!-- Fim da Barra -->
+  </div>
+
+  <script src="../JS/Acesso.js"></script>
+  <script src="../JS/Pesquisar.js"></script>
+</body>
+
 </html>
 <script>
 
-b_usuario.innerHTML = sessionStorage.apelido;
-c_usuario.innerHTML = sessionStorage.idade;
-d_usuario.innerHTML = sessionStorage.pais;
+  b_usuario.innerHTML = sessionStorage.apelido;
+  c_usuario.innerHTML = sessionStorage.idade;
+  d_usuario.innerHTML = sessionStorage.pais;
+
+  var idadeCriador = 1
+
+  for (var contador = 2003; contador < 2023; contador++) {
+    idadeCriador++
+  }
+  
+  var dadosCriador = {
+    nome: "Theofilo",
+    idade: idadeCriador
+  }
+
+  Criador.innerHTML = `Nome: ${dadosCriador.nome} <br> Idade: ${dadosCriador.idade}`
 
 </script>

@@ -1,237 +1,220 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <title>ShineMax | Filmes</title>
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <link rel="icon" href="../../Img/icones/logo.png" />
-    <link rel="stylesheet" href="../../CSS/Shinemax.css" />
-    <link rel="stylesheet" href="../../CSS/Filmes.css" />
-  </head>
+  <title>ShineMax | Filmes</title>
 
-  <body>
-    <div class="header">
-      <div class="container">
-        <!-- Barra de cima -->
-        <a href="index.html">
-          <div class="shinemax">
-            <img src="../../Img/icones/logo.png" height="50px" />
-            ShineMax
-          </div>
-        </a>
-        <ul id="ocultar" class="barra">
-          <li><a href="index.html">Home</a></li>
-          <li>Filmes</li>
-          <li><a href="Series.html">Séries</a></li>
-          <li><a href="Animes.html">Animes</a></li>
-          <div>
-            <img
-              onclick="mostrar('pesquisa')"
-              style="filter: invert(1)"
-              src="../../Img/icones/pesquisa.png"
-              height="30px"
-              width="30px"
-            />
-          </div>
-          <div class="usuario">
-            <span class="icone-login">
-              <img src="../../Img/icones/usuario.png" width="50px" />
-              <div class="menu-login">
-                <div id="online">
-                  <li id="b_usuario">Usuario</li>
-                  <li><a href="../Configuracões.html"> Configurações </a></li>
-                  <li>
-                    <a href="../index.html" onclick="limparSessao()">sair</a>
-                  </li>
-                </div>
-                <div id="offline" style="display: none">
-                  <li><a href="../Login.html"> Login </a></li>
-                  <li><a href="../Cadastro.html"> Cadastro </a></li>
-                </div>
+  <link rel="icon" href="../../Img/icones/logo.png" />
+  <link rel="stylesheet" href="../../CSS/Shinemax.css" />
+  <link rel="stylesheet" href="../../CSS/Filmes.css" />
+</head>
+
+<body>
+  <div class="header">
+    <div class="container">
+      <!-- Barra de cima -->
+      <a href="index.html">
+        <div class="shinemax">
+          <img src="../../Img/icones/logo.png" height="50px" />
+          ShineMax
+        </div>
+      </a>
+      <ul id="ocultar" class="barra">
+        <li><a href="index.html">Home</a></li>
+        <li>Filmes</li>
+        <li><a href="Series.html">Séries</a></li>
+        <li><a href="Animes.html">Animes</a></li>
+        <div>
+          <img onclick="mostrar('pesquisa')" style="filter: invert(1)" src="../../Img/icones/pesquisa.png" height="30px"
+            width="30px" />
+        </div>
+        <div class="usuario">
+          <span class="icone-login">
+            <img src="../../Img/icones/usuario.png" width="50px" />
+            <div class="menu-login">
+              <div id="online">
+                <li id="b_usuario">Usuario</li>
+                <li><a href="../Configuracões.html"> Configurações </a></li>
+                <li>
+                  <a href="../index.html" onclick="limparSessao()">sair</a>
+                </li>
               </div>
-            </span>
-          </div>
-        </ul>
-        <!-- Fim da Barra-->
-      </div>
-
-      <div id="pesquisa" style="display: none">
-        <div class="buttonpesquisar">
-          <img
-            src="../../Img/icones/pesquisa.png"
-            style="filter: invert(1)"
-            width="20px"
-            alt="Buscar"
-          />
-          <input type="search" class="inputpesquisa" placeholder="Buscar..." />
-        </div>
-      </div>
-    </div>
-
-    <div class="espacoOrdenar">
-      <h1>Filmes</h1>
-      <div class="ordenarFilmes">
-        <li onclick="ordemRecente()">Recentes</li>
-        <li onclick="ordemAZ()">A a Z</li>
-        <li onclick="ordemZA()">Z a A</li>
-        <li onclick="ordemAvaliacao()">Avaliação</li>
-        <div class="esconder">
-          <div class="aparecer">
-            <li class="genHover">Gênero</li>
-            <div class="generos">
-              <li onclick="">Ação</li>
-              <li onclick="">Romance</li>
-              <li onclick="">Suspense</li>
+              <div id="offline" style="display: none">
+                <li><a href="../Login.html"> Login </a></li>
+                <li><a href="../Cadastro.html"> Cadastro </a></li>
+              </div>
             </div>
+          </span>
+        </div>
+      </ul>
+      <!-- Fim da Barra-->
+    </div>
+
+    <div id="pesquisa" style="display: none">
+      <div class="buttonpesquisar">
+        <img src="../../Img/icones/pesquisa.png" style="filter: invert(1)" width="20px" alt="Buscar" />
+        <input type="search" class="inputpesquisa" placeholder="Buscar..." />
+      </div>
+    </div>
+  </div>
+
+  <div class="espacoOrdenar">
+    <h1>Filmes</h1>
+    <div class="ordenarFilmes">
+      <li onclick="ordemRecente()">Recentes</li>
+      <li onclick="ordemAZ()">A a Z</li>
+      <li onclick="ordemZA()">Z a A</li>
+      <li onclick="ordemAvaliacao()">Avaliação</li>
+      <div class="esconder">
+        <div class="aparecer">
+          <li class="genHover">Gênero</li>
+          <div class="generos">
+            <li onclick="">Ação</li>
+            <li onclick="">Romance</li>
+            <li onclick="">Suspense</li>
           </div>
         </div>
-        <div class="canto">
-          <li onclick="ordemGrid()">
-            <img
-              src="../../Img/icones/grid.png"
-              width="25px"
-              style="filter: invert(1)"
-              alt="CapaGrid"
-            />
-          </li>
-          <li>
-            mostrar
-            <select id="filmesPorPagina">
-              <option value=""></option>
-              <option value="">30</option>
-              <option value="">50</option>
-            </select>
-          </li>
-        </div>
+      </div>
+      <div class="canto">
+        <li onclick="ordemGrid()">
+          <img src="../../Img/icones/grid.png" width="25px" style="filter: invert(1)" alt="CapaGrid" />
+        </li>
+        <li>
+          mostrar
+          <select id="filmesPorPagina">
+            <option value=""></option>
+            <option value="">30</option>
+            <option value="">50</option>
+          </select>
+        </li>
       </div>
     </div>
+  </div>
 
-    <div class="listaAssistir">
-      <div class="capaFilme" id="hover">
-        <img class="img" src="../../Img/Capas/Filmes/a mulher rei.png" alt="Capa" />
-        <h4 class="tituloFilme">Creed III</h4>
-      </div>
-      <div class="capaFilme">
-        <img class="img" src="../../Img/Capas/Filmes/adao negro.png" alt="Capa" />
-        <h4 class="tituloFilme">Creed III</h4>
-      </div>
-      <div class="capaFilme">
-        <img class="img" src="../../Img/Capas/Filmes/avatar.png" alt="Capa" />
-        <h4 class="tituloFilme">Creed III</h4>
-      </div>
-      <div class="capaFilme">
-        <img class="img" src="../../Img/Capas/Filmes/creed III.png" alt="Capa" />
-        <h4 class="tituloFilme">Creed III</h4>
-      </div>
-      <div class="capaFilme">
-        <img class="img" src="../../Img/Capas/Filmes/esquema de risco.png" alt="Capa" />
-        <h4 class="tituloFilme">Creed III</h4>
-      </div>
-      <div class="capaFilme">
-        <img class="img" src="../../Img/Capas/Filmes/eu sou a lenda.png" alt="Capa" />
-        <h4 class="tituloFilme">Creed III</h4>
-      </div>
-      <div class="capaFilme">
-        <img class="img" src="../../Img/Capas/Filmes/gato de botas.png" alt="Capa" />
-        <h4 class="tituloFilme">Creed III</h4>
-      </div>
-      <div class="capaFilme">
-        <img class="img" src="../../Img/Capas/Filmes/homem aranha de volta ao lar.png" alt="Capa" />
-        <h4 class="tituloFilme">Creed III</h4>
-      </div>
-      <div class="capaFilme">
-        <img class="img" src="../../Img/Capas/Filmes/homem de ferro 3.png" alt="Capa" />
-        <h4 class="tituloFilme">Creed III</h4>
-      </div>
-      <div class="capaFilme">
-        <img class="img" src="../../Img/Capas/Filmes/john wick 4.png" alt="Capa" />
-        <h4 class="tituloFilme">Creed III</h4>
-      </div>
-
-      <div class="capaFilme">
-        <img class="img" src="../../Img/Capas/Filmes/kingsman a origem.png" alt="Capa" />
-        <h4 class="tituloFilme">Creed III</h4>
-      </div>
-      <div class="capaFilme">
-        <img class="img" src="../../Img/Capas/Filmes/kung fu panda 3.png" alt="Capa" />
-        <h4 class="tituloFilme">Creed III</h4>
-      </div>
-      <div class="capaFilme">
-        <img class="img" src="../../Img/Capas/Filmes/meu malvado favorito 2.png" alt="Capa" />
-        <h4 class="tituloFilme">Creed III</h4>
-      </div>
-      <div class="capaFilme">
-        <img class="img" src="../../Img/Capas/Filmes/minions 2.png" alt="Capa" />
-        <h4 class="tituloFilme">Creed III</h4>
-      </div>
-      <div class="capaFilme">
-        <img class="img" src="../../Img/Capas/Filmes/operação big hero.png" alt="Capa" />
-        <h4 class="tituloFilme">Creed III</h4>
-      </div>
-      <div class="capaFilme">
-        <img class="img" src="../../Img/Capas/Filmes/carros 3.png" alt="Capa" />
-        <h4 class="tituloFilme">Creed III</h4>
-      </div>
-      <div class="capaFilme">
-        <img class="img" src="../../Img/Capas/Filmes/shazan.png" alt="Capa" />
-        <h4 class="tituloFilme">Creed III</h4>
-      </div>
-      <div class="capaFilme">
-        <img class="img" src="../../Img/Capas/Filmes/uma noite no museu o retorno de kahmurah.png" alt="Capa" />
-        <h4 class="tituloFilme">Creed III</h4>
-      </div>
-      <div class="capaFilme">
-        <img
-          class="img" src="../../Img/Capas/Filmes/vingadores guerra infinita.png" alt="Capa" />
-        <h4 class="tituloFilme">Creed III</h4>
-      </div>
-      <div class="capaFilme">
-        <img class="img" src="../../Img/Capas/Filmes/wifi ralph.png" alt="Capa" />
-        <h4 class="tituloFilme">Creed III</h4>
-      </div>
+  <div class="listaAssistir">
+    <div class="capaFilme" id="hover">
+      <img class="img" src="../../Img/Capas/Filmes/a mulher rei.png" alt="Capa" />
+      <h4 class="tituloFilme">Creed III</h4>
+    </div>
+    <div class="capaFilme">
+      <img class="img" src="../../Img/Capas/Filmes/adao negro.png" alt="Capa" />
+      <h4 class="tituloFilme">Creed III</h4>
+    </div>
+    <div class="capaFilme">
+      <img class="img" src="../../Img/Capas/Filmes/avatar.png" alt="Capa" />
+      <h4 class="tituloFilme">Creed III</h4>
+    </div>
+    <div class="capaFilme">
+      <img class="img" src="../../Img/Capas/Filmes/creed III.png" alt="Capa" />
+      <h4 class="tituloFilme">Creed III</h4>
+    </div>
+    <div class="capaFilme">
+      <img class="img" src="../../Img/Capas/Filmes/esquema de risco.png" alt="Capa" />
+      <h4 class="tituloFilme">Creed III</h4>
+    </div>
+    <div class="capaFilme">
+      <img class="img" src="../../Img/Capas/Filmes/eu sou a lenda.png" alt="Capa" />
+      <h4 class="tituloFilme">Creed III</h4>
+    </div>
+    <div class="capaFilme">
+      <img class="img" src="../../Img/Capas/Filmes/gato de botas.png" alt="Capa" />
+      <h4 class="tituloFilme">Creed III</h4>
+    </div>
+    <div class="capaFilme">
+      <img class="img" src="../../Img/Capas/Filmes/homem aranha de volta ao lar.png" alt="Capa" />
+      <h4 class="tituloFilme">Creed III</h4>
+    </div>
+    <div class="capaFilme">
+      <img class="img" src="../../Img/Capas/Filmes/homem de ferro 3.png" alt="Capa" />
+      <h4 class="tituloFilme">Creed III</h4>
+    </div>
+    <div class="capaFilme">
+      <img class="img" src="../../Img/Capas/Filmes/john wick 4.png" alt="Capa" />
+      <h4 class="tituloFilme">Creed III</h4>
     </div>
 
-    <div class="footer">
-      <!-- Barra Baixo -->
-      <div class="container">
-        <div class="redes">Siga-nos nas Redes Sociais</div>
-        <div class="redesocial">
-          <a href="https://github.com/TheoMesquita/Shinemax">
-            <img
-              src="../../Img/icones/git.png"
-              style="filter: invert(1)"
-              width="30px"
-            />
-          </a>
-          <a href="https://web.facebook.com/theofilo.mesquita.5">
-            <img src="../../Img/icones/facebook.png" width="30px" />
-          </a>
-          <a href="https://www.instagram.com/010_theo/">
-            <img src="../../Img/icones/instagram.png" width="30px" />
-          </a>
-          <a href="">
-            <img src="../../Img/icones/youtube.png" width="30px" />
-          </a>
-        </div>
-        <div class="contato">Algum problema? Contate-nos</div>
-        <div class="contatos">
-          <li>E-mail: theomesquita@hotmail.com</li>
-          <li>Celular: (11) 98677-3099</li>
-        </div>
-        <div class="copy">&copy; Copyright Todos os direitos reservados</div>
-        <button class="topo"><a href="#topo">^</a></button>
-      </div>
-      <!-- Fim da Barra -->
+    <div class="capaFilme">
+      <img class="img" src="../../Img/Capas/Filmes/kingsman a origem.png" alt="Capa" />
+      <h4 class="tituloFilme">Creed III</h4>
     </div>
+    <div class="capaFilme">
+      <img class="img" src="../../Img/Capas/Filmes/kung fu panda 3.png" alt="Capa" />
+      <h4 class="tituloFilme">Creed III</h4>
+    </div>
+    <div class="capaFilme">
+      <img class="img" src="../../Img/Capas/Filmes/meu malvado favorito 2.png" alt="Capa" />
+      <h4 class="tituloFilme">Creed III</h4>
+    </div>
+    <div class="capaFilme">
+      <img class="img" src="../../Img/Capas/Filmes/minions 2.png" alt="Capa" />
+      <h4 class="tituloFilme">Creed III</h4>
+    </div>
+    <div class="capaFilme">
+      <img class="img" src="../../Img/Capas/Filmes/operação big hero.png" alt="Capa" />
+      <h4 class="tituloFilme">Creed III</h4>
+    </div>
+    <div class="capaFilme">
+      <img class="img" src="../../Img/Capas/Filmes/carros 3.png" alt="Capa" />
+      <h4 class="tituloFilme">Creed III</h4>
+    </div>
+    <div class="capaFilme">
+      <img class="img" src="../../Img/Capas/Filmes/shazan.png" alt="Capa" />
+      <h4 class="tituloFilme">Creed III</h4>
+    </div>
+    <div class="capaFilme">
+      <img class="img" src="../../Img/Capas/Filmes/uma noite no museu o retorno de kahmurah.png" alt="Capa" />
+      <h4 class="tituloFilme">Creed III</h4>
+    </div>
+    <div class="capaFilme">
+      <img class="img" src="../../Img/Capas/Filmes/vingadores guerra infinita.png" alt="Capa" />
+      <h4 class="tituloFilme">Creed III</h4>
+    </div>
+    <div class="capaFilme">
+      <img class="img" src="../../Img/Capas/Filmes/wifi ralph.png" alt="Capa" />
+      <h4 class="tituloFilme">Creed III</h4>
+    </div>
+  </div>
 
-    <script src="../../JS/Pesquisar.js"></script>
-  </body>
+  <div class="footer">
+    <!-- Barra Baixo -->
+    <div class="container">
+      <div class="redes">Siga-nos nas Redes Sociais</div>
+      <div class="redesocial">
+        <a href="https://github.com/TheoMesquita/Shinemax">
+          <img src="../../Img/icones/git.png" style="filter: invert(1)" width="30px" />
+        </a>
+        <a href="https://web.facebook.com/theofilo.mesquita.5">
+          <img src="../../Img/icones/facebook.png" width="30px" />
+        </a>
+        <a href="https://www.instagram.com/010_theo/">
+          <img src="../../Img/icones/instagram.png" width="30px" />
+        </a>
+        <a href="">
+          <img src="../../Img/icones/youtube.png" width="30px" />
+        </a>
+      </div>
+      <div class="contato">Algum problema? Contate-nos</div>
+      <div class="contatos">
+        <li>E-mail: theomesquita@hotmail.com</li>
+        <li>Celular: (11) 98677-3099</li>
+      </div>
+      <div class="copy">&copy; Copyright Todos os direitos reservados</div>
+      <button class="topo"><a href="#topo">^</a></button>
+    </div>
+    <!-- Fim da Barra -->
+  </div>
+
+  <script src="../../JS/Acesso.js"></script>
+  <script src="../../JS/Pesquisar.js"></script>
+</body>
+
 </html>
 <script>
 
-b_usuario.innerHTML = sessionStorage.apelido;
+  b_usuario.innerHTML = sessionStorage.apelido;
 
 </script>

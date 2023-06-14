@@ -22,7 +22,7 @@ idUsuario int primary key auto_increment,
 nome varchar(45),
 Sobrenome varchar(45),
 apelido varchar(45),
-idade date,
+idade int,
 nacionalidade varchar(45),
 genero char(10), constraint chkGenero check (genero in ('Masculino','Feminino')),
 email varchar(45), 
@@ -52,10 +52,9 @@ constraint pkComposta primary key (idHistorico, fkShineMax, fkUsuario)
 );
 
 insert into usuario values
-	(null, 'Shine', 'Max', 'ShineMax', '2003-09-29', 'Brasil', null, 'shinemax@shine.max', 'S4in3M@x', 'administrador', null);
+	(null, 'Shine', 'Max', 'ShineMax', null, 'Brasil', null, 'shinemax@shine.max', 'S4in3M@x', 'administrador', null);
 
 select * from usuario;
-
     
 insert into voto values
 	(null, 'gostei', null),
@@ -65,5 +64,3 @@ insert into voto values
 select * from voto;
 
 select count(nota) from voto group by nota order by nota;
-
-select year(idade) from usuario;

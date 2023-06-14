@@ -8,7 +8,7 @@
 .icone-login {
   display: flex;
   flex-direction: column;
-  height: 400px;
+  height: 500px;
   margin: 35px auto;
   justify-content: space-between;
 }
@@ -72,4 +72,7 @@
 }
 .hello{
   color: white  ;
+}
+.criador{
+  color: white;
 }
