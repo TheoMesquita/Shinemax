@@ -1,293 +1,277 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-<head>
-  <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>ShineMax | Cadastrar</title>
 
-  <title>ShineMax | Cadastrar</title>
+        <link rel="icon" href="../Img/icones/logo.png" />
+        <link rel="stylesheet" href="../CSS/Shinemax.css" />
+        <link rel="stylesheet" href="../CSS/Cadastro.css" />
+        <link rel="stylesheet" href="../CSS/Erros.css" />
+    </head>
 
-  <link rel="icon" href="../Img/icones/logo.png" />
-  <link rel="stylesheet" href="../CSS/Shinemax.css" />
-  <link rel="stylesheet" href="../CSS/Cadastro.css" />
-  <link rel="stylesheet" href="../CSS/Erros.css" />
-</head>
-
-<body>
-  <div class="carrossel">
-    <div class="container" id="img">
-      <img src="../Img/fundos/fundo.png" width="100%" />
-      <img src="../Img/fundos/fundo1.png" width="100%" />
-      <img src="../Img/fundos/fundo2.png" width="100%" />
-      <img src="../Img/fundos/fundo3.png" width="100%" />
-      <img src="../Img/fundos/fundo4.png" width="100%" />
-    </div>
-  </div>
-
-  <div class="header">
-    <div class="container">
-      <!-- Barra de cima -->
-      <a href="../index.html">
-        <div class="shinemax">
-          <img src="../Img/icones/logo.png" height="50px" />
-          ShineMax
-        </div>
-      </a>
-      <ul id="ocultar" class="barra">
-        <li><a href="../index.html">Home</a></li>
-        <li>Filmes</li>
-        <li><a href="Series.html">Séries</a></li>
-        <li><a href="Animes.html">Animes</a></li>
-        <div>
-          <img onclick="mostrar('pesquisa')" style="filter: invert(1)" src="../Img/icones/pesquisa.png" height="30px"
-            width="30px" />
-        </div>
-        <div class="usuario">
-          <span class="icone-login">
-            <img src="../Img/icones/usuario.png" width="50px" />
-            <div class="menu-login">
-              <div id="online" style="display: none">
-                <li id="c_usuario">Usuario</li>
-                <li><a href="Configuracões.html"> Configurações </a></li>
-                <li>
-                  <a href="../index.html" onclick="limparSessao()">sair</a>
-                </li>
-              </div>
-              <div id="offline">
-                <li><a href="Login.html"> Login </a></li>
-                <li><a href="Cadastro.html"> Cadastro </a></li>
-              </div>
+    <body>
+        <div class="carrossel">
+            <div class="container" id="img">
+                <img src="../Img/fundos/fundo.png" width="100%" />
+                <img src="../Img/fundos/fundo1.png" width="100%" />
+                <img src="../Img/fundos/fundo2.png" width="100%" />
+                <img src="../Img/fundos/fundo3.png" width="100%" />
+                <img src="../Img/fundos/fundo4.png" width="100%" />
             </div>
-          </span>
         </div>
-      </ul>
-      <!-- Fim da Barra-->
-    </div>
 
-    <div id="pesquisa" style="display: none">
-      <div class="buttonpesquisar">
-        <img src="../Img/icones/pesquisa.png" style="filter: invert(1)" width="20px" alt="Buscar" />
-        <input type="search" class="inputpesquisa" placeholder="Buscar..." />
-      </div>
-    </div>
-  </div>
+        <div class="header">
+            <div class="container">
+                <!-- Barra de cima -->
+                <a href="../index.html">
+                    <div class="shinemax">
+                        <img src="../Img/icones/logo.png" height="50px" />
+                        ShineMax
+                    </div>
+                </a>
+                <ul id="ocultar" class="barra">
+                    <li><a href="../index.html">Home</a></li>
+                    <li>Filmes</li>
+                    <li><a href="Series.html">Séries</a></li>
+                    <li><a href="Animes.html">Animes</a></li>
+                    <div>
+                        <img onclick="mostrar('pesquisa')" style="filter: invert(1)" src="../Img/icones/pesquisa.png" height="30px" width="30px" />
+                    </div>
+                    <div class="usuario">
+                        <span class="icone-login">
+                            <img src="../Img/icones/usuario.png" width="50px" />
+                            <div class="menu-login">
+                                <div id="online" style="display: none">
+                                    <li id="c_usuario">Usuario</li>
+                                    <li><a href="Configuracões.html"> Configurações </a></li>
+                                    <li>
+                                        <a href="../index.html" onclick="limparSessao()">sair</a>
+                                    </li>
+                                </div>
+                                <div id="offline">
+                                    <li><a href="Login.html"> Login </a></li>
+                                    <li><a href="Cadastro.html"> Cadastro </a></li>
+                                </div>
+                            </div>
+                        </span>
+                    </div>
+                </ul>
+                <!-- Fim da Barra-->
+            </div>
 
-  <div class="credenciaisCadastro">
-    <div class="alerta_erro">
-      <div class="card_erro" id="cardErro">
-        <span id="mensagem_erro"></span>
-      </div>
-    </div>
-    <div class="cadastro">
-      Nome
-      <input id="nome_input" placeholder="Primeiro Nome" />
-    </div>
-    <div class="cadastro">
-      sobrenome
-      <input id="sobrenome_input" placeholder="Ultimo Nome" />
-    </div>
-    <div class="cadastro">
-      apelido
-      <input id="apelido_input" placeholder="Quero ser chamado de:" />
-    </div>
-    <div class="cadastro">
-      Idade
-      <input id="idade_input" placeholder="Quantos anos você tem?" />
-    </div>
-    <div class="cadastro">
-      nacionalidade
-      <select id="pais_select">
-        <option value="">Selecione</option>
-        <option value="br">Brasil</option>
-        <option value="eua">Estados Unidos</option>
-      </select>
-    </div>
-    <div class="cadastro">
-      genero
-      <select id="genero_select">
-        <option value="">Selecione</option>
-        <option value="Masculino">Masculino</option>
-        <option value="Feminino">Feminino</option>
-      </select>
-    </div>
-    <div class="cadastro">
-      E-mail:
-      <input id="email_input" placeholder="email@dominio.com" />
-    </div>
-    <div class="cadastro">
-      Senha:
-      <input id="senha_input" type="password" placeholder="********" />
-    </div>
-    <div class="cadastro">
-      Confirmar Senha:
-      <input id="confirmarSenha" type="password" placeholder="********" />
-    </div>
-    <button onclick="cadastrar()" id="button">Cadastrar</button>
+            <div id="pesquisa" style="display: none">
+                <div class="buttonpesquisar">
+                    <img src="../Img/icones/pesquisa.png" style="filter: invert(1)" width="20px" alt="Buscar" />
+                    <input type="search" class="inputpesquisa" placeholder="Buscar..." />
+                </div>
+            </div>
+        </div>
 
-    <div id="div_aguardar" class="loading-div">
-      <img src="../Img/Gifs/circle-loading.gif" id="loading-gif" />
-    </div>
+        <div class="credenciaisCadastro">
+            <div class="alerta_erro">
+                <div class="card_erro" id="cardErro">
+                    <span id="mensagem_erro"></span>
+                </div>
+            </div>
+            <div class="cadastro">
+                Nome
+                <input id="nome_input" placeholder="Primeiro Nome" />
+            </div>
+            <div class="cadastro">
+                sobrenome
+                <input id="sobrenome_input" placeholder="Ultimo Nome" />
+            </div>
+            <div class="cadastro">
+                apelido
+                <input id="apelido_input" placeholder="Quero ser chamado de:" />
+            </div>
+            <div class="cadastro">
+                Idade
+                <input id="idade_input" placeholder="Quantos anos você tem?" />
+            </div>
+            <div class="cadastro">
+                nacionalidade
+                <select id="pais_select">
+                    <option value="">Selecione</option>
+                    <option value="br">Brasil</option>
+                    <option value="eua">Estados Unidos</option>
+                </select>
+            </div>
+            <div class="cadastro">
+                genero
+                <select id="genero_select">
+                    <option value="">Selecione</option>
+                    <option value="Masculino">Masculino</option>
+                    <option value="Feminino">Feminino</option>
+                </select>
+            </div>
+            <div class="cadastro">
+                E-mail:
+                <input id="email_input" placeholder="email@dominio.com" />
+            </div>
+            <div class="cadastro">
+                Senha:
+                <input id="senha_input" type="password" placeholder="********" />
+            </div>
+            <div class="cadastro">
+                Confirmar Senha:
+                <input id="confirmarSenha" type="password" placeholder="********" />
+            </div>
+            <button onclick="cadastrar()" id="button">Cadastrar</button>
 
-    <div id="div_erros_login"></div>
-  </div>
+            <div id="div_aguardar" class="loading-div">
+                <img src="../Img/Gifs/circle-loading.gif" id="loading-gif" />
+            </div>
 
-  <div class="footer">
-    <!-- Barra Baixo -->
-    <div class="container">
-      <div class="redes">Siga-nos nas Redes Sociais</div>
-      <div class="redesocial">
-        <a href="https://github.com/TheoMesquita/Shinemax">
-          <img src="../Img/icones/git.png" width="30px" />
-        </a>
-        <a href="https://web.facebook.com/theofilo.mesquita.5">
-          <img src="../Img/icones/facebook.png" width="30px" />
-        </a>
+            <div id="div_erros_login"></div>
+        </div>
 
-        <a href="https://www.instagram.com/010_theo/">
-          <img src="../Img/icones/instagram.png" width="30px" />
-        </a>
-        <a href="">
-          <img src="../Img/icones/youtube.png" width="30px" />
-        </a>
-      </div>
-      <div class="contato">Algum problema? Contate-nos</div>
-      <div class="contatos">
-        <li>E-mail: theomesquita@hotmail.com</li>
-        <li>Celular: (11) 98677-3099</li>
-      </div>
-      <div class="copy">&copy; Copyright Todos os direitos reservados</div>
-      <button class="topo"><a href="#topo">^</a></button>
-    </div>
-    <!-- Fim da Barra -->
-  </div>
+        <div class="footer">
+            <!-- Barra Baixo -->
+            <div class="container">
+                <div class="redes">Siga-nos nas Redes Sociais</div>
+                <div class="redesocial">
+                    <a href="https://github.com/TheoMesquita/Shinemax">
+                        <img src="Img/icones/git.png" style="filter: invert(1)" width="30px" />
+                    </a>
+                    <a href="https://web.facebook.com/theofilo.mesquita.5">
+                        <img src="Img/icones/facebook.png" width="30px" />
+                    </a>
+                    <a href="https://www.instagram.com/010_theo/">
+                        <img src="Img/icones/instagram.png" width="30px" />
+                    </a>
+                    <a href="https://www.youtube.com/c/ghostfenix">
+                        <img src="Img/icones/youtube.png" width="30px" />
+                    </a>
+                </div>
+                <a href="#" class="contato">Algum problema? Contate-nos</a>
+                <div class="contatos">
+                    <a href="mailto:theomesquita@hotmail.com">E-mail: theomesquita@hotmail.com</a>
+                    <a href="https://wa.me/5511986773099">Celular: (11) 98677-3099</a>
+                </div>
+                <div class="copy">&copy; Copyright Todos os direitos reservados</div>
+                <a class="topo" href="#topo">^</a>
+            </div>
+            <!-- Fim da Barra -->
+        </div>
 
-  <script src="../JS/Acesso.js"></script>
-  <script src="../JS/Pesquisar.js"></script>
-</body>
-
+        <script src="../JS/Acesso.js"></script>
+        <script src="../JS/Pesquisar.js"></script>
+    </body>
 </html>
 <script>
-  function cadastrar() {
-    aguardar();
+    function cadastrar() {
+        aguardar();
 
-    //Recupere o valor da nova input pelo nome do id
-    // Agora vá para o método fetch logo abaixo
-    var nomeVar = nome_input.value;
-    var sobrenomeVar = sobrenome_input.value;
-    var apelidoVar = apelido_input.value;
-    var idadeVar = idade_input.value;
-    var paisVar = pais_select.value;
-    var generoVar = genero_select.value;
-    var emailVar = email_input.value;
-    var senhaVar = senha_input.value;
-    var confirmacaoSenhaVar = confirmarSenha.value;
+        //Recupere o valor da nova input pelo nome do id
+        // Agora vá para o método fetch logo abaixo
+        var nomeVar = nome_input.value;
+        var sobrenomeVar = sobrenome_input.value;
+        var apelidoVar = apelido_input.value;
+        var idadeVar = idade_input.value;
+        var paisVar = pais_select.value;
+        var generoVar = genero_select.value;
+        var emailVar = email_input.value;
+        var senhaVar = senha_input.value;
+        var confirmacaoSenhaVar = confirmarSenha.value;
 
-    if (
-      nomeVar == "" ||
-      sobrenomeVar == "" ||
-      apelidoVar == "" ||
-      idadeVar == "" ||
-      paisVar == "" ||
-      generoVar == "" ||
-      emailVar == "" ||
-      senhaVar == "" ||
-      confirmacaoSenhaVar == ""
-    ) {
-      nome_input.style.borderColor = "#DC3545";
-      sobrenome_input.style.borderColor = "#DC3545";
-      apelido_input.style.borderColor = "#DC3545";
-      idade_input.style.borderColor = "#DC3545";
-      pais_select.style.borderColor = "#DC3545";
-      genero_select.style.borderColor = "#DC3545";
-      email_input.style.borderColor = "#DC3545";
-      senha_input.style.borderColor = "#DC3545";
-      confirmarSenha.style.borderColor = "#DC3545";
+        if (nomeVar == "" || sobrenomeVar == "" || apelidoVar == "" || idadeVar == "" || paisVar == "" || generoVar == "" || emailVar == "" || senhaVar == "" || confirmacaoSenhaVar == "") {
+            nome_input.style.borderColor = "#DC3545";
+            sobrenome_input.style.borderColor = "#DC3545";
+            apelido_input.style.borderColor = "#DC3545";
+            idade_input.style.borderColor = "#DC3545";
+            pais_select.style.borderColor = "#DC3545";
+            genero_select.style.borderColor = "#DC3545";
+            email_input.style.borderColor = "#DC3545";
+            senha_input.style.borderColor = "#DC3545";
+            confirmarSenha.style.borderColor = "#DC3545";
 
-      cardErro.style.display = "block";
-      mensagem_erro.innerHTML = "Preencha todos os campos!";
+            cardErro.style.display = "block";
+            mensagem_erro.innerHTML = "Preencha todos os campos!";
 
-      finalizarAguardar();
-      return false;
-    } else if (!(emailVar.indexOf("@") >= 0 && emailVar.indexOf(".") >= 0)) {
-      email_input.style.borderColor = "#DC3545";
+            finalizarAguardar();
+            return false;
+        } else if (!(emailVar.indexOf("@") >= 0 && emailVar.indexOf(".") >= 0)) {
+            email_input.style.borderColor = "#DC3545";
 
-      cardErro.style.display = "block";
-      mensagem_erro.innerHTML = "Insira um E-mail válido!";
+            cardErro.style.display = "block";
+            mensagem_erro.innerHTML = "Insira um E-mail válido!";
 
-      finalizarAguardar();
-      return false;
-    } else if (senhaVar != confirmacaoSenhaVar) {
-      senha_input.style.borderColor = "#DC3545";
-      confirmarSenha.style.borderColor = "#DC3545";
+            finalizarAguardar();
+            return false;
+        } else if (senhaVar != confirmacaoSenhaVar) {
+            senha_input.style.borderColor = "#DC3545";
+            confirmarSenha.style.borderColor = "#DC3545";
 
-      cardErro.style.display = "block";
-      mensagem_erro.innerHTML = "As Senhas não coincidem!";
+            cardErro.style.display = "block";
+            mensagem_erro.innerHTML = "As Senhas não coincidem!";
 
-      finalizarAguardar();
-      return false;
-    } else {
-      setInterval(sumirMensagem, 5000);
+            finalizarAguardar();
+            return false;
+        } else {
+            setInterval(sumirMensagem, 5000);
+        }
+
+        // Enviando o valor da nova input
+        fetch("/usuarios/cadastrar", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json",
+            },
+            body: JSON.stringify({
+                nomeServer: nomeVar,
+                sobrenomeServer: sobrenomeVar,
+                apelidoServer: apelidoVar,
+                idadeServer: idadeVar,
+                paisServer: paisVar,
+                generoServer: generoVar,
+                emailServer: emailVar,
+                senhaServer: senhaVar,
+            }),
+        })
+            .then(function (resposta) {
+                console.log("resposta: ", resposta);
+
+                if (resposta.ok == true) {
+                    cardErro.style.display = "block";
+
+                    resposta.json().then(json => {
+                        console.log(json);
+                        console.log(JSON.stringify(json));
+
+                        sessionStorage.nome = json.nome;
+                        sessionStorage.sobrenome = json.sobrenome;
+                        sessionStorage.apelido = json.apelido;
+                        sessionStorage.idade = json.idade;
+                        sessionStorage.pais = json.pais;
+                        sessionStorage.genero = json.genero;
+                        sessionStorage.email = json.email;
+
+                        mensagem_erro.innerHTML = "Cadastro realizado com sucesso! Redirecionando para tela de Login...";
+
+                        setTimeout(function () {
+                            window.location = "../index.html";
+                        }, 1000); // apenas para exibir o loading
+                    });
+                    limparFormulario();
+                    finalizarAguardar();
+                } else {
+                    throw "Houve um erro ao tentar realizar o cadastro!";
+                }
+            })
+            .catch(function (resposta) {
+                console.log(`#ERRO: ${resposta}`);
+                finalizarAguardar();
+            });
+
+        return false;
     }
 
-    // Enviando o valor da nova input
-    fetch("/usuarios/cadastrar", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify({
-        nomeServer: nomeVar,
-        sobrenomeServer: sobrenomeVar,
-        apelidoServer: apelidoVar,
-        idadeServer: idadeVar,
-        paisServer: paisVar,
-        generoServer: generoVar,
-        emailServer: emailVar,
-        senhaServer: senhaVar,
-      }),
-    })
-      .then(function (resposta) {
-        console.log("resposta: ", resposta);
-
-        if (resposta.ok == true) {
-          cardErro.style.display = "block";
-
-          resposta.json().then((json) => {
-            console.log(json);
-            console.log(JSON.stringify(json));
-
-            sessionStorage.nome = json.nome
-            sessionStorage.sobrenome = json.sobrenome
-            sessionStorage.apelido = json.apelido
-            sessionStorage.idade = json.idade
-            sessionStorage.pais = json.pais
-            sessionStorage.genero = json.genero
-            sessionStorage.email = json.email
-
-
-            mensagem_erro.innerHTML =
-              "Cadastro realizado com sucesso! Redirecionando para tela de Login...";
-
-            setTimeout(function () {
-              window.location = "../index.html";
-            }, 1000); // apenas para exibir o loading
-          });
-          limparFormulario();
-          finalizarAguardar();
-        } else {
-          throw "Houve um erro ao tentar realizar o cadastro!";
-        }
-      })
-      .catch(function (resposta) {
-        console.log(`#ERRO: ${resposta}`);
-        finalizarAguardar();
-      });
-
-    return false;
-  }
-
-  function sumirMensagem() {
-    cardErro.style.display = "none";
-  }
+    function sumirMensagem() {
+        cardErro.style.display = "none";
+    }
 </script>

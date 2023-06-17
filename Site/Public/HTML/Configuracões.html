@@ -93,28 +93,28 @@
   <div class="footer">
     <!-- Barra Baixo -->
     <div class="container">
-      <div class="redes">Siga-nos nas Redes Sociais</div>
-      <div class="redesocial">
-        <a href="https://github.com/TheoMesquita/Shinemax">
-          <img src="../Img/icones/git.png" style="filter: invert(1);" width="30px" />
-        </a>
-        <a href="https://web.facebook.com/theofilo.mesquita.5">
-          <img src="../Img/icones/facebook.png" width="30px" />
-        </a>
-        <a href="https://www.instagram.com/010_theo/">
-          <img src="../Img/icones/instagram.png" width="30px" />
-        </a>
-        <a href="">
-          <img src="../Img/icones/youtube.png" width="30px" />
-        </a>
-      </div>
-      <div class="contato">Algum problema? Contate-nos</div>
-      <div class="contatos">
-        <li>E-mail: theomesquita@hotmail.com</li>
-        <li>Celular: (11) 98677-3099</li>
-      </div>
-      <div class="copy">&copy; Copyright Todos os direitos reservados</div>
-      <button class="topo"><a href="#topo">^</a></button>
+        <div class="redes">Siga-nos nas Redes Sociais</div>
+        <div class="redesocial">
+            <a href="https://github.com/TheoMesquita/Shinemax">
+                <img src="Img/icones/git.png" style="filter: invert(1)" width="30px" />
+            </a>
+            <a href="https://web.facebook.com/theofilo.mesquita.5">
+                <img src="Img/icones/facebook.png" width="30px" />
+            </a>
+            <a href="https://www.instagram.com/010_theo/">
+                <img src="Img/icones/instagram.png" width="30px" />
+            </a>
+            <a href="https://www.youtube.com/c/ghostfenix">
+                <img src="Img/icones/youtube.png" width="30px" />
+            </a>
+        </div>
+        <a href="#" class="contato">Algum problema? Contate-nos</a>
+        <div class="contatos">
+            <a href="mailto:theomesquita@hotmail.com">E-mail: theomesquita@hotmail.com</a>
+            <a href="https://wa.me/5511986773099">Celular: (11) 98677-3099</a>
+        </div>
+        <div class="copy">&copy; Copyright Todos os direitos reservados</div>
+        <a class="topo" href="#topo">^</a>
     </div>
     <!-- Fim da Barra -->
   </div>
@@ -130,17 +130,20 @@
   c_usuario.innerHTML = sessionStorage.idade;
   d_usuario.innerHTML = sessionStorage.pais;
 
-  var idadeCriador = 1
+  var idadeCriador = 0
 
   for (var contador = 2003; contador < 2023; contador++) {
     idadeCriador++
   }
   
-  var dadosCriador = {
-    nome: "Theofilo",
-    idade: idadeCriador
-  }
+  var dadosCriador = [
+    dados = {
+      nome: "Theofilo",
+      idade: idadeCriador
+    }]
 
-  Criador.innerHTML = `Nome: ${dadosCriador.nome} <br> Idade: ${dadosCriador.idade}`
+    if (dadosCriador[0].idade == 19) {
+      Criador.innerHTML = `Nome: ${dadosCriador[0].nome} <br> Idade: ${dadosCriador[0].idade}`
+    }
 
 </script>
